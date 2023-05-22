@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        'name',
+        'price',
+        'description',
+        'bEb',
+        'pranzo',
+        'parcheggio',
+        'wifi',
+        'smoking',
+        'pulizia',
+        'animali',
+        'cancellazione',
+        'pagamento',
+        'servizio',
+    ];
 }

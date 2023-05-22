@@ -41,12 +41,14 @@
                     <input id="best_sellers" type="checkbox" wire:model="best_sellers" value="{{$book->id}}">
                     <span  class="ps-3 text-white">{{$book->title}}, {{$book->author}}</span>
                 </div>
-            @endforeach --}}
+            @endforeach 
                 
 
-        {{-- </div> --}}
+         </div>
 
-        <div class="mb-3">
+
+
+         <div class="mb-3">
             <label for="bEb" class="form-label text-white">B&B</label>
             <input type="checkbox" id="bEb">
             @error('bEb') <span class="error">{{ $message }}</span> @enderror
@@ -105,7 +107,7 @@
             <label for="servizio" class="form-label text-white">Servizio in camera</label>
             <input type="checkbox" id="servizio">
             @error('servizio') <span class="error">{{ $message }}</span> @enderror
-        </div>
+        </div> --}}
 
         <div class="mb-3">
             <label for="description" class="form-label text-white">Descrizione</label>

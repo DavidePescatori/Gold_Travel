@@ -16,10 +16,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->float('price');
-            $table->text('descritpion');
+            $table->text('description');
             $table->string('area');
             $table->timestamps();
-            
+
         });
     }
 

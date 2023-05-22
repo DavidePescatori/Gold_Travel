@@ -16,8 +16,9 @@
         </div>
         
         
-        <select class="form-select" wire:model="area"  aria-label="Default select example">
-            <option selected>Area</option>
+        <label for="area" class="form-label text-white">Seleziona la tua area geografica</label>
+        <select class="form-select  @error('area') is-invalid @enderror" wire:model="area"  aria-label="Default select example">
+            <option selected></option>
             <option value="1">America del Nord</option>
             <option value="2">America del Sud</option>
             <option value="3">Europa Orientale</option>
@@ -28,6 +29,7 @@
             <option value="8">Asia Orientale</option>
             <option value="9">Artico</option>
             <option value="10">Antartide</option>
+            @error('area') <span class="error">{{ $message }}</span> @enderror
         </select>
         
         <div class="mb-3">

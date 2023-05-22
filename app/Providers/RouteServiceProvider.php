@@ -37,13 +37,14 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
         });
+        
+        Fortify::loginView(function () {
+            return view('auth.login');
+        });
 
         Fortify::registerView(function () {
             return view('auth.register');
         });
 
-        Fortify::loginView(function () {
-            return view('auth.login');
-        });
     }
 }

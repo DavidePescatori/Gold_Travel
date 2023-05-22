@@ -15,7 +15,7 @@ class CreateForm extends Component
     protected $rules = [
         'name' => 'required|min:3',
         'price' => 'required',
-        'description' => 'required|min:20|max:300',
+        'description' => 'required|min:10|max:300',
         'area' => 'required',
     ];
 
@@ -42,7 +42,6 @@ class CreateForm extends Component
         
         $user->articles()->create([
             
-            dd($user),
             'name' => $this->name,
             'price' => $this->price,
             'description' => $this->description,
@@ -54,7 +53,7 @@ class CreateForm extends Component
 
         $this->reset();
 
-        return redirect(route('article.index'));
+        // return redirect(route('article.index'));
 
 
 

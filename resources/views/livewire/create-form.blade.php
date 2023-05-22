@@ -1,5 +1,5 @@
 <div>
-    <form class="shadow p-5 rounded bg-secondary" wire:submit.prevent="">
+    <form class="shadow p-5 rounded bg-secondary" wire:submit.prevent="store">
         @csrf
 
         @if (session()->has('articleCreated'))
@@ -8,18 +8,40 @@
             </div>
         @endif
 
+        
         <div class="mb-3">
           <label for="name" class="form-label text-white">Destinazione</label>
-          <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" wire:model.lazy="name">
+          <input type="text" wire:model.lazy="name" class="form-control @error('name') is-invalid @enderror" id="name" wire:model.lazy="name">
           @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
-
+        
+        
+        <select class="form-select" wire:model="area"  aria-label="Default select example">
+            <option selected>Area</option>
+            <option value="1">America del Nord</option>
+            <option value="2">America del Sud</option>
+            <option value="3">Europa Orientale</option>
+            <option value="4">Asia Centrale</option>
+            <option value="5">Africa</option>
+            <option value="6">Medio Oriente</option>
+            <option value="7">Europa Occidentale</option>
+            <option value="8">Asia Orientale</option>
+            <option value="9">Artico</option>
+            <option value="10">Antartide</option>
+        </select>
+        
         <div class="mb-3">
             <label for="price" class="form-label text-white">Prezzo per notte</label>
-            <input type="float" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
+            <input type="float" wire:model.lazy="price" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
             @error('price') <span class="error">{{ $message }}</span> @enderror
         </div>
         
+        <div class="mb-3">
+            <label for="description" class="form-label text-white">Descrizione</label>
+            <textarea id="description" wire:model.lazy="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror" wire:model.lazy="description"></textarea>
+            @error('description') <span class="error">{{ $message }}</span> @enderror
+        </div>
+
         {{-- @if ($image)
             <p class="text-white">Antrepima immagine:</p>
             <div class="mt-3">
@@ -109,11 +131,6 @@
             @error('servizio') <span class="error">{{ $message }}</span> @enderror
         </div> --}}
 
-        <div class="mb-3">
-            <label for="description" class="form-label text-white">Descrizione</label>
-            <textarea id="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror" wire:model.lazy="description"></textarea>
-            @error('description') <span class="error">{{ $message }}</span> @enderror
-        </div>
 
         
         

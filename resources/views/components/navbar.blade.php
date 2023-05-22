@@ -10,6 +10,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Tutti gli annunci</a>
+          </li>
           @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,7 +26,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Inserisci annuncio</a>
+                  <a class="nav-link" aria-current="page" href="{{route('article.create')}}">Inserisci annuncio</a>
                 </li>
 
                 

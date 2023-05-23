@@ -1,0 +1,105 @@
+.bg-steelBlue{
+
+    background-color: #1A385A;
+
+}
+
+.bg-seagalBlue{
+
+background-color: #769ABE;
+
+}
+
+.bg-tomatoOrange{
+
+background-color:#E46F44 ;
+
+}
+
+.bg-pinkShell{
+
+background-color:#E8AA9B ;
+
+}
+
+.bg-plumViolet{
+
+background-color: #DCD5DC;
+
+}
+
+.color-plumViolet{
+
+color:#DCD5DC;
+
+}
+.color-pinkShell{
+
+color:#E8AA9B;
+
+}
+.color-Gold{
+
+
+color: #ffd60a;
+
+}
+.color-seagalBlue{
+
+color:#769ABE
+
+}
+
+.color-steelBlue{
+
+color: #1A385A;
+
+}
+
+.active{
+    color: #ffd60a!important;
+    padding-inline: 10px;
+}
+
+#title{
+
+font-size: 70px; 
+
+}
+a:hover{
+
+    color:#769ABE!important;
+    
+}
+
+.headerMargin{
+    margin-top: -0.5rem;
+    
+    }
+
+#divTitle{
+
+height:50vh;
+
+}
+
+.logo-custom{
+    height: 60px;
+   
+}
+
+.europaOrientale{
+
+    background-image: url(/public/media/europaOrientale.jpg);
+}
+
+.europaOccidentale{
+    background-image: url(/public/media/europaOccidentale.jpg);
+}
+
+.Antartide{
+
+    background-image: url(/public/media/Antartide.jpg);
+
+}
+

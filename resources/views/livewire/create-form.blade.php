@@ -1,5 +1,5 @@
 <div>
-    <form class="shadow p-5 rounded bg-secondary" wire:submit.prevent="store">
+    <form class="shadow p-5 rounded bg-pinkShell color-steelBlue" wire:submit.prevent="store">
         @csrf
 
         @if (session()->has('articleCreated'))
@@ -10,22 +10,22 @@
 
         
         <div class="mb-3">
-          <label for="name" class="form-label text-white">Destinazione</label>
+          <label for="name" class="form-label">Destinazione</label>
           <input type="text" wire:model.lazy="name" class="form-control @error('name') is-invalid @enderror" id="name" wire:model.lazy="name">
           @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
         
         
-        <label for="area" class="form-label text-white">Seleziona la tua area geografica</label>
-        <select class="form-select  @error('area') is-invalid @enderror" wire:model="area"  aria-label="Default select example">
+        <label for="area" class="form-label">Seleziona la tua area geografica</label>
+        <select id="area" class="form-select  @error('area') is-invalid @enderror" wire:model="area"  aria-label="Default select example">
             <option selected></option>
             <option value="1">America del Nord</option>
             <option value="2">America del Sud</option>
             <option value="3">Europa Orientale</option>
-            <option value="4">Asia Centrale</option>
+            <option value="4">Europa Occidentale</option>
             <option value="5">Africa</option>
             <option value="6">Medio Oriente</option>
-            <option value="7">Europa Occidentale</option>
+            <option value="7">Asia Centrale</option>
             <option value="8">Asia Orientale</option>
             <option value="9">Artico</option>
             <option value="10">Antartide</option>
@@ -33,13 +33,13 @@
         </select>
         
         <div class="mb-3">
-            <label for="price" class="form-label text-white">Prezzo per notte</label>
+            <label for="price" class="form-label">Prezzo per notte</label>
             <input type="float" wire:model.lazy="price" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
             @error('price') <span class="error">{{ $message }}</span> @enderror
         </div>
         
         <div class="mb-3">
-            <label for="description" class="form-label text-white">Descrizione</label>
+            <label for="description" class="form-label">Descrizione</label>
             <textarea id="description" wire:model.lazy="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror" wire:model.lazy="description"></textarea>
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </div>
@@ -53,13 +53,13 @@
 
 
         <div class="mb-3">
-            <label for="image" class="form-label text-white">Immagine libreria</label>
+            <label for="image" class="form-label">Immagine libreria</label>
             <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" wire:model.lazy="image">
             @error('image') <span class="error">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-3">
-            <label for="best_sellers" class="form-label text-white">Libri più venduti</label><br>
+            <label for="best_sellers" class="form-label">Libri più venduti</label><br>
             @foreach ($books as $book)
                 <div class="d-flex">
                     <input id="best_sellers" type="checkbox" wire:model="best_sellers" value="{{$book->id}}">

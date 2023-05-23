@@ -2,21 +2,24 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Article;
 use Livewire\Component;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 
 class CreateForm extends Component
 {
 
     // public $name, $price, $description, $bEb, $pranzo, $parcheggio, $wifi, $smoking, $pulizia, $animali, $cancellazione, $pagamento, $servizio;
-    public $name, $price, $description, $area;
+    public $name, $price, $description, $category;
 
     // dd(Auth()->user());
     protected $rules = [
         'name' => 'required|min:3',
         'price' => 'required',
         'description' => 'required|min:10|max:300',
-        'area' => 'required',
+        'category'=> 'required',
+        
     ];
 
     public function updated($propertyName)
@@ -28,39 +31,38 @@ class CreateForm extends Component
         
         $this->validate();
         
+        $category = Category::find($this->category);
 
-        $user= Auth::user();
+        $article = $category->articles()->create([
 
-        // $user->articles()->create([
-            
-            //     'name' => $this->name,
-            //     'price' => $this->price,
-        //     'description' => $this->description,
-        //     'area' => $this->area,
-
-        // ]);
-        
-        $user->articles()->create([
-            
             'name' => $this->name,
             'price' => $this->price,
             'description' => $this->description,
-            'area' => $this->area,
+            'category'=> $this->category,
+
         ]);
-        
+
+        Auth::user()->articles()->save($article);
 
         session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio');
 
         $this->reset();
 
-        // return redirect(route('article.index'));
+        
+            }
+        
+            public function render()
+            {
+                return view('livewire.create-form');
+            }
+        }
+        
+            
+            
+            
+    
+        
 
 
 
-    }
 
-    public function render()
-    {
-        return view('livewire.create-form');
-    }
-}

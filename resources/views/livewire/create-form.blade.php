@@ -16,21 +16,19 @@
         </div>
         
         
-        <label for="area" class="form-label">Seleziona la tua area geografica</label>
-        <select id="area" class="form-select  @error('area') is-invalid @enderror" wire:model="area"  aria-label="Default select example">
-            <option selected></option>
-            <option value="1">America del Nord</option>
-            <option value="2">America del Sud</option>
-            <option value="3">Europa Orientale</option>
-            <option value="4">Europa Occidentale</option>
-            <option value="5">Africa</option>
-            <option value="6">Medio Oriente</option>
-            <option value="7">Asia Centrale</option>
-            <option value="8">Asia Orientale</option>
-            <option value="9">Artico</option>
-            <option value="10">Antartide</option>
-            @error('area') <span class="error">{{ $message }}</span> @enderror
+        <div class="mb-3">
+            <label for="category" class="form-label">Seleziona la tua area geografica</label>
+        <select id="category" class="form-select  @error('category') is-invalid @enderror" wire:model.defer="category"  aria-label="Default select example">
+            <option value="">Scegli la categoria</option>
+            @foreach ($categories as $category)
+
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                
+            @endforeach
+            
         </select>
+            @error('category') <span class="error">{{ $message }}</span> @enderror
+        </div>
         
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo per notte</label>

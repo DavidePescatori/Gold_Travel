@@ -1,4 +1,5 @@
 let Title = document.querySelector('#title');
+let Div = document.querySelector('#divTitle')
 let Geo = document.querySelectorAll('option');
 
 Geo.forEach(option=>{
@@ -29,8 +30,8 @@ window.addEventListener('scroll' , ()=>{
     Title.style.marginLeft = 'auto';
     Title.style.marginRight = 'auto';
     Title.style.transform = 'scale(0.6)';
-    
-    
+    Div.classList.remove('divTitle');
+    Div.classList.add('divTitle2');
     }
 
 });

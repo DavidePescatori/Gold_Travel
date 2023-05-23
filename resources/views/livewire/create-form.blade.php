@@ -1,5 +1,5 @@
 <div>
-    <form class="shadow p-5 rounded bg-pinkShell color-steelBlue" wire:submit.prevent="store">
+    <form class="shadow p-5 rounded bg-tomatoOrange color-steelBlue" wire:submit.prevent="store">
         @csrf
 
         @if (session()->has('articleCreated'))

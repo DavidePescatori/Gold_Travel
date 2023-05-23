@@ -60,7 +60,12 @@ color: #1A385A;
     color: #ffd60a!important;
     padding-inline: 10px;
 }
+.bg-transparent{
 
+background-color: rgba(0, 0, 0,0);
+border:none!important;
+
+}
 #title{
 
 font-size: 70px; 
@@ -77,11 +82,16 @@ a:hover{
     
     }
 
-#divTitle{
+.divTitle{
 
 height:50vh;
 
 }
+.divTitle2{
+
+    height:20vh;
+    
+    }
 
 .logo-custom{
     height: 60px;

@@ -113,3 +113,133 @@ height:50vh;
 
 }
 
+.circle-nature {
+    width: 200px;
+    height: 200px;
+    border: 10px ;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .circle-nature:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: green;
+    border-right-color: green;
+    border-bottom-color: green;
+    border-left-color: green;
+    border-radius: 50%;
+    animation: fillCircle 2s linear forwards;
+  }
+
+  .circle-relax {
+    width: 200px;
+    height: 200px;
+    border: 10px ;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .circle-relax:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: blue;
+    border-right-color: blue;
+    border-bottom-color: blue;
+
+    border-radius: 50%;
+    animation: fillCircle 2s linear forwards;
+  }
+
+  .circle-culture {
+    width: 200px;
+    height: 200px;
+    border: 10px ;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .circle-culture:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: orange;
+    border-right-color: orange;
+
+    border-radius: 50%;
+    animation: fillCircle 2s linear forwards;
+  }
+
+  .circle-history {
+    width: 200px;
+    height: 200px;
+    border: 10px ;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .circle-history:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: gold;
+
+    border-radius: 50%;
+    animation: fillCircle 2s linear forwards;
+  }
+
+
+  @keyframes fillCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .circle img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .color-nature{
+    color: green;
+  }
+
+  .color-relax{
+
+    color: blue;
+  }
+
+  .color-history{
+
+    color: gold ;
+  }
+
+  .color-culture{
+
+    color: orange;
+  }

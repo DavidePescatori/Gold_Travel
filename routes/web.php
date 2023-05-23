@@ -16,12 +16,12 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
-Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('category.show');
 
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 
 Route::get('/article/show{article}', [ArticleController::class, 'show'])->name('article.show');
-
+Route::get('/article/all', [ArticleController::class, 'allarticle'])->name('article.allarticle');
 
 

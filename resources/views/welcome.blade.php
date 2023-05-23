@@ -38,11 +38,10 @@
                                     <h5 class="card-title">{{$article->name}}</h5>
                                     <p class="card-text">prezzo: {{$article->price}}</p>
                                     <p class="card-text">descrizione: {{$article->description}}</p>
-                                    <a href="#" class="btn btn-secondary">Più informazioni</a>
-                                    <a href="#" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Area geografica: {{$article->category->name}}</a>
+                                    <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
+                                    <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Area geografica: {{$article->category->name}}</a>
                                     </div>
                                 </div>
-
                             </div>
                         @empty
 

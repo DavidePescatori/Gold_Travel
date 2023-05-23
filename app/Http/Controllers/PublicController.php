@@ -18,6 +18,7 @@ class PublicController extends Controller
     }
 
     public function categoryShow(Category $category){
-        return view('categoryShow', compact('category'));
+        // $category = Category::all();
+        return view('category.show', compact('category'));
     }
 }

@@ -16,11 +16,13 @@
                     Area geografica
                     </a>
                     <ul class="dropdown-menu bg-seagalBlue color-plumViolet" aria-labelledby="categoriesDropdown">
+                      <li class="nav-item">
+                        <a class="dropdown-item" href=" {{route('article.allarticle')}}">Tutti gli annunci</a>
+                      </li><li><hr class="dropdown-divider"></li>
                       @foreach($categories as $category)
-                        <li><a class="dropdown-item" href="{{ route('categoryShow', compact('category')) }}">{{ ($category->name) }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('category.show', compact('category')) }}">{{ ($category->name) }}</a></li>
                         <li><hr class="dropdown-divider"></li>
                       @endforeach
-
                     </ul>
                 </li>
         </ul>

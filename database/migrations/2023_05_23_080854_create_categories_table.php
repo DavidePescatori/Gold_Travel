@@ -21,16 +21,26 @@ return new class extends Migration
         });
 
         $categories= [
-            'America del Nord',
-            'America del Sud',
-            'Europa Orientale',
-            'Europa Occidentale',
-            'Africa',
-            'Medio Oriente',
-            'Asia Centrale',
-            'Asia Orientale',
-            'Artico',
-            'Antartide',
+            "Abruzzo",
+            "Basilicata",
+            "Calabria",
+            "Campania",
+            "Emilia Romagna",
+            "Friuli Venezia Giulia",
+            "Lazio",
+            "Liguria",
+            "Lombardia",
+            "Marche",
+            "Molise",
+            "Piemonte",
+            "Puglia",
+            "Sardegna",
+            "Sicilia",
+            "Toscana",
+            "Trentino Alto Adige",
+            "Umbria",
+            "Valle d'Aosta",
+            "Veneto",
         ];
 
         foreach($categories as $category){

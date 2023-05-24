@@ -1,8 +1,8 @@
-<div class="container my-5 py-5">
-    <div class="row justify-content-center">
+<div class="container-fluid header-image">
+    <div class="row justify-content-center py-5">
         <div class="col-12 col-md-8">
 
-            <h1 class="text-center color-seagalBlue">
+            <h1 class="text-center fontBord">
                {{ $header }}
             </h1>
 

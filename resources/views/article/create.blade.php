@@ -1,4 +1,4 @@
-<x-layout  header="Inserisci il tuo annuncio">
+<x-layout  header="Crea il tuo annuncio">
 
     <div class="container-fluid py-5 bg-article-create-custom">
         <div class="row justify-content-center">

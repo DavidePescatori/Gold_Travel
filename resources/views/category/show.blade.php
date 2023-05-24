@@ -1,4 +1,4 @@
-<x-layout header="Stai visualizzando {{$category->name}}">
+<x-layout header="{{$category->name}}">
 
    <div class="container">
     <div class="row">

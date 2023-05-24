@@ -1,3 +1,8 @@
+
+:root {
+  --bs-dropdown-link-active-color: #FF0000; 
+}
+
 .bg-steelBlue{
 
     background-color: #1A385A;
@@ -21,6 +26,11 @@ background-color:#E46F44 ;
 background-color:#E8AA9B ;
 
 }
+.bg-gold{
+
+  background-color:  #ffc107;
+
+}
 
 .bg-plumViolet{
 
@@ -30,7 +40,7 @@ background-color: #DCD5DC;
 
 .color-plumViolet{
 
-color:#DCD5DC;
+color:#DCD5DC!important;
 
 }
 .color-pinkShell{
@@ -41,7 +51,7 @@ color:#E8AA9B;
 .color-Gold{
 
 
-color: #ffd60a;
+color: #ffc107;
 
 }
 .color-seagalBlue{
@@ -53,6 +63,16 @@ color:#769ABE
 .color-steelBlue{
 
 color: #1A385A;
+
+}
+
+.fontBord{
+  
+    font-family: arial, verdana, tahona, sans-serif;
+    line-height: 150%;
+    color: #769ABE;
+    text-shadow: -1px 0 #1A385A, 0 1px #1A385A, 1px 0 #1A385A, 0 -1px #1A385A;
+  
 
 }
 
@@ -77,41 +97,33 @@ a:hover{
     
 }
 
-.headerMargin{
-    margin-top: -0.5rem;
-    
-    }
 
 .divTitle{
-
-height:50vh;
-
+  
+  height:50vh;
+  
 }
 .divTitle2{
+  
+  height:20vh;
+  
+}
 
-    height:20vh;
+.headerMargin{
+    margin-top: -0.8rem;
     
     }
 
+/* logo navbar */
+
 .logo-custom{
-    height: 60px;
+    height: 50px;
+    padding-right: 8px;
+
    
 }
+/* fine logo navbar */
 
-.europaOrientale{
-
-    background-image: url(/public/media/europaOrientale.jpg);
-}
-
-.europaOccidentale{
-    background-image: url(/public/media/europaOccidentale.jpg);
-}
-
-.Antartide{
-
-    background-image: url(/public/media/Antartide.jpg);
-
-}
 
 .circle-nature {
     width: 200px;
@@ -200,7 +212,7 @@ height:50vh;
     height: 100%;
     position: absolute;
     border: 10px solid transparent;
-    border-top-color: gold;
+    border-top-color: rgb(255, 193, 7);
 
     border-radius: 50%;
     animation: fillCircle 2s linear forwards;
@@ -248,7 +260,7 @@ height:50vh;
   /* sfondo form inserimento annuncio */
   .bg-custom{
 
-    background-color: #ffd700;
+    background-color: rgb(255, 193, 7);
     /* background-image: url(/public/media/Oceano.jpg); */
   }
 
@@ -268,11 +280,38 @@ height:50vh;
 
   }
 
+  .header-image{
+
+    background-image: url(/public/media/headerImage.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top;
+    margin-top: 6vh;
+    height: 40vh;
+  }
+
   .insert-article-custom{
 
-    background-image: url(/public/media/Inserisci\ il\ tuo\ annuncio2!.png);
+    background-image: url(/public/media/Inserisci\ il\ tuo\ annuncio2\ modificato!.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     height: 40vh;
   }
+
+
+  /* navbar dropdown delle categorie */
+  #categorie{
+
+    overflow-y: auto;
+    max-height: 250px;
+    
+
+
+  }
+
+  .navbar-dropdown::-webkit-scrollbar {
+    width: 0.0em;  /* Imposta la larghezza della scrollbar */
+  }
+  
+   /* fine navbar dropdown delle categorie */

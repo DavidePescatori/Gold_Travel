@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-steelBlue fixed-top py-0">
+<nav class="navbar navbar-expand-lg bg-steelBlue fixed-top py-1">
     <div class="container-fluid">
-    <img class="logo-custom" src="/media/logo.png" alt="">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <img class="logo-custom" src="/media/colosseo.png" alt="">
+      <button class="navbar-toggler bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -12,16 +12,16 @@
           </li>
 
               <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Area geografica
+                    <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" >
+                    Dove vuoi andare?
                     </a>
-                    <ul class="dropdown-menu bg-seagalBlue color-plumViolet" aria-labelledby="categoriesDropdown">
+                    <ul id="categorie" class="navbar-dropdown dropdown-menu bg-seagalBlue color-plumViolet" aria-labelledby="categoriesDropdown">
                       <li class="nav-item">
                         <a class="dropdown-item" href=" {{route('article.allarticle')}}">Tutti gli annunci</a>
-                      </li><li><hr class="dropdown-divider"></li>
+                      </li>
                       @foreach($categories as $category)
+                      <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ route('category.show', compact('category')) }}">{{ ($category->name) }}</a></li>
-                        <li><hr class="dropdown-divider"></li>
                       @endforeach
                     </ul>
                 </li>

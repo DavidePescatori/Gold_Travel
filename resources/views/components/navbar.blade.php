@@ -34,6 +34,19 @@
           <li class="nav-item">
             <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'article.create') active @endif" aria-current="page" href="{{route('article.create')}}">Inserisci annuncio</a>
           </li>
+
+          @if (Auth::user()->is_revisor)
+            <li class="nav-item">
+                <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
+                Zona revisore
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{App\Models\Article::toBeRevisionedCount()}}
+                  <span class="visually-hidden">Messaggi non letti</span>
+                </span>
+              </a>
+            </li>
+          @endif
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle color-plumViolet" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Ciao {{Auth::user()->name}}

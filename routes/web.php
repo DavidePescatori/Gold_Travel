@@ -24,4 +24,11 @@ Route::get('/article/create', [ArticleController::class, 'create'])->name('artic
 Route::get('/article/show{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/article/all', [ArticleController::class, 'allarticle'])->name('article.allarticle');
 
+// Home revisore
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
 
+// Accetta annuncio
+Route::patch('/accetta/annuncio/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.accept_article');
+
+// Rifiuta annuncio
+Route::patch('/rifiuta/annuncio/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.reject_article');

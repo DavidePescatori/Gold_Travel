@@ -1,4 +1,4 @@
-<x-layout header="Dettaglio annuncio">
+ <x-layout header="Dettaglio annuncio">
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 p-3">
@@ -21,13 +21,13 @@
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/300" class="d-block w-100" alt="foto di {{$article->name}}">
+                                <img src="https://picsum.photos/300" class="d-block w-100" alt="foto di {{$article_to_check->name}}">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/301" class="d-block w-100" alt="foto di {{$article->name}}">
+                                <img src="https://picsum.photos/301" class="d-block w-100" alt="foto di {{$article_to_check->name}}">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/303" class="d-block w-100" alt="foto di {{$article->name}}">
+                                <img src="https://picsum.photos/303" class="d-block w-100" alt="foto di {{$article_to_check->name}}">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -83,4 +83,5 @@
     <a href="{{route('article.edit', compact('article'))}}" class="btn btn-dark">Modifica</a>
     @endif --}}   
     
-    
+   
+{{-- 

@@ -42,7 +42,7 @@ class ArticleController extends Controller
 
     public function allarticle()
     {
-        $articles = Article::paginate(7);
+        $articles = Article::where('is_accepted', true)->paginate(7);
         return view('article.allarticle', compact('articles'));
     }
 

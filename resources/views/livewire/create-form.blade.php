@@ -1,5 +1,5 @@
 <div>
-    <form class="shadow p-5 rounded bg-tomatoOrange color-steelBlue" wire:submit.prevent="store">
+    <form class="shadow p-5 rounded bg-custom color-steelBlue" wire:submit.prevent="store">
         @csrf
 
         @if (session()->has('articleCreated'))
@@ -8,6 +8,13 @@
             </div>
         @endif
 
+        <div class="div-custom rounded">
+
+        </div>
+
+        <div class="insert-article-custom">
+            
+        </div>
         
         <div class="mb-3">
           <label for="name" class="form-label">Destinazione</label>

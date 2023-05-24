@@ -1,6 +1,6 @@
 <x-layout  header="Inserisci il tuo annuncio">
 
-    <div class="container my-5">
+    <div class="container-fluid py-5 bg-article-create-custom">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10">
                 @livewire('create-form')

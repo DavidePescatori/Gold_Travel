@@ -243,3 +243,36 @@ height:50vh;
 
     color: orange;
   }
+
+
+  /* sfondo form inserimento annuncio */
+  .bg-custom{
+
+    background-color: #ffd700;
+    /* background-image: url(/public/media/Oceano.jpg); */
+  }
+
+  .div-custom{
+
+    background-image: url(/public/media/Oceano.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+
+
+  }
+
+  .bg-article-create-custom{
+
+    background-color: #1A385A;
+
+  }
+
+  .insert-article-custom{
+
+    background-image: url(/public/media/Inserisci\ il\ tuo\ annuncio2!.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 40vh;
+  }

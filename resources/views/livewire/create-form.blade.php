@@ -2,17 +2,12 @@
     <form class="shadow p-5 rounded bg-custom color-steelBlue" wire:submit.prevent="store">
         @csrf
 
-        @if (session()->has('articleCreated'))
-            <div class="alert alert-success">
-                {{ session('articleCreated') }}
-            </div>
-        @endif
 
         <div class="div-custom rounded">
 
         </div>
 
-        <div class="insert-article-custom">
+        <div class="insert-article-custom my-4">
             
         </div>
         
@@ -24,7 +19,7 @@
         
         
         <div class="mb-3">
-            <label for="category" class="form-label">Seleziona la tua area geografica</label>
+            <label for="category" class="form-label">Seleziona la tua regione</label>
         <select id="category" class="form-select  @error('category') is-invalid @enderror" wire:model.defer="category"  aria-label="Default select example">
             <option value="">Scegli la categoria</option>
             @foreach ($categories as $category)
@@ -145,5 +140,11 @@
       
         <button class="btn btn-dark">Pubblica Annuncio</button>
           
+        
+        @if (session()->has('articleCreated'))
+            <div class="alert snippet alert-success my-4 p-2">
+                {{ session('articleCreated') }}
+            </div>
+        @endif
       </form>
 </div>

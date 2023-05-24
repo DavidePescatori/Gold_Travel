@@ -292,13 +292,19 @@ a:hover{
 
   .insert-article-custom{
 
-    background-image: url(/public/media/Inserisci\ il\ tuo\ annuncio2\ modificato!.png);
+    background-image: url(/public/media/Inserisci\ il\ tuo\ annuncio.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     height: 40vh;
   }
 
+
+  .snippet{
+
+    width: 30%;
+
+  }
 
   /* navbar dropdown delle categorie */
   #categorie{

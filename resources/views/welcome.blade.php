@@ -33,7 +33,7 @@
                             <div class="col-12 col-md-4 p-3">
 
                                 <div class="card bg-transparent">
-                                    <img src="https://picsum.photos/300" class="card-img-top p-3 rounded" alt="immagine">
+                                    <img src="https://picsum.photos/{{300 + $loop->index}}" class="card-img-top p-3 rounded" alt="immagine">
                                     <div class="card-body">
                                     <h5 class="card-title">{{$article->name}}</h5>
                                     <p class="card-text">prezzo: {{$article->price}}€</p>

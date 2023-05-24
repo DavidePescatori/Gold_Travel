@@ -37,7 +37,7 @@
 
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
-                <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
+                <a class=" @if(Route::currentRouteName() == 'revisor.index') active @endif nav-link btn btn-sm color-plumViolet position-relative" aria-current="page" href="{{route('revisor.index')}}">
                 Zona revisore
                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {{App\Models\Article::toBeRevisionedCount()}}
@@ -52,8 +52,9 @@
                     Ciao {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu bg-seagalBlue color-plumViolet">
-                    <li><a class="dropdown-item color-plumViolet" href="#">Profilo</a></li>
-                    <li><a class="dropdown-item color-plumViolet" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+                    <li><a class="dropdown-item href="#">Profilo</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                     <form id="form-logout" method="POST" action="{{route('logout')}}" class="d-none">@csrf</form>
                     </ul>
                 </li>

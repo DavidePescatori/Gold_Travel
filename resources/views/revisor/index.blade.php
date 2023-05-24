@@ -1,10 +1,10 @@
- <x-layout header="Dettaglio annuncio">
+ <x-layout header="">
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 p-3">
                 
                 <h1 class="display-2">
-                    {{$article_to_check ? 'Eccol\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+                    {{$article_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
             </div>
         </div>
@@ -57,7 +57,7 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row py-5">
             <div class="col-12 col-md-6">
                 <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
                     @csrf

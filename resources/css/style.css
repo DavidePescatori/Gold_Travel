@@ -43,11 +43,13 @@ background-color: #DCD5DC;
 color:#DCD5DC!important;
 
 }
+
 .color-pinkShell{
 
 color:#E8AA9B;
 
 }
+
 .color-Gold{
 
 
@@ -68,13 +70,33 @@ color: #1A385A;
 
 .fontBord{
   
-    font-family: arial, verdana, tahona, sans-serif;
+    /* font-family: arial, verdana, tahona, sans-serif; */
     line-height: 150%;
-    color: #769ABE;
-    text-shadow: -1px 0 #1A385A, 0 1px #1A385A, 1px 0 #1A385A, 0 -1px #1A385A;
-  
+    color: hsl(300, 9%, 85%) ;
+    text-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
+    font-size: 85px;
+    font-family: 'Amaranth', sans-serif;
+    background-color: hsl(212, 55%, 23%, 0.7);
+    border-radius: 15px 15px 0px 0px;
+    /* text-shadow: black 50px !important; */
 
 }
+
+.fontBord:hover{
+
+  color:  #1A385A;
+  background-color: hsl(300, 9%, 85%, 1);
+  text-shadow: 0px 0 #5a5651, 0 0px #000000, 0px 0 #000000, 0 0px #000000 !important;
+  transition: 1s ease-out;
+  transform: scale(1.04);
+}
+
+.shadow-custom{
+
+  height: 7.5rem;
+
+}
+
 
 .active{
     color: #ffd60a!important;
@@ -124,136 +146,80 @@ a:hover{
 }
 /* fine logo navbar */
 
-
-.circle-nature {
-    width: 200px;
-    height: 200px;
-    border: 10px ;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .circle-nature:before {
-    content: "";
+  /* CSS dei cerchietti */
+  
+  .circular-chart {
     display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border: 10px solid transparent;
-    border-top-color: green;
-    border-right-color: green;
-    border-bottom-color: green;
-    border-left-color: green;
-    border-radius: 50%;
-    animation: fillCircle 2s linear forwards;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
   }
-
-  .circle-relax {
-    width: 200px;
-    height: 200px;
-    border: 10px ;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
   }
-
-  .circle-relax:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border: 10px solid transparent;
-    border-top-color: blue;
-    border-right-color: blue;
-    border-bottom-color: blue;
-
-    border-radius: 50%;
-    animation: fillCircle 2s linear forwards;
+  
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
   }
-
-  .circle-culture {
-    width: 200px;
-    height: 200px;
-    border: 10px ;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .circle-culture:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border: 10px solid transparent;
-    border-top-color: orange;
-    border-right-color: orange;
-
-    border-radius: 50%;
-    animation: fillCircle 2s linear forwards;
-  }
-
-  .circle-history {
-    width: 200px;
-    height: 200px;
-    border: 10px ;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .circle-history:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border: 10px solid transparent;
-    border-top-color: rgb(255, 193, 7);
-
-    border-radius: 50%;
-    animation: fillCircle 2s linear forwards;
-  }
-
-
-  @keyframes fillCircle {
+  
+  @keyframes progress {
     0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
+      stroke-dasharray: 0 100;
     }
   }
+  
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
 
-  .circle img {
-    max-width: 100%;
-    max-height: 100%;
+  .svg-custom {
+    width: 80% !important;
+    height: 80% !important;
     position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 40%;
+      left: 40%;
       transform: translate(-50%, -50%);
   }
 
   .color-nature{
+    stroke: green;
     color: green;
   }
 
   .color-relax{
 
+    stroke: blue;
     color: blue;
+
   }
 
   .color-history{
 
-    color: gold ;
+    stroke: gold ;
+    color: gold;
+
   }
 
   .color-culture{
 
+    stroke: orange;
     color: orange;
+
+  }
+
+  .font-custom{
+
+    /* font-family: monospace; */
+
   }
 
 

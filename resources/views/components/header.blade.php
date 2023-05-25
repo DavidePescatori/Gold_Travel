@@ -1,11 +1,11 @@
-<div class="container-fluid header-image">
-    <div class="row justify-content-center py-5">
-        <div class="col-12 col-md-8">
+<div class="d-flex align-items-end  header-image ps-3">
+    {{-- <div class="row justify-content-center align-items-end">
+        <div class="col-12 col-md-8"> --}}
 
-            <h1 class="text-center fontBord">
+            <h1 class="fontBord shadow-custom m-0 p-1">
                {{ $header }}
             </h1>
 
-        </div>
-    </div>
+        {{-- </div>
+    </div> --}}
 </div>

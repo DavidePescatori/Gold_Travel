@@ -1,62 +1,116 @@
 <x-layout header="{{$category->name}}">
-  
-  <div class="container py-5">
-    <div class="row">
-      <div class="col">
-        <div class="circle-nature circle"><img class="rounded-circle" alt="avatar1" src="/media/nature.svg" /></div>
-        <div><h4>Natura e avventura</h4></div>
-        <strong class="color-nature">{{ $category->nature }}%</strong>
-      </div>
-      <div class="col">
-        <div class="circle-relax circle"><img class="rounded-circle" alt="avatar1" src="/media/relax.svg"/></div>
-        <div class="ps-4"><h4>Relax e mare</h4></div>
-        <strong class="ps-4 color-relax">{{ $category->relax }}%</strong>
-      </div>
-      <div class="col">
-        <div class="circle-history circle"><img class="rounded-circle" alt="avatar1" src="/media/history.svg" /></div>
-        <div><h4>Monumenti e storia</h4></div>
-        <strong class="color-history">{{ $category->history }}%</strong>
-      </div>
-      <div class="col">
-        <div class="circle-culture circle"><img class="rounded-circle" alt="avatar1" src="/media/culture.svg" /></div>
-        <div class="ps-4"><h4>Città e cultura</h4></div>
-        <strong class="ps-4 color-culture">{{ $category->culture }}%</strong>
-      </div>
-    </div>
-  </div>
-  
-  
-  
-  <div class="min-vh-100">
-    <div class="container-fluid my-5">
-      <div class="row justify-content-center">
-        
-        @forelse ($category->articles as $article)
-        <div class="col-12 col-md-4 p-3">
-          
-          <div class="card bg-transparent">
-            <img src="https://picsum.photos/300" class="card-img-top p-3 rounded" alt="immagine">
-            <div class="card-body">
-              <h5 class="card-title">{{$article->name}}</h5>
-              <p class="card-text">prezzo: {{$article->price}}</p>
-              <p class="card-text">descrizione: {{$article->description}}</p>
-              <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
-              <a href="{{route('homepage')}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-danger">Torna Indietro</a>
-            </div>
-          </div>
+    <div class="container py-5">
+      <div class="row font-custom">
+        <div class="col-3 ">
+          <svg viewBox="0 0 36 36" class="circular-chart color-nature">
+            <path class="circle-bg"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+            stroke-dasharray="{{$category->nature}}, 100"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <image xlink:href="/media/nature.svg" x="6" y="6" width="25" height="25" />
+          </svg>
+          <h3 class="display-5 text-center">Natura e avventura</h3>
+          <p class="color-nature text-center display-5">{{$category->nature}}%</p>
+
         </div>
-        
-        
-        @empty
-        
-        <div class="col-12 text-center">
+        <div class="col-3">
+          <svg viewBox="0 0 36 36" class="circular-chart color-relax">
+            <path class="circle-bg"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+            stroke-dasharray="{{$category->relax}}, 100"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <image xlink:href="/media/relax.svg" x="6" y="6" width="25" height="25" /> 
+          </svg>
+          <h3 class="text-center display-5">Relax e mare</h3>
+          <p class="color-relax text-center display-5">{{$category->relax}}%</p>
+
+        </div><div class="col-3">
+          <svg viewBox="0 0 36 36" class="circular-chart color-history">
+            <path class="circle-bg"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+            stroke-dasharray="{{$category->history}}, 100"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <image xlink:href="/media/history.svg" x="7" y="5" width="23" height="25" /> 
           
-          <h2>Non ci sono ancora annunci inseriti</h2>
-          <a href="{{route('article.create')}}" class="btn btn-warning">Inserisci il tuo annuncio</a>
+          </svg>
+          <h3 class="display-5 text-center">Monumenti e storia</h3>
+          <p class="color-history text-center display-5">{{$category->history}}%</p>
+
+        </div><div class="col-3">
+          <svg viewBox="0 0 36 36" class="circular-chart color-culture">
+            <path class="circle-bg"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+            stroke-dasharray="{{$category->culture}}, 100"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <image xlink:href="/media/culture.svg" x="6" y="6" width="25" height="25" /> 
+          
+          </svg>
+          <h3 class="display-5 text-center">Città e cultura</h3>
+          <p class="color-culture text-center display-5">{{$category->culture}}%</p>
+
         </div>
-        @endforelse
       </div>
     </div>
     
-  </div>
-</x-layout>
+    
+    <div class="min-vh-100">
+      <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+          
+          @forelse ($category->articles as $article)
+          <div class="col-12 col-md-4 p-3">
+            
+            <div class="card bg-transparent">
+              <img src="https://picsum.photos/300" class="card-img-top p-3 rounded" alt="immagine">
+              <div class="card-body">
+                <h5 class="card-title">{{$article->name}}</h5>
+                <p class="card-text">prezzo: {{$article->price}}</p>
+                <p class="card-text">descrizione: {{$article->description}}</p>
+                <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
+                <a href="{{route('homepage')}}" class="my-2 border-top pt-2 border-dark card-link  btn btn-danger">Torna Indietro</a>
+              </div>
+            </div>
+          </div>
+          
+          
+          @empty
+          
+          <div class="col-12 text-center">
+            
+            <h2>Non ci sono ancora annunci inseriti</h2>
+            <a href="{{route('article.create')}}" class="btn btn-warning">Inserisci il tuo annuncio</a>
+          </div>
+          @endforelse
+        </div>
+      </div>
+      
+    </div>
+  </x-layout>

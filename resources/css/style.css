@@ -78,6 +78,7 @@ color: #1A385A;
     font-family: 'Amaranth', sans-serif;
     background-color: hsl(212, 55%, 23%, 0.7);
     border-radius: 15px 15px 0px 0px;
+
     /* text-shadow: black 50px !important; */
 
 }
@@ -88,7 +89,7 @@ color: #1A385A;
   background-color: hsl(300, 9%, 85%, 1);
   text-shadow: 0px 0 #5a5651, 0 0px #000000, 0px 0 #000000, 0 0px #000000 !important;
   transition: 1s ease-out;
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .shadow-custom{
@@ -216,13 +217,6 @@ a:hover{
 
   }
 
-  .font-custom{
-
-    /* font-family: monospace; */
-
-  }
-
-
   /* sfondo form inserimento annuncio */
   .bg-custom{
 
@@ -230,7 +224,7 @@ a:hover{
     /* background-image: url(/public/media/Oceano.jpg); */
   }
 
-  .div-custom{
+  /* .div-custom{
 
     background-image: url(/public/media/Oceano.jpg);
     background-size: cover;
@@ -238,7 +232,7 @@ a:hover{
     height: 50vh;
 
 
-  }
+  } */
 
   .bg-article-create-custom{
 
@@ -258,11 +252,11 @@ a:hover{
 
   .insert-article-custom{
 
-    background-image: url(/public/media/Inserisci\ il\ tuo\ annuncio.png);
+    background-image: url(/public/media/AnnuncioDefinitivo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
-    height: 40vh;
+    height: 45vh;
   }
 
 
@@ -287,3 +281,44 @@ a:hover{
   }
   
    /* fine navbar dropdown delle categorie */
+
+   /* logo aereo inserisci-annuncio */
+/* .img-aereo{
+  transform: rotate(-20deg);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: -12rem;
+  } */
+
+/* .card-areo{
+  background-color: #ffc107;
+} */
+   /* fine logo aereo inserisci annuncio */
+
+   /* prova card  */
+/* .card-home{
+  width: 15rem;
+} */
+   /* fine prova card */
+
+  /* codice casa inserisci annuncio */
+.casa-custom{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  margin-top: -4rem;
+  border-radius: 25px;
+  /* box-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important; */
+}
+
+.card-casa-rem{
+  margin-top: 10rem;
+}
+
+.card-custom-rem{
+  width: 18rem;
+}
+  /* fine casa annuncio*/

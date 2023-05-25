@@ -1,24 +1,19 @@
 <div>
-    <form class="shadow p-5 rounded bg-custom color-steelBlue" wire:submit.prevent="store">
-        @csrf
-
-
+            <form class="shadow p-5 rounded bg-custom color-steelBlue" wire:submit.prevent="store">
+            @csrf
         <div class="div-custom rounded">
-
         </div>
 
         <div class="insert-article-custom my-4">
             
         </div>
         
-        <div class="mb-3">
+        <div class="">
           <label for="name" class="form-label">Destinazione</label>
           <input type="text" wire:model.lazy="name" class="form-control @error('name') is-invalid @enderror" id="name" wire:model.lazy="name">
           @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
-        
-        
-        <div class="mb-3">
+        <div class="">
             <label for="category" class="form-label">Seleziona la tua regione</label>
         <select id="category" class="form-select  @error('category') is-invalid @enderror" wire:model.defer="category"  aria-label="Default select example">
             <option value="">Scegli la categoria</option>
@@ -43,6 +38,7 @@
             <textarea id="description" wire:model.lazy="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror" wire:model.lazy="description"></textarea>
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </div>
+        
 
         {{-- @if ($image)
             <p class="text-white">Antrepima immagine:</p>
@@ -147,4 +143,5 @@
             </div>
         @endif
       </form>
-</div>
+    </div>
+

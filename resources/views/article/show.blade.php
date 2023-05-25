@@ -1,8 +1,8 @@
 <x-layout header="Dettaglio annuncio">
-  <div class="container-fluid my-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-4 p-3">
-        <div class="card">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {{-- <div class="card"> --}}
           <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -24,17 +24,21 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">{{$article->name}}</h5>
-            <p class="card-text">Prezzo {{$article->price}}</p><br>
-            <p class="card-text">Descrizione: {{$article->description}}</p><br>
-            <p class="card-text">Creato il: {{$article->created_at->format('d/m/Y')}}</p><br>
-            <p class="card-text">Creato da: {{$article->user->name}}</p><br> 
-            <a href="{{route('homepage')}}" class="btn btn-secondary">Torna indietro</a>
-          </div>
-        </div>
-      </div>
+      {{-- </div> --}}
     </div>
+    <div class="col-12 col-md-6">
+      {{-- <div class="card-body"> --}}
+        <h5 class="card-title">{{$article->name}}</h5>
+        <p class="card-text">Prezzo {{$article->price}}</p><br>
+        <p class="card-text">Descrizione: {{$article->description}}</p><br>
+        <p class="card-text">Creato il: {{$article->created_at->format('d/m/Y')}}</p><br>
+        <p class="card-text">Creato da: {{$article->user->name}}</p><br> 
+        <a href="{{route('homepage')}}" class="btn btn-secondary">Torna indietro</a>
+      {{-- </div> --}}
+    </div>
+    </div>
+
+</div>
   </div>
   {{-- @if (Auth::user() && Auth::user()->id == $article->user_id)
     <a href="{{route('article.edit', compact('article'))}}" class="btn btn-dark">Modifica</a>

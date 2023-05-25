@@ -1,4 +1,4 @@
-<div class="d-flex align-items-end  header-image ps-3">
+<div class="d-flex align-items-end  header-image ps-1">
     {{-- <div class="row justify-content-center align-items-end">
         <div class="col-12 col-md-8"> --}}
 

@@ -51,14 +51,14 @@
     </div>
  </div>
 
-<div class="min-vh-100">
+<div>
     <div class="container-fluid my-5">
                 <div class="row justify-content-center">
 
                         @forelse ($articles as $article)
-                            <div class="col-12 col-md-4 p-3">
+                            <div class="col-12 col-md-4">
 
-                                <div class="card bg-transparent">
+                                {{-- <div class="card card-home bg-transparent">
                                     <img src="https://picsum.photos/{{300 + $loop->index}}" class="card-img-top p-3 rounded" alt="immagine">
                                     <div class="card-body">
                                     <h5 class="card-title">{{$article->name}}</h5>
@@ -67,7 +67,29 @@
                                     <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
                                     <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Area geografica: {{$article->category->name}}</a>
                                     </div>
-                                </div>
+                                </div> --}}
+
+                                <div class="card mb-3 shadow">
+                                    <div class="row g-0">
+                                      <div class="col-md-4">
+                                        <img src="https://picsum.photos/{{300 + $loop->index}}" class="img-fluid rounded-start" alt="immagine">
+                                      </div>
+                                      <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{$article->name}}</h5>
+                                            <p class="card-text">prezzo: {{$article->price}}€</p>
+                                            {{-- <p class="card-text">descrizione: {{$article->description}}</p> --}}
+                                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
+                                            <div class="row g-0">
+                                                <div class="col-md-8">
+                                                    <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{$article->category->name}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
                             </div>
                         @empty
 
@@ -78,6 +100,7 @@
                         </div>
 
                         @endforelse
+
 
                 </div>
     </div>

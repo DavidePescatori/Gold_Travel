@@ -14,7 +14,27 @@
 
 <body class="">
 
-<x-navbar />
+    <x-navbar />
+
+        @if(session('emailSent'))
+        <div class="alert alert-success text-center my-5">
+            {{ session('emailSent') }}
+        </div>
+        @endif
+
+        @if(session('emailError'))
+        <div class="alert alert-danger text-center my-5">
+            {{ session('emailError') }}
+        </div>
+        @endif
+
+        @if(session('access.denied'))
+        <div class="alert alert-danger text-center my-5">
+            {{ session('access.denied') }}
+        </div>
+        @endif
+
+
  <div class="container-fluid">
     <div class="row">
         <div id="divTitle" class="d-flex justify-content-center align-items-center divTitle">

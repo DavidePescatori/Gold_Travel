@@ -25,7 +25,12 @@
                       @endforeach
                     </ul>
                 </li>
+
+                <li class="nav-item">
+                  <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'mail.become.revisor') active @endif" aria-current="page" href="{{route('mail.become.revisor')}}">Lavora con noi</a>
+                </li>
         </ul>
+
        
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 

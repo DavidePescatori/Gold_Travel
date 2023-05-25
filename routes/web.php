@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RevisorController;
 
 /*
@@ -26,10 +27,23 @@ Route::get('/article/show{article}', [ArticleController::class, 'show'])->name('
 Route::get('/article/all', [ArticleController::class, 'allarticle'])->name('article.allarticle');
 
 // Home revisore
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 // Accetta annuncio
-Route::patch('/accetta/annuncio/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.accept_article');
+Route::patch('/accetta/annuncio/{article}', [RevisorController::class, 'acceptArticle'])->middleware('isRevisor')->name('revisor.accept_article');
 
 // Rifiuta annuncio
-Route::patch('/rifiuta/annuncio/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.reject_article');
+Route::patch('/rifiuta/annuncio/{article}', [RevisorController::class, 'rejectArticle'])->middleware('isRevisor')->name('revisor.reject_article');
+
+// email
+
+// Route::get('/richiesta/revisore', [ContactController::class, 'index'])->middleware('auth')->name('mail.contact_us');
+
+Route::post('/contattaci/submit',[ContactController::class, 'contact_us_submit'])->name('mail.contact.us.submit');
+
+
+// richiesta revisore
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('mail.become.revisor');
+
+// rendi revisore
+Route::get('/rendi/revisore{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');

@@ -34,6 +34,12 @@
         </div>
         @endif
 
+        @if(session('message'))
+        <div class="alert alert-success text-center my-5">
+            {{ session('message') }}
+        </div>
+        @endif
+
 
  <div class="container-fluid">
     <div class="row">

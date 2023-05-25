@@ -15,7 +15,7 @@ class CreateForm extends Component
     
     // dd(Auth()->user());
     protected $rules = [
-        'name' => 'required|min:5',
+        'name' => 'required|min:2',
         'price' => 'required|numeric',
         'description' => 'required|min:10|max:300',
         'category'=> 'required',

@@ -5,22 +5,22 @@
       <div class="col">
         <div class="circle-nature circle"><img class="rounded-circle" alt="avatar1" src="/media/nature.svg" /></div>
         <div><h4>Natura e avventura</h4></div>
-        <strong class="color-nature">100%</strong>
+        <strong class="color-nature">{{ $category->nature }}%</strong>
       </div>
       <div class="col">
         <div class="circle-relax circle"><img class="rounded-circle" alt="avatar1" src="/media/relax.svg"/></div>
         <div class="ps-4"><h4>Relax e mare</h4></div>
-        <strong class="ps-4 color-relax">80%</strong>
+        <strong class="ps-4 color-relax">{{ $category->relax }}%</strong>
       </div>
       <div class="col">
         <div class="circle-history circle"><img class="rounded-circle" alt="avatar1" src="/media/history.svg" /></div>
         <div><h4>Monumenti e storia</h4></div>
-        <strong class="color-history">20%</strong>
+        <strong class="color-history">{{ $category->history }}%</strong>
       </div>
       <div class="col">
         <div class="circle-culture circle"><img class="rounded-circle" alt="avatar1" src="/media/culture.svg" /></div>
         <div class="ps-4"><h4>Città e cultura</h4></div>
-        <strong class="ps-4 color-culture">60%</strong>
+        <strong class="ps-4 color-culture">{{ $category->culture }}%</strong>
       </div>
     </div>
   </div>

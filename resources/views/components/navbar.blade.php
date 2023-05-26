@@ -1,6 +1,11 @@
-<nav class="navbar navbar-expand-lg bg-steelBlue fixed-top py-1">
-    <div class="container-fluid">
-    <img class="logo-custom" src="/media/colosseo.png" alt="">
+<nav class="navbar navbar-expand-lg bg-steelBlue fixed-top py-1" >
+    <div class="container-fluid" id="navbar">
+      <img class="logo-custom" src="/media/colosseo.png" alt="">
+      
+      <div class="navbar-toggler divTitleNav" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        
+        <h1 class="text-center color-Gold nome-navbar">Gold<span class="color-seagalBlue">Travel</span></h1>
+      </div>
+    
       <button class="navbar-toggler bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -42,7 +47,7 @@
             <li class="nav-item">
                 <a class=" @if(Route::currentRouteName() == 'revisor.index') active @endif nav-link btn btn-sm color-plumViolet position-relative" aria-current="page" href="{{route('revisor.index')}}">
                 Zona revisore
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                   {{App\Models\Article::toBeRevisionedCount()}}
                   <span class="visually-hidden">Messaggi non letti</span>
                 </span>
@@ -85,8 +90,8 @@
         </ul>
       
         <form action="{{ route('articles.search') }}" method="GET" class="d-flex" role="search">
-          <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Cerca</button>
+          <input name="searched" class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
+          <button class="btn bg-seagalBlue color-plumViolet" type="submit">Cerca</button>
         </form>
   
       </div>

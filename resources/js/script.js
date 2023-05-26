@@ -1,6 +1,6 @@
 let Title = document.querySelector('#title');
-let Div = document.querySelector('#divTitle')
-let Geo = document.querySelectorAll('option');
+let Div = document.querySelector('#divTitle');
+
 
 
 window.addEventListener('scroll' , ()=>{
@@ -13,4 +13,7 @@ window.addEventListener('scroll' , ()=>{
     }
 
 });
+
+
+
 

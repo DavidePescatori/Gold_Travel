@@ -41,7 +41,7 @@
         @endif
 
 
- <div class="container-fluid">
+ <div class="container-fluid titoloWelcome">
     <div class="row">
         <div id="divTitle" class="d-flex justify-content-center align-items-center divTitle">
             <h1 id="title" class="text-center color-Gold">Gold<span class="color-seagalBlue">Travel</span></h1>

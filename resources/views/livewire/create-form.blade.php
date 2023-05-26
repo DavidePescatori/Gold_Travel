@@ -9,11 +9,6 @@
         </div>
         
         <div class="">
-          <label for="name" class="form-label">Destinazione</label>
-          <input type="text" wire:model.lazy="name" class="form-control @error('name') is-invalid @enderror" id="name" wire:model.lazy="name">
-          @error('name') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="">
             <label for="category" class="form-label">Seleziona la tua regione</label>
         <select id="category" class="form-select  @error('category') is-invalid @enderror" wire:model.defer="category"  aria-label="Default select example">
             <option value="">Scegli la categoria</option>
@@ -26,6 +21,20 @@
         </select>
             @error('category') <span class="error">{{ $message }}</span> @enderror
         </div>
+        
+        <div>
+            <label for="name" class="pb-1">Città:</label>
+            <input type="text" type="hidden" id="name" wire:model="query" autocomplete="off" class="form-control @error('name') is-invalid @enderror" @focus="suggestionsOpen = true" @blur="suggestionsOpen = false ">
+            @if (!empty($suggestions))
+                <ul class="ulCittaCustom">
+                @foreach ($suggestions as $suggestion)
+                <li class="cittaCustom bold" wire:click="selectCity('{{ $suggestion }}')">{{ $suggestion }}</li>
+                @endforeach
+                </ul>
+            @endif
+            @error('name') <span class="error">{{ $message }}</span> @enderror
+        </div>
+
         
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo per notte</label>
@@ -135,7 +144,8 @@
         
       
         <button class="btn btn-dark">Pubblica Annuncio</button>
-          
+
+
         
         @if (session()->has('articleCreated'))
             <div class="alert snippet alert-success my-4 p-2">

@@ -29,8 +29,8 @@
     <div class="col-12 col-md-6">
       {{-- <div class="card-body"> --}}
         <h5 class="card-title">{{$article->name}}</h5>
-        <p class="card-text">Prezzo {{$article->price}}</p><br>
         <p class="card-text">Descrizione: {{$article->description}}</p><br>
+        <p class="card-text">Prezzo {{$article->price}}</p><br>
         <p class="card-text">Creato il: {{$article->created_at->format('d/m/Y')}}</p><br>
         <p class="card-text">Creato da: {{$article->user->name}}</p><br> 
         <a href="{{route('homepage')}}" class="btn btn-secondary">Torna indietro</a>

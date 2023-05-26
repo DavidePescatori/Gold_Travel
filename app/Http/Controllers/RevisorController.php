@@ -28,7 +28,7 @@ class RevisorController extends Controller
     public function rejectArticle(Article $article)
     {
         $article->setAccepted(false);
-        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
+        return redirect()->back()->with('message', 'Annuncio rifiutato correttamente');
     }
 
     public function becomeRevisor()
@@ -47,4 +47,12 @@ class RevisorController extends Controller
 
         return redirect('/')->with('message','Complimenti L\'utente è diventato revisore');
     }
+
+
+   public function rollbackArticle()
+   {
+       $article = Article::where('is_accepted', '!=', null)->get()->reverse()->first();
+       $article->setAccepted(null);
+       return redirect()->back()->with('message', 'Ripristino avvenuto correttamente');
+   }
 }

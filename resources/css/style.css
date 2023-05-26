@@ -404,7 +404,35 @@ li>a:hover{
 
 /* fine menù a tendina comuni  */
 
+.swiper {
+  /* height: 80%; */
+  width: 800px;
+}
 
+.revisor-title-custom{
+
+  font-family: monospace;
+
+
+}
+
+ .swiper-button-prev:hover {
+  width: 65px;
+  height: 65px;
+  color: #769ABE !important ;
+
+  border-radius: 50%;
+  border: 4px solid #ffc107;
+}
+
+.swiper-button-next:hover {
+  width: 65px;
+  height: 65px;
+  color: #ffc107 !important ;
+
+  border-radius: 50%;
+  border: 4px solid #769ABE;
+} 
 
 
 .divTitleNav{

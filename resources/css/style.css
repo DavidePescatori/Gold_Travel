@@ -388,3 +388,51 @@ li>a:hover{
 }
 
 /* fine menù a tendina comuni  */
+
+
+
+.divTitleNav{
+
+  border: 0px!important;
+}
+
+@media screen and (max-width: 1000px){
+  .nomeSito-navbar{
+
+   display: none;
+
+  }
+
+}
+
+@media screen and (max-width: 1260px){
+
+  .headerMargin{
+    margin-top: -0.8rem;
+    width: 100px;
+    margin-left: 27rem;
+    }
+
+
+}
+@media screen and (max-width: 1210px){
+
+  .titoloWelcome{
+
+    display: none;
+
+   }
+
+
+}
+
+@media screen and (max-width: 382px){
+
+  .nome-navbar{
+
+    font-size: 30px;
+
+  }
+
+
+}

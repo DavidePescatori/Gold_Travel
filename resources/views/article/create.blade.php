@@ -11,7 +11,7 @@
                 </div>
             </div> --}}
                 <div class="col-12 col-md-6">
-                <div class="card card-casa-rem">
+                <div class="card card-casa-rem formLavora">
                     <div class="card-body">
                         <img src="/media/hotel.jpg" class="card-img-top casa-custom align-items-center d-flex shadow" alt="immagine casa">
                       <p class=" display-1 card-text text-center">Dicono di noi</p>

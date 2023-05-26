@@ -114,7 +114,7 @@ border:none!important;
 font-size: 70px; 
 
 }
-a:hover{
+li>a:hover{
 
     color:#769ABE!important;
     
@@ -134,7 +134,8 @@ a:hover{
 
 .headerMargin{
     margin-top: -0.8rem;
-    
+    width: 100px;
+    margin-left: 30rem;
     }
 
 /* logo navbar */
@@ -145,10 +146,16 @@ a:hover{
 
    
 }
+
+.nomeSito-navbar{
+  padding-left: 2.8rem;
+  font-size: 40px;
+  
+}
 /* fine logo navbar */
 
   /* CSS dei cerchietti */
-  
+
   .circular-chart {
     display: block;
     margin: 10px auto;
@@ -322,3 +329,23 @@ a:hover{
   width: 18rem;
 }
   /* fine casa annuncio*/
+
+  .card-tizi-rem{
+    margin-top: 1rem;
+  }
+
+.cardTiziStaff{
+
+  border-radius: 50%;
+
+}
+
+.formLavora{
+
+  border-radius: 3%;
+}
+
+.formStaff{
+
+  border-radius: 25px;
+}

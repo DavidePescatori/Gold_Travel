@@ -10,6 +10,11 @@
           <li class="nav-item">
             <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'homepage') active @endif" href="{{route('homepage')}}">Home</a>
           </li>
+          @auth
+          <li class="nav-item">
+            <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'article.create') active @endif" aria-current="page" href="{{route('article.create')}}">Inserisci annuncio</a>
+          </li>
+          @endauth
 
               <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" >
@@ -24,20 +29,15 @@
                         <li><a class="dropdown-item" href="{{ route('category.show', compact('category')) }}">{{ ($category->name) }}</a></li>
                       @endforeach
                     </ul>
-                </li>
 
-              
+                </li>
         </ul>
 
-       
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-               
+        @if(Route::currentRouteName() != 'homepage')<h1 class="text-center color-Gold nomeSito-navbar">Gold<span class="color-seagalBlue">Travel</span></h1>@endif            
+ 
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">  
           @auth
-          <li class="nav-item">
-            <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'article.create') active @endif" aria-current="page" href="{{route('article.create')}}">Inserisci annuncio</a>
-          </li>
-
+          
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
                 <a class=" @if(Route::currentRouteName() == 'revisor.index') active @endif nav-link btn btn-sm color-plumViolet position-relative" aria-current="page" href="{{route('revisor.index')}}">

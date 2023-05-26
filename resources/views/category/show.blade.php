@@ -94,8 +94,8 @@
                 <h5 class="card-title">{{$article->name}}</h5>
                 <p class="card-text">prezzo: {{$article->price}}</p>
                 <p class="card-text">descrizione: {{$article->description}}</p>
-                <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
-                <a href="{{route('homepage')}}" class="my-2 border-top pt-2 border-dark card-link  btn btn-danger">Torna Indietro</a>
+                <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">Più informazioni</a>
+                <a href="{{route('homepage')}}" class="my-2 border-top card-link  btn btn-info">Torna Indietro</a>
               </div>
             </div>
           </div>

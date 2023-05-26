@@ -1,5 +1,5 @@
 <div>
-            <form class="shadow p-5 rounded bg-custom color-steelBlue" wire:submit.prevent="store">
+            <form class="shadow p-5 bg-custom color-steelBlue formLavora" wire:submit.prevent="store">
             @csrf
         <div class="div-custom rounded">
         </div>

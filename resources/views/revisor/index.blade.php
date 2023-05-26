@@ -24,8 +24,8 @@
             
 
                     <!-- Slider main container -->
-                    <h5 class="card-title display-4 text-uppercase fw-bold text-center">{{$article_to_check->name}}</h5> <br>
-                    <div id="Swiper" class="swiper">
+                    <h5 class="card-title display-4 text-uppercase fw-bold text-center mb-3">{{$article_to_check->name}}</h5> 
+                    <div class="swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
@@ -37,8 +37,9 @@
                         
                         
                         <!-- If we need navigation buttons -->
-                        <div id="buttonPrev" class="swiper-button-prev"></div>
-                        <div id="buttonNext" class="swiper-button-next"></div>
+                        <div class="swiper-button-prev px-3 py-1"></div> 
+                        <div class="swiper-button-next px-3 py-1"></div> 
+
                     </div>
                     <div class="card-body text-center ">
                         <p class="card-text pt-3">Descrizione: {{$article_to_check->description}}</p><br>

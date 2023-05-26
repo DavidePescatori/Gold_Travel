@@ -349,3 +349,36 @@ li>a:hover{
 
   border-radius: 25px;
 }
+
+/* menù a tendina comuni */
+.cittaCustom{
+
+  cursor: pointer;
+  list-style: none;
+ 
+}
+
+.ulCittaCustom{
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  overflow-y: auto;
+  max-height: 250px;
+
+}
+
+.ulCittaCustom::-webkit-scrollbar {
+  width: 0.0em;  /* Imposta la larghezza della scrollbar */
+}
+
+.cittaCustom:hover{
+
+  color: gray;
+}
+
+/* fine menù a tendina comuni  */

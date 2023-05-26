@@ -12,30 +12,28 @@
     
     @if($article_to_check)
     
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-6">
                 
                 
-                <div class="card">
+                <div class="card p-0">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://picsum.photos/300" class="d-block w-100" alt="foto di {{$article_to_check->name}}">
+                            <div class="carousel-item active ">
+                                <img src="https://picsum.photos/300"  class=" img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/301" class="d-block w-100" alt="foto di {{$article_to_check->name}}">
+                                <img src="https://picsum.photos/301" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/303" class="d-block w-100" alt="foto di {{$article_to_check->name}}">
+                                <img src="https://picsum.photos/302" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        
-                        
                         
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -52,28 +50,44 @@
                     </div>
                 </div>
                 
+                <div class="row py-5">
+                    <div class="col-6 d-flex justify-content-start">
+                        <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-success shadow">Accetta</button>
+                        </form>
+                    </div>
+                    
+                    <div class="col-6 d-flex justify-content-end">
+                        <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                        </form>
+                    </div>
+                </div>
                 
+            </div>
+            <div class="col-12 col-md-6">
                 
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="2000"  data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/300" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/301" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/302" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="row py-5">
-            <div class="col-12 col-md-6">
-                <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-success shadow">Accetta</button>
-                </form>
-            </div>
-            
-            <div class="col-12 col-md-6 text-end">
-                <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-                </form>
-            </div>
-        </div>
+        
     </div>
     @endif
 </x-layout>
@@ -83,5 +97,6 @@
     <a href="{{route('article.edit', compact('article'))}}" class="btn btn-dark">Modifica</a>
     @endif --}}   
     
-   
-{{-- 
+    
+    {{-- 
+        

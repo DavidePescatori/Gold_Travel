@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,11 +27,11 @@ class ContactController extends Controller
 
         } catch(Exception $error){
 
-            return redirect()->back()->with('emailError', 'si è verificato un problema con i nostri server, riprova tra qualche minuto');
+            return redirect()->back()->with('emailError', 'Si è verificato un problema con i nostri server, riprova tra qualche minuto');
         
         }
 
-         return redirect('/')->with('emailSent', 'abbiamo ricevuto la tua email ti risponderemo il prima possibile');
+         return redirect('/')->with('emailSent', 'Abbiamo ricevuto la tua candidatura, ti risponderemo il prima possibile');
 
     }
 }

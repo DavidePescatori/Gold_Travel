@@ -4,9 +4,11 @@
         <div class="div-custom rounded">
         </div>
 
-        <div class="insert-article-custom my-4">
+        <div class="insert-article-custom">
             
+            <img class="img-form-custom" src="/media/AnnuncioDefinitivo.png" alt="">
         </div>
+
         
         <div class="">
             <label for="category" class="form-label">Seleziona la tua regione</label>

@@ -2,14 +2,7 @@
 
     <div class="container-fluid py-5 bg-article-create-custom">
         <div class="row">
-            {{-- <div class="col-12 col-md-6 mt-5">
-                <div class="card card-areo">
-                    <div class="card-body">
-                        <img src="/media/aereo.png" class="card-img-top img-aereo align-items-center d-flex" alt="immagine aereo">
-                      <p class=" display-1 card-text text-center text-white">Preparati a viaggiare</p>
-                  </div>
-                </div>
-            </div> --}}
+           
                 <div class="col-12 col-md-6">
                 <div class="card card-casa-rem formLavora">
                     <div class="card-body">

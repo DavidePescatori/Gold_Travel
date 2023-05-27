@@ -523,6 +523,8 @@ li>a:hover{
 
 }
 
+/* media query header */
+
 @media screen and (max-width: 739px){
 
   .fontBord{
@@ -590,4 +592,4 @@ li>a:hover{
   
   }
 }
-
+/* fine media query header */

@@ -54,7 +54,9 @@
 <div>
     <div class="container-fluid my-5">
                 <div class="row justify-content-center">
-
+                            <div class="col-12">
+                                <h2 class="text-center color-steelBlue"></h2>
+                            </div>
                         @forelse ($articles as $article)
                             <div class="col-12 col-md-4">
 

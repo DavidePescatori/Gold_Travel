@@ -8,8 +8,12 @@ window.addEventListener('scroll' , ()=>{
     if(window.scrollY > 100){
     Title.classList.add('fixed-top', 'headerMargin');
     Title.style.transform = 'scale(0.6)';
-    Div.classList.remove('divTitle');
-    Div.classList.add('divTitle2');
+    Title.classList.remove('bg-h1');
+    
+    }else{
+        Title.classList.remove('fixed-top', 'headerMargin');
+    Title.style.transform = 'scale(1)';
+    Title.classList.add('bg-h1');
     }
 
 });

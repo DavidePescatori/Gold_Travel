@@ -39,7 +39,7 @@ return new class extends Migration
             "Toscana",
             "Trentino Alto Adige",
             "Umbria",
-            'Valle d\'Aosta',
+            "Valle di Aosta",
             "Veneto",
         ];
 

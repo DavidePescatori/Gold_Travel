@@ -265,13 +265,26 @@ li>a:hover{
 
   .insert-article-custom{
 
-    background-image: url(/public/media/AnnuncioDefinitivo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    height: 45vh;
+    height: 65vh;
+    margin-bottom: 60px !important;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
+  .img-form-custom{
+    height: 100%;
+    border-radius: 25px;
+    width: 100%;
+
+  }
+
+  .img-carousel-custom{
+
+    height: 500px !important;
+    width: 100% !important;
+
+  }
 
   .snippet{
 
@@ -387,7 +400,50 @@ li>a:hover{
   color: gray;
 }
 
+
+
 /* fine menù a tendina comuni  */
+
+.swiper {
+  /* height: 80%; */
+  width: 800px;
+}
+
+.revisor-title-custom{
+
+  font-family: monospace;
+
+
+}
+
+/*Tasti swiper personalizzati*/
+
+.swiper-button-next, .swiper-button-prev {
+
+  display: none; /* Nascondi i tasti dello swiper per impostazione predefinita */
+}  
+
+.swiper:hover .swiper-button-next {
+
+  display: block;
+  width: 65px;
+  height: 65px;
+  color: #ffc107 !important ;
+  background-color: #769ABE;
+  border-radius: 50%;
+  border: 4px solid #769ABE;
+} 
+
+.swiper:hover .swiper-button-prev {
+  display: block;
+  width: 65px;
+  height: 65px;
+  color: #769ABE !important ;
+  background-color: #ffc107;
+  border-radius: 50%;
+  border: 4px solid #ffc107;
+}
+
 
 
 
@@ -396,10 +452,40 @@ li>a:hover{
   border: 0px!important;
 }
 
+@media screen and (max-width: 600px){
+
+  /* .title-circle-custom{
+
+    font-size: 20px !important;
+
+
+  } */
+
+
+
+}
+
+
 @media screen and (max-width: 1000px){
   .nomeSito-navbar{
 
    display: none;
+
+  }
+
+  
+  .nav-numeretto-custom{
+
+    width: 120px;
+
+
+
+  }
+
+  .nav-numeretto-custom span{
+
+    /* float:left !important; */
+    left: 100% !important;
 
   }
 

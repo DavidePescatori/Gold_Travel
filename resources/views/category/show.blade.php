@@ -1,7 +1,7 @@
 <x-layout header="{{$category->name}}">
-    <div class="container py-5">
+    <div class="container py-5 circle-card-custom">
       <div class="row font-custom">
-        <div class="col-3 ">
+        <div class="col-6 col-md-3 ">
           <svg viewBox="0 0 36 36" class="circular-chart color-nature">
             <path class="circle-bg"
             d="M18 2.0845
@@ -16,11 +16,11 @@
             />
             <image xlink:href="/media/nature.svg" x="6" y="6" width="25" height="25" />
           </svg>
-          <h3 class="display-5 text-center">Natura e avventura</h3>
-          <p class="color-nature text-center display-5">{{$category->nature}}%</p>
+          <h3 class="display-5 title-circle-custom text-center">Natura e avventura</h3>
+          <p class="color-nature text-center display-5 fw-bold">{{$category->nature}}%</p>
 
         </div>
-        <div class="col-3">
+        <div class="col-6 col-md-3">
           <svg viewBox="0 0 36 36" class="circular-chart color-relax">
             <path class="circle-bg"
             d="M18 2.0845
@@ -35,10 +35,10 @@
             />
             <image xlink:href="/media/relax.svg" x="6" y="6" width="25" height="25" /> 
           </svg>
-          <h3 class="text-center display-5">Relax e mare</h3>
-          <p class="color-relax text-center display-5">{{$category->relax}}%</p>
+          <h3 class="text-center display-5 title-circle-custom">Relax e mare</h3>
+          <p class="color-relax text-center display-5 fw-bold">{{$category->relax}}%</p>
 
-        </div><div class="col-3">
+        </div><div class="col-6 col-md-3">
           <svg viewBox="0 0 36 36" class="circular-chart color-history">
             <path class="circle-bg"
             d="M18 2.0845
@@ -54,10 +54,10 @@
             <image xlink:href="/media/history.svg" x="7" y="5" width="23" height="25" /> 
           
           </svg>
-          <h3 class="display-5 text-center">Monumenti e storia</h3>
-          <p class="color-history text-center display-5">{{$category->history}}%</p>
+          <h3 class="display-5 text-center title-circle-custom">Monumenti e storia</h3>
+          <p class="color-history text-center display-5 fw-bold">{{$category->history}}%</p>
 
-        </div><div class="col-3">
+        </div><div class="col-6 col-md-3">
           <svg viewBox="0 0 36 36" class="circular-chart color-culture">
             <path class="circle-bg"
             d="M18 2.0845
@@ -73,8 +73,8 @@
             <image xlink:href="/media/culture.svg" x="6" y="6" width="25" height="25" /> 
           
           </svg>
-          <h3 class="display-5 text-center">Città e cultura</h3>
-          <p class="color-culture text-center display-5">{{$category->culture}}%</p>
+          <h3 class="display-5 text-center title-circle-custom">Città e cultura</h3>
+          <p class="color-culture text-center display-5 fw-bold">{{$category->culture}}%</p>
 
         </div>
       </div>

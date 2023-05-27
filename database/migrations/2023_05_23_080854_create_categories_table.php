@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        $categories= [
+        $categories = [
             "Abruzzo",
             "Basilicata",
             "Calabria",
@@ -39,7 +39,7 @@ return new class extends Migration
             "Toscana",
             "Trentino Alto Adige",
             "Umbria",
-            "Valle d\'Aosta",
+            'Valle d\'Aosta',
             "Veneto",
         ];
 

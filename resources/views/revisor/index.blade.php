@@ -42,10 +42,10 @@
 
                     </div>
                     <div class="card-body text-center ">
-                        <p class="card-text pt-3">Descrizione: {{$article_to_check->description}}</p><br>
-                        <p class="card-text">Prezzo {{$article_to_check->price}}€</p><br>
-                        <p class="card-text">Creato il: {{$article_to_check->created_at->format('d/m/Y')}}</p><br>
-                        <p class="card-text">Creato da: {{$article_to_check->user->name}}</p><br> 
+                        <p class="card-text pt-3 fs-4">Descrizione: {{$article_to_check->description}}</p><br>
+                        <p class="card-text fs-3 text-end">€  {{$article_to_check->price}}</p><br>
+                        <p class="card-text fw-lighter text-end">Creato da: {{$article_to_check->user->name}}</p>
+                        <p class="card-text fw-lighter fst-italic text-end">il: {{$article_to_check->created_at->format('d/m/Y')}}</p><br>
                         <a href="{{route('homepage')}}" class="btn btn-secondary">Torna indietro</a>
                     </div>
                     

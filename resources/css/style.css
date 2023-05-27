@@ -522,3 +522,72 @@ li>a:hover{
 
 
 }
+
+@media screen and (max-width: 739px){
+
+  .fontBord{
+  
+    /* font-family: arial, verdana, tahona, sans-serif; */
+    line-height: 150%;
+    color: hsl(300, 9%, 85%) ;
+    text-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
+    font-size: 55px;
+    font-family: 'Amaranth', sans-serif;
+    background-color: hsl(212, 55%, 23%, 0.7);
+    border-radius: 15px 15px 0px 0px;
+  
+    /* text-shadow: black 50px !important; */
+  
+  }
+  .shadow-custom{
+
+    height: 5.5rem;
+  
+  }
+  
+  .fontBord:hover{
+  
+  color:  #1A385A;
+  background-color: hsl(300, 9%, 85%, 1);
+  text-shadow: 0px 0 #5a5651, 0 0px #000000, 0px 0 #000000, 0 0px #000000 !important;
+  transition: 1s ease-out;
+  transform: scale(1.02);
+  }
+
+
+}
+
+
+@media screen and (max-width: 481px){
+
+  .fontBord{
+  
+    /* font-family: arial, verdana, tahona, sans-serif; */
+    line-height: 150%;
+    color: hsl(300, 9%, 85%) ;
+    text-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
+    font-size: 35px;
+    font-family: 'Amaranth', sans-serif;
+    background-color: hsl(212, 55%, 23%, 0.7);
+    border-radius: 15px 15px 0px 0px;
+  
+    /* text-shadow: black 50px !important; */
+  
+  }
+  
+  .fontBord:hover{
+  
+  color:  #1A385A;
+  background-color: hsl(300, 9%, 85%, 1);
+  text-shadow: 0px 0 #5a5651, 0 0px #000000, 0px 0 #000000, 0 0px #000000 !important;
+  transition: 1s ease-out;
+  transform: scale(1.02);
+  }
+
+  .shadow-custom{
+
+    height: 3.5rem;
+  
+  }
+}
+

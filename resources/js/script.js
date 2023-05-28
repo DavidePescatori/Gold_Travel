@@ -11,7 +11,7 @@ window.addEventListener('scroll' , ()=>{
     Title.classList.remove('bg-h1');
     
     }else{
-        Title.classList.remove('fixed-top', 'headerMargin');
+    Title.classList.remove('fixed-top', 'headerMargin');
     Title.style.transform = 'scale(1)';
     Title.classList.add('bg-h1');
     }

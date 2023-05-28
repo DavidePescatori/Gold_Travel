@@ -136,7 +136,7 @@ li>a:hover{
 .headerMargin{
     margin-top: -0.8rem;
     width: 100px;
-    margin-left: 30rem;
+    margin-left: 35rem;
     }
 
 /* logo navbar */
@@ -417,16 +417,18 @@ li>a:hover{
 
 }
 
-
+:root {
+  --swiper-navigation-size: 22px;
+}
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 65px;
-  height: 65px;
-  color: #ffc107 !important;
-  background-color: #769ABE;
+  font-weight: 900;
+  width: 45px;
+  height: 45px;
+  color: #1A385A !important;
+  background-color: #ffc107;
   border-radius: 50%;
-  border: 4px solid #769ABE;
   opacity: 0;
   transition: opacity 0.7s;
 }
@@ -594,17 +596,16 @@ li>a:hover{
 
 .sfondoWelcome{
 
-  /* background-image: url(/public/media/SfondoWelcome.jpg); */
-  background-image: url(/public/media/SfondoWelcome2.jpg);
-  
-  background-repeat: no-repeat;
+  background-image: url(/public/media/SfondoWelcome.jpg);  
+  /* background-repeat: no-repeat; */
   /* background-position: center; */
   background-size: cover;
 }
 
 .bg-h1{
- width: 30rem;
+width: 28rem;
 background: rgb(26, 56, 90) ;
-background: radial-gradient(circle, rgba(26,56,90,0.60) 70%, rgba(26,56,90,0) 100%); 
+background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 100%); 
+
 
 }

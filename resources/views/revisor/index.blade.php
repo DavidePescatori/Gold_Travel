@@ -1,4 +1,4 @@
-<x-layout header="">
+<x-layout header="Revisioni">
     <div class="container-fluid my-5">
         <div class="row">
             <div class="col-12 p-3 d-flex justify-content-center">

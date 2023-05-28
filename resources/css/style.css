@@ -94,6 +94,14 @@ color: #1A385A;
   cursor: default;
 }
 
+.fontBord:not(:hover){
+
+  transition: 1s ease-out;
+
+
+
+}
+
 .shadow-custom{
 
   height: 7.5rem;
@@ -473,6 +481,11 @@ transition: 1s;
 
   }
 
+  .distanza-card-navbar-custom{
+
+    margin-top: 150px !important;
+
+  }
   
   .nav-numeretto-custom{
 
@@ -602,6 +615,8 @@ transition: 1s;
   /* background-repeat: no-repeat; */
   /* background-position: center; */
   background-size: cover;
+  margin-top: 6vh;
+  height: 55vh;
 }
 
 .bg-h1{

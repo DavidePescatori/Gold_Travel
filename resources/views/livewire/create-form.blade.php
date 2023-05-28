@@ -92,6 +92,9 @@
                     </div>           
                     <div class="col-4">
                         <div class="mb-3">
+                            <div>
+                                <i class="fa fa-smoking p-2 text-start"></i>
+                            </div>
                             <label for="smoking" class="form-label ">Area fumatori</label>
                             <input type="checkbox" id="smoking">
                             @error('smoking') <span class="error">{{ $message }}</span> @enderror
@@ -138,7 +141,10 @@
                 @foreach ($services as $service)
                     <div class="d-flex">
                         <input id="services" type="checkbox" wire:model="selectedServices" value="{{$service->id}}">
-                        <span  class="ps-3">{{$service->name}}</span>
+                                                   
+                        <i class="fa {{ $service->icon }} p-2 text-start"></i>
+                        
+                        <span  class="">{{$service->name}}</span>
                     </div>
                 @endforeach
             </div>

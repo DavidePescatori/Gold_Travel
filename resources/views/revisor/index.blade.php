@@ -121,6 +121,7 @@
         
     </div>
     @endif
+    @if (App\Models\Article::toBeRevisionedCount() != App\Models\Article::all()->count() )
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 d-flex justify-content-center">
@@ -132,6 +133,7 @@
             </div>
         </div>
     </div>
+    @endif
 </x-layout>
 
 

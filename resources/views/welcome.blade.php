@@ -69,7 +69,7 @@
                         </div>
                     </div> --}}
                     
-                    <div class="card mb-3 shadow">
+                    <div class="card mb-3 shadow cardHover">
                         <div class="row g-0">
                             <div class="col-12 col-lg-4 p-3 d-flex justify-content-center">
                                 <img src="https://picsum.photos/{{300 + $loop->index}}" class="img-fluid rounded-start" alt="immagine">

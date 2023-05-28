@@ -46,7 +46,8 @@ class ArticleController extends Controller
     public function allarticle()
     {
         $articles = Article::where('is_accepted', true)->paginate(12);
-        return view('article.allarticle', compact('articles'));
+        $services = Service::all();
+        return view('article.allarticle', compact('articles', 'services'));
     }
 
     /**

@@ -21,8 +21,8 @@ class Service extends Model
             case 'Area fumatori':
                 return 'fa-smoking';
            
-            case 'Pagamento anticipato':
-                return 'fa-credit-card';
+            case 'pagamento anticipato':
+                return 'fa-sack-dollar';
 
             case 'Mezza pensione':
                 return 'fa-utensils';

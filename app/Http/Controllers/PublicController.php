@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Service;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -19,7 +20,8 @@ class PublicController extends Controller
 
     public function categoryShow(Category $category){
         // $category = Category::all();
-        return view('category.show', compact('category'));
+        $services= Service::all();
+        return view('category.show', compact('category', 'services'));
     }
 
     public function searchArticles(Request $request)

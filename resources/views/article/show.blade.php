@@ -35,7 +35,7 @@
           <h3>Servizi aggiuntivi:</h3>
 
           @foreach ($article->services as $service)
-              <div>
+              <div>                           
                   <i class="fa {{ $service->icon }} p-2 text-start"></i> {{ $service->name }}
               </div>
           @endforeach

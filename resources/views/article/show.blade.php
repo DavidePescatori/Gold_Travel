@@ -29,7 +29,25 @@
           <p class="card-text">Prezzo {{$article->price}}€</p><br>
           <p class="card-text">Creato il: {{$article->created_at->format('d/m/Y')}}</p><br>
           <p class="card-text">Creato da: {{$article->user->name}}</p><br> 
-          <a href="{{route('homepage')}}" class="btn btn-secondary">Torna indietro</a>
+
+          @if (count($article->services))
+
+          <h3>Servizi aggiuntivi:</h3>
+
+          @foreach ($article->services as $service)
+              <div>
+                  <i class="fa {{ $service->icon }} p-2 text-start"></i> {{ $service->name }}
+              </div>
+          @endforeach
+
+          
+          @endif
+
+          <div class="text-center">
+            <a href="{{route('homepage')}}" class="btn btn-secondary mt-4">Torna indietro</a>
+          </div>
+
+
         </div>
       </div>
     </div>

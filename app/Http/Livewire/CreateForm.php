@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Article;
+use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Validation\Rule;
@@ -14,7 +15,9 @@ class CreateForm extends Component
 {
     
     // public $name, $price, $description, $bEb, $pranzo, $parcheggio, $wifi, $smoking, $pulizia, $animali, $cancellazione, $pagamento, $servizio;
-    public $name, $price, $description, $category;
+    public $name, $price, $description, $category, $services;
+
+    public $selectedServices =[];
 
     // public per menù a tendina dei comuni
     public $query = '';
@@ -27,7 +30,6 @@ class CreateForm extends Component
         'name'=> 'required',
         'price'=> 'required|numeric',
         'description'=> 'required|min:10|max:300',
-        'category'=> 'required',
     ];
     
     
@@ -69,12 +71,19 @@ class CreateForm extends Component
 
       //fine funzione per menù a tendina comuni
     
+      public function mount()
+      {
+        $this->services = Service::all();
+      }
     
-    public function store(){
+
+
+      public function store(){
         
         $this->validate();
         
         $category = Category::find($this->category);
+
         
         $article = $category->articles()->create([
             
@@ -82,10 +91,16 @@ class CreateForm extends Component
             'price' => $this->price,
             'description' => $this->description,
             'category'=> $this->category,
+
             
         ]);
+
+        $selectedServices = Service::whereIn('id', $this->selectedServices)->get();
+    
+        $article->services()->sync($selectedServices);
         
         Auth::user()->articles()->save($article);
+
         
         session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio.');
         
@@ -113,6 +128,7 @@ class CreateForm extends Component
     
     public function render()
     {
+
         return view('livewire.create-form');
     }
 }

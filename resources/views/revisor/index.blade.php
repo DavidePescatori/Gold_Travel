@@ -46,7 +46,23 @@
                         <p class="card-text fs-3 text-end">€  {{$article_to_check->price}}</p><br>
                         <p class="card-text fw-lighter text-end">Creato da: {{$article_to_check->user->name}}</p>
                         <p class="card-text fw-lighter fst-italic text-end">il: {{$article_to_check->created_at->format('d/m/Y')}}</p><br>
-                        <a href="{{route('homepage')}}" class="btn btn-secondary">Torna indietro</a>
+
+                        <div class="card-body text-center">
+                            @if (count($article_to_check->services))
+
+                            <h3 class="text-end">Servizi aggiuntivi:</h3>
+
+                            @foreach ($article_to_check->services as $service)
+                                <div class="text-end">
+                                    <i class="fa {{ $service->icon }} p-2 text-end"></i> {{ $service->name }}
+                                </div>
+                            @endforeach
+
+                        
+                        @endif
+                        </div>
+
+                        <a href="{{route('homepage')}}" class="btn btn-secondary mt-5">Torna indietro</a>
                     </div>
                     
                     

@@ -58,10 +58,10 @@
             </div>
         @endif--}}
 
-            <div class="col-12">
+            {{-- <div class="col-12">
                 <h5>Seleziona i servizi offerti per i tuoi ospiti</h2>
-            </div>
-            <div class="container-fluid">
+            </div> --}}
+            {{-- <div class="container-fluid">
                 <div class="row">
                     <div class="col-4">
                         <div class="mb-3">
@@ -129,7 +129,21 @@
                         </div> 
                     </div>
                 </div>
+            </div> --}}
+
+            @if ($services)
+
+            <div class="mb-3">
+                <label for="services" class="form-label">Servizi Aggiuntivi</label><br>
+                @foreach ($services as $service)
+                    <div class="d-flex">
+                        <input id="services" type="checkbox" wire:model="selectedServices" value="{{$service->id}}">
+                        <span  class="ps-3">{{$service->name}}</span>
+                    </div>
+                @endforeach
             </div>
+
+            @endif
 
         
         

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 // use App\Models\Article;
+use App\Models\Service;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
@@ -59,5 +60,10 @@ class Article extends Model
     public function category()
     {
        return $this->belongsTo(Category::class); 
+    }
+
+    public function services(){
+
+        return $this->belongsToMany(Service::class);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Article;
+use App\Models\Service;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,8 +15,12 @@ class RevisorController extends Controller
 {
     public function index()
     {
+        $article = Article::all();
+
+        $services = Service::all();
+
         $article_to_check = Article::where('is_accepted', null)->first();
-        return view('revisor.index', compact('article_to_check'));
+        return view('revisor.index', compact('article_to_check', 'article', 'services'));
     }
 
     public function acceptArticle(Article $article)

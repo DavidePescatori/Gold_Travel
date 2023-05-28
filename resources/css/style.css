@@ -254,15 +254,6 @@ li>a:hover{
 
   }
 
-  .header-image{
-
-    background-image: url(/public/media/headerImage.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: top;
-    margin-top: 6vh;
-    height: 40vh;
-  }
 
   .insert-article-custom{
 
@@ -608,4 +599,214 @@ background: rgb(26, 56, 90) ;
 background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 100%); 
 
 
+}
+
+/* immagini header per categoria */
+.abruzzo{
+  
+  background-image: url('/public/media/abruzzo-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.basilicata {
+  
+  background-image: url('/public/media/basilicata-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 40%;
+  margin-top: 6vh;
+  height: 55vh;
+  
+}
+
+.calabria {
+  
+  background-image: url('/public/media/calabria-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 85%;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.campania {
+  
+  background-image: url('/public/media/campania-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.emilia-romagna {
+  
+  background-image: url('/public/media/emilia-romagna-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 20%;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.friuli-venezia-giulia {
+  
+  background-image: url('/public/media/friuli-venezia-giulia-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 50% ;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.lazio {
+  
+  background-image: url('/public/media/lazio-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 60%;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.liguria {
+  
+  background-image: url('/public/media/liguria-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.lombardia {
+  
+  background-image: url('/public/media/lombardia-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.marche {
+  
+  background-image: url('/public/media/marche-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.molise {
+  
+  background-image: url('/public/media/molise-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.piemonte {
+  
+  background-image: url('/public/media/piemonte-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: top;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.puglia {
+  
+  background-image: url('/public/media/puglia-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 50%;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.sardegna {
+  
+  background-image: url('/public/media/sardegna-image.jpg') !important;
+  background-size: cover;
+  background-position: 100% 25%;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.sicilia {
+  
+  background-image: url('/public/media/sicilia-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.toscana {
+  
+  background-image: url('/public/media/toscana-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 30% ;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.trentino-alto-adige {
+  
+  background-image: url('/public/media/trentino-alto-adige-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.umbria {
+  
+  background-image: url('/public/media/umbria-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.valle-di-aosta {
+  
+  background-image: url('/public/media/valle-di-aosta-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 75%;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.veneto {
+  
+  background-image: url('/public/media/veneto-image.jpg') !important;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 100% 45%;
+  margin-top: 6vh;
+  height: 55vh;
+}
+
+.header-image{
+  background-image: url(/public/media/default-image.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin-top: 6vh;
+  height: 55vh;
 }

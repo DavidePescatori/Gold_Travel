@@ -69,14 +69,94 @@ const swiper = new Swiper('.swiper', {
     // });
     
     
-    
-let check = document.querySelector("#valle");
+
+//  titoli categorie
+let check = document.querySelector("#check");
 let hidden = document.querySelector("#hidden");
 let show = document.querySelector("#show");
- 
-if (check.classList.contains('valle')) {
+let header = document.querySelector("#header");
+
+switch (check.classList[1]) {
+  case 'id1':
+    header.classList.remove('header-image');
+    header.classList.add('abruzzo');
+    break;
+  case 'id2':
+    header.classList.remove('header-image');
+    header.classList.add('basilicata');
+    break;
+  case 'id3':
+    header.classList.remove('header-image');
+    header.classList.add('calabria');
+    break;
+  case 'id4':
+    header.classList.remove('header-image');
+    header.classList.add('campania');
+    break;
+  case 'id5':
+    header.classList.remove('header-image');
+    header.classList.add('emilia-romagna');
+    break;
+  case 'id6':
+    header.classList.remove('header-image');
+    header.classList.add('friuli-venezia-giulia');
+    break;
+  case 'id7':
+    header.classList.remove('header-image');
+    header.classList.add('lazio');
+    break;
+  case 'id8':
+    header.classList.remove('header-image');
+    header.classList.add('liguria');
+    break;
+  case 'id9':
+    header.classList.remove('header-image');
+    header.classList.add('lombardia');
+    break;
+  case 'id10':
+    header.classList.remove('header-image');
+    header.classList.add('marche');
+    break;
+  case 'id11':
+    header.classList.remove('header-image');
+    header.classList.add('molise');
+    break;
+  case 'id12':
+    header.classList.remove('header-image');
+    header.classList.add('piemonte');
+    break;
+  case 'id13':
+    header.classList.remove('header-image');
+    header.classList.add('puglia');
+    break;
+  case 'id14':
+    header.classList.remove('header-image');
+    header.classList.add('sardegna');
+    break;
+  case 'id15':
+    header.classList.remove('header-image');
+    header.classList.add('sicilia');
+    break;
+  case 'id16':
+    header.classList.remove('header-image');
+    header.classList.add('toscana');
+    break;
+  case 'id17':
+    header.classList.remove('header-image');
+    header.classList.add('trentino-alto-adige');
+    break;
+  case 'id18':
+    header.classList.remove('header-image');
+    header.classList.add('umbria');
+    break;
+  case 'id19':
     hidden.classList.remove('d-none');
     show.classList.add('d-none');
+    header.classList.remove('header-image');
+    header.classList.add("valle-di-aosta");
+    break;
+  case 'id20':
+    header.classList.remove('header-image');
+    header.classList.add('veneto');
+    break;
 }
-
-    

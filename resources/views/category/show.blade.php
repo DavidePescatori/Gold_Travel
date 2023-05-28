@@ -1,6 +1,6 @@
 
 <x-layout header="{{$category->name}}">
-  <span id="valle" class="d-none @if($category->name == "Valle d'Aosta") valle @endif"></span>
+<span id="check" class="d-none id{{$category->id}}"></span>
     <div class="container py-5 circle-card-custom">
       <div class="row font-custom">
         <div class="col-6 col-md-3 ">

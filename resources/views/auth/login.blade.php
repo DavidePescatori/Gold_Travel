@@ -12,6 +12,7 @@
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
+                                    {{-- <li>Dati non corrispondenti!</li> --}}
                                 @endforeach
                             </ul>
                         </div>

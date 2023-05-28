@@ -12,6 +12,7 @@
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
+                                    {{-- <li>Dati inseriti non validi</li> --}}
                                 @endforeach
                             </ul>
                         </div>

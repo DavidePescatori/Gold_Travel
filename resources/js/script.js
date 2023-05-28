@@ -70,6 +70,13 @@ const swiper = new Swiper('.swiper', {
     
     
     
-    
-    
+let check = document.querySelector("#valle");
+let hidden = document.querySelector("#hidden");
+let show = document.querySelector("#show");
+ 
+if (check.classList.contains('valle')) {
+    hidden.classList.remove('d-none');
+    show.classList.add('d-none');
+}
+
     

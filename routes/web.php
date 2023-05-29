@@ -54,3 +54,5 @@ Route::get('/ricerca/annuncio', [PublicController::class, 'searchArticles'])->na
 // Annulla annuncio
 Route::patch('/rollback/annuncio', [RevisorController::class, 'rollbackArticle'])->name('revisor.rollbackArticle');
 
+// Cambio lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');

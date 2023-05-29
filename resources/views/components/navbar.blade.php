@@ -93,6 +93,18 @@
         <input name="searched" class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
         <button class="btn bg-seagalBlue color-plumViolet" type="submit">Cerca</button>
       </form>
+
+      <li class="nav-item">
+        <x-_locale lang="it" />
+      </li>
+
+      <li class="nav-item">
+        <x-_locale lang="en" />
+      </li>
+
+      <li class="nav-item">
+        <x-_locale lang="es" />
+      </li>
       
     </div>
   </div>

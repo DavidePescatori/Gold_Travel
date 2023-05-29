@@ -50,89 +50,30 @@
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </div>
         
-
-        {{-- @if ($image)
-            <p class="text-white">Antrepima immagine:</p>
-            <div class="mt-3">
-                <img src="{{ $image->temporaryUrl() }}">
-            </div>
-        @endif--}}
-
-            {{-- <div class="col-12">
-                <h5>Seleziona i servizi offerti per i tuoi ospiti</h2>
-            </div> --}}
-            {{-- <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="mb-3">
-                           <label for="bEb" class="form-label ">B&B</label>
-                           <input type="checkbox" id="bEb">
-                           @error('bEb') <span class="error">{{ $message }}</span> @enderror
-                        </div>
-               
-                       <div class="mb-3">
-                           <label for="pranzo" class="form-label ">Mezza pensione</label>
-                           <input type="checkbox" id="pranzo">
-                           @error('pranzo') <span class="error">{{ $message }}</span> @enderror
-                       </div>
-               
-               
-                       <div class="mb-3">
-                           <label for="parcheggio" class="form-label ">Parcheggio</label>
-                           <input type="checkbox" id="parcheggio">
-                           @error('parcheggio') <span class="error">{{ $message }}</span> @enderror
-                       </div>
-               
-                       <div class="mb-3">
-                           <label for="wifi" class="form-label ">Wi-Fi</label>
-                           <input type="checkbox" id="wifi">
-                           @error('wifi') <span class="error">{{ $message }}</span> @enderror
-                       </div>
-
-                    </div>           
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <div>
-                                <i class="fa fa-smoking p-2 text-start"></i>
-                            </div>
-                            <label for="smoking" class="form-label ">Area fumatori</label>
-                            <input type="checkbox" id="smoking">
-                            @error('smoking') <span class="error">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="pulizia" class="form-label ">Pulizia della stanza</label>
-                            <input type="checkbox" id="pulizia">
-                            @error('pulizia') <span class="error">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="animali" class="form-label ">Animali ammessi</label>
-                            <input type="checkbox" id="animali">
-                            @error('animali') <span class="error">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="cancellazione" class="form-label ">Cancellazione Gratuita</label>
-                            <input type="checkbox" id="cancellazione">
-                            @error('cancellazione') <span class="error">{{ $message }}</span> @enderror
-                        </div>       
+    <div class="mb-3">
+        <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+        @error('temporary_images.*')
+            <p class="text-danger mt-2">{{$message}}</p>
+        @enderror    
+    </div>
+         @if (!empty($images))
+        <div class="row">
+            <div class="col-12">
+                <p class="text-white">Antrepima immagine:</p>
+                <div class="row border border-4 border-info rounded shadow py-4">
+                    @foreach ($images as $key => $image)
+                    <div class="col-12 my-3">
+                        <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>    
                     </div>
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <label for="pagamento" class="form-label ">Pagamento Anticipato</label>
-                            <input type="checkbox" id="pagamento">
-                            @error('pagamento') <span class="error">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="servizio" class="form-label ">Servizio in camera</label>
-                            <input type="checkbox" id="servizio">
-                            @error('servizio') <span class="error">{{ $message }}</span> @enderror
-                        </div> 
-                    </div>
+                    @endforeach
                 </div>
-            </div> --}}
+
+            </div>
+        </div>
+           
+        @endif
+
 
             @if ($services)
 
@@ -149,11 +90,7 @@
                 @endforeach
             </div>
 
-            @endif
-
-        
-        
-        
+            @endif      
       
         <button class="btn btn-dark">Pubblica Annuncio</button>
 
@@ -164,6 +101,7 @@
                 {{ session('articleCreated') }}
             </div>
         @endif
+
       </form>
     </div>
-
+</div>

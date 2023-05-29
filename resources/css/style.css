@@ -847,3 +847,10 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
  
   border-radius: 15px;
 }
+
+.img-preview{
+  height: 300px; 
+  background-repeat:no-repeat;
+  background-size:contain;
+
+}

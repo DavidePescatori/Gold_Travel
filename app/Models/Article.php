@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 // use App\Models\Article;
+use App\Models\Image;
 use App\Models\Service;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
@@ -65,5 +66,9 @@ class Article extends Model
     public function services(){
 
         return $this->belongsToMany(Service::class);
+    }
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 }

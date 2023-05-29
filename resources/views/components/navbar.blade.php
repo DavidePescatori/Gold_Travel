@@ -17,17 +17,17 @@
         </li>
         @auth
         <li class="nav-item">
-          <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'article.create') active @endif" aria-current="page" href="{{route('article.create')}}">Inserisci annuncio</a>
+          <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'article.create') active @endif" aria-current="page" href="{{route('article.create')}}">{{__('ui.Annuncio')}}</a>
         </li>
         @endauth
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" >
-            Dove vuoi andare?
+            {{__('ui.Dove')}}
           </a>
           <ul id="categorie" class="navbar-dropdown dropdown-menu bg-seagalBlue color-plumViolet" aria-labelledby="categoriesDropdown">
             <li class="nav-item">
-              <a class="dropdown-item" href=" {{route('article.allarticle')}}">Tutti gli annunci</a>
+              <a class="dropdown-item" href=" {{route('article.allarticle')}}">{{__('ui.TuttiAnnunci')}}</a>
             </li>
             @foreach($categories as $category)
             <li><hr class="dropdown-divider"></li>
@@ -46,7 +46,7 @@
         @if (Auth::user()->is_revisor)
         <li class="nav-item nav-numeretto-custom">
           <a class=" @if(Route::currentRouteName() == 'revisor.index') active @endif nav-link color-plumViolet position-relative" aria-current="page" href="{{route('revisor.index')}}">
-            Zona revisore
+            {{__('ui.Revisore')}}
             <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
               {{App\Models\Article::toBeRevisionedCount()}}
               <span class="visually-hidden">Messaggi non letti</span>
@@ -55,18 +55,18 @@
         </li>
         @else
         <li class="nav-item">
-          <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'mail.become.revisor') active @endif" aria-current="page" href="{{route('mail.become.revisor')}}">Lavora con noi</a>
+          <a class="nav-link color-plumViolet @if(Route::currentRouteName() == 'mail.become.revisor') active @endif" aria-current="page" href="{{route('mail.become.revisor')}}"> {{__('ui.Lavora')}}</a>
         </li>
         @endif
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color-plumViolet" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ciao {{Auth::user()->name}}
+            {{__('ui.Ciao')}} {{Auth::user()->name}}
           </a>
           <ul class="dropdown-menu bg-seagalBlue color-plumViolet">
-            <li><a class="dropdown-item href="#">Profilo</a></li>
+            <li><a class="dropdown-item href="#">{{__('ui.Profilo')}}</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{__('ui.Logout')}}</a></li>
             <form id="form-logout" method="POST" action="{{route('logout')}}" class="d-none">@csrf</form>
           </ul>
         </li>
@@ -77,11 +77,11 @@
         @else
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color-plumViolet" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ciao Ospite
+            {{__('ui.Guest')}}
           </a>
           <ul class="dropdown-menu bg-seagalBlue color-plumViolet">
-            <li><a class="dropdown-item color-plumViolet" href="{{route('register')}}">Registrati</a></li>
-            <li><a class="dropdown-item color-plumViolet" href="{{route('login')}}">Accedi</a></li>
+            <li><a class="dropdown-item color-plumViolet" href="{{route('register')}}">{{__('ui.Registrati')}}</a></li>
+            <li><a class="dropdown-item color-plumViolet" href="{{route('login')}}">{{__('ui.Accedi')}}</a></li>
           </ul>
         </li>
         
@@ -90,22 +90,25 @@
       </ul>
       
       <form action="{{ route('articles.search') }}" method="GET" class="d-flex" role="search">
-        <input name="searched" class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
-        <button class="btn bg-seagalBlue color-plumViolet" type="submit">Cerca</button>
+        <input name="searched" class="form-control me-2" type="search" placeholder="{{__('ui.Search')}}" aria-label="Search">
+        <button class="btn bg-seagalBlue color-plumViolet" type="submit">{{__('ui.Search')}}</button>
       </form>
-
-      <li class="nav-item">
-        <x-_locale lang="it" />
-      </li>
-
-      <li class="nav-item">
-        <x-_locale lang="en" />
-      </li>
-
-      <li class="nav-item">
-        <x-_locale lang="es" />
-      </li>
+      
+      
+      <div class="nav-item dropdown mx-3">
+        <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="ddMenu" role="button" data-bs-toggle="dropdown" >
+          <i class="fa-solid fa-2x fa-earth-americas color-Gold"></i>
+        </a>
+        <div id="lingue" class="navbar-dropdown dropdown-menu dropdown-menu-left bg-seagalBlue color-plumViolet" aria-labelledby="ddMenu">
+          <a class="dropdown-item" href=" #"><x-_locale lang="it" /></a>
+          <a class="dropdown-item" href=" #"><x-_locale lang="en" /></a>
+          <a class="dropdown-item" href=" #"><x-_locale lang="es" /></a>
+        </div>
+      </div>
+      
       
     </div>
   </div>
 </nav>
+
+

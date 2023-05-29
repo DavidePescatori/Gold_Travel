@@ -30,6 +30,7 @@ return new class extends Migration
             'Animali ammessi',
             'Wi-fi',
             'Cancellazione Gratuita',
+
             
         ];
 

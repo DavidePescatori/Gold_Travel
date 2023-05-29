@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Lang;
 
 class ArticleController extends Controller
 {

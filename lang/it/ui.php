@@ -27,9 +27,24 @@ return[
     'CreaAnnuncioHeader' => 'Crea il tuo annuncio',
     'DiconoNoi' => 'Dicono di noi',
     'CreatoDa' => 'Creato da:',
+    'CreatoIl' => 'Creato il',
     'Prezzo' => 'Prezzo',
     'PiùInfo' => 'Più informazioni',
     'NoAnnunci' => 'Non ci sono ancora annunci inseriti',
+    'regione'=> 'Seleziona la regione',
+    'città' => 'Seleziona città',
+    'prezzoNotte' => 'Prezzo per notte',
+    'Descrizione' => 'Descrizione',
+    'Servizi' => 'Servizi aggiuntivi',
+    'PubblicaAnnuncio' => 'Pubblica annuncio',
+    'TornaIndietro' => 'Torna Indietro',
+    'NaturaAvventura' => 'Natura e Avventura',
+    'RelaxMare' => 'Relax e Mare',
+    'Monumenti' => 'Monumenti e Storia',
+    'Cultura' => 'Città e Cultura',
+
+    
+    
 
 
 

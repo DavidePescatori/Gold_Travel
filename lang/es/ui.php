@@ -27,9 +27,28 @@ return[
     'CreaAnnuncioHeader' => 'Cree su anuncio',
     'DiconoNoi' => 'Lo que dicen de nosotros',
     'CreatoDa' => 'Creado por:',
+    'CreatoIl' => 'Creado en',
     'Prezzo' => 'Precio',
     'PiùInfo' => 'Más información',
     'NoAnnunci' => 'Aún no hay anuncios publicados',
+    'regione ' => 'Seleccionar región',
+    'città' => 'Seleccione una ciudad',
+    'prezzoNotte' => 'Precio por noche',
+    'Descrizione' => 'Descripciòn',
+    'Servizi' => 'Servicios adicionales',
+    'PubblicaAnnuncio' => 'Publicar anuncio',
+    'TornaIndietro' => 'Volver arriba',
+    'NaturaAvventura' => 'Naturalesa y Aventura',
+    'RelaxMare' => 'Relajaciòn y Mar',
+    'Monumenti' => 'Monumentos y Historia',
+    'Cultura' => 'Ciudad y Cultura',
+
+
+
+
+
+
+
     
 
 

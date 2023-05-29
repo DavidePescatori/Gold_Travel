@@ -27,9 +27,28 @@ return[
     'CreaAnnuncioHeader' => 'Create your announcement',
     'DiconoNoi' => 'They say about us',
     'CreatoDa' => 'Created by:',
+    'CreatoIl' => 'Created',
     'Prezzo' => 'Price',
     'PiùInfo' => 'More Info',
     'NoAnnunci' => 'There are no ads posted yet',
+    'regione'=> 'Select region',
+    'città' => 'Select city',
+    'prezzoNotte' => 'Price per night',
+    'Descrizione' => 'Description',
+    'Servizi' => 'Additional services',
+    'PubblicaAnnuncio' => 'Post ad',
+    'TornaIndietro' => 'Go back',
+    'NaturaAvventura' => 'Adventure and Nature',
+    'RelaxMare' => 'Sea and Relax',
+    'Monumenti' => 'Monuments and History',
+    'Cultura' => 'City and Culture',
+
+
+
+
+
+
+
 
 
 

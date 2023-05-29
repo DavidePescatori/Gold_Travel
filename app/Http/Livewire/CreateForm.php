@@ -31,8 +31,8 @@ class CreateForm extends Component
         'price'=> 'required|numeric',
         'description'=> 'required|min:10|max:300',
     ];
-    
-    
+
+   
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);

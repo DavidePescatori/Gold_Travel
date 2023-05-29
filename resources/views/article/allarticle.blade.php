@@ -26,7 +26,7 @@
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-3  p-3 d-flex justify-content-center cardHover">
                 <div class="card card-custom-rem text-center shadow">
-                    <img src="https://picsum.photos/{{300 + $loop->index}}" class="card-img-top p-3 rounded" alt="immagine">
+                    <img src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : 'https://picsum.photos/300'}}" class="card-img-top p-3 rounded" alt="immagine">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->name}}</h5>
                         <p class="card-text">prezzo: {{$article->price}}</p>
@@ -42,9 +42,9 @@
                 <a href="{{route('article.create')}}" class="btn btn-warning">Inserisci il tuo annuncio</a>
             </div>
             @endforelse
+            {{$articles->links()}}
         </div>
     </div>
-    {{$articles->links()}}
     
     
     

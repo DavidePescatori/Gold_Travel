@@ -19,23 +19,47 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6">
-                
-          
-            
+               
 
                     <!-- Slider main container -->
                     <h5 class="card-title display-4 text-uppercase fw-bold text-center mb-3">{{$article_to_check->name}}</h5> 
+                    @if ($article_to_check->images)
                     <div class="swiper">
                         <!-- Additional required wrapper -->
+                        
                         <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide"><img src="https://picsum.photos/800/600" alt="foto di {{$article_to_check->name}}"></div>
-                            <div class="swiper-slide"><img src="https://picsum.photos/801/601" alt="foto di {{$article_to_check->name}}"></div>
-                            <div class="swiper-slide"><img src="https://picsum.photos/802/602" alt="foto di {{$article_to_check->name}}"></div>
-                            
+                            @foreach ($article_to_check->images as $image)
+                            <div class="swiper-slide @if($loop->first)active @endif">
+                                <img src="{{Storage::url($image->path)}}" alt="foto di {{$article_to_check->name}}">
+                            </div>                                           
+                           @endforeach
                         </div>
+                    </div>    
+                    @else
+                    <div class="card p-0">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active ">
+                                    <img src="https://picsum.photos/300"  class=" img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/301" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/302" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
                         
-                        
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    @endif    
                         <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev px-3 py-1"></div> 
                         <div class="swiper-button-next px-3 py-1"></div> 
@@ -44,7 +68,7 @@
                     <div class="card-body text-center ">
                         <p class="card-text pt-3 fs-4">Descrizione: {{$article_to_check->description}}</p><br>
                         <p class="card-text fs-3 text-end">€  {{$article_to_check->price}}</p><br>
-                        <p class="card-text fw-lighter text-end">Creato da: {{$article_to_check->user->name}}</p>
+                        <p class="card-text fw-lighter text-end">Creato da: {{$article_to_check->users->name}}</p> 
                         <p class="card-text fw-lighter fst-italic text-end">il: {{$article_to_check->created_at->format('d/m/Y')}}</p><br>
 
                         <div class="card-body text-center">

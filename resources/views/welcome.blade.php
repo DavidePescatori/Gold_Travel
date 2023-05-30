@@ -53,8 +53,8 @@
     <div class="container-fluid my-5 distanza-card-navbar-custom">
         <div class="row justify-content-center">
                 <div class="col-12">
-                    <p class="h2 my-2 fw-bold">{{__('ui.allArticles')}}</p>
-                    <div class="row">
+                    <p class="h2 my-2 fw-bold text-center">{{__('ui.allArticles')}}</p>
+                    <div class="row justify-content-center">
                         @forelse ($articles as $article)
                         <div class="col-9 col-md-4 my-3">
                             

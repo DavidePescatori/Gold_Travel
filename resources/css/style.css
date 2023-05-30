@@ -437,7 +437,7 @@ transition: 1s;
   width: 45px;
   height: 45px;
   color: #1A385A !important;
-  background-color: #ffc107;
+  background-color: rgb(255, 193, 7);
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.7s;
@@ -462,14 +462,18 @@ transition: 1s;
 
 @media screen and (max-width: 600px){
 
-  /* .title-circle-custom{
 
-    font-size: 20px !important;
+  .img-custom-swiper{
 
-
-  } */
+    width: 300px;
 
 
+  }
+
+  .swiper {
+    /* height: 80%; */
+    width: 300px;
+  }
 
 }
 

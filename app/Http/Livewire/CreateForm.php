@@ -175,13 +175,3 @@ class CreateForm extends Component
         return view('livewire.create-form');
     }
 }
-
-
-
-
-
-
-
-
-
-

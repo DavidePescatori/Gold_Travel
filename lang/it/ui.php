@@ -42,6 +42,23 @@ return[
     'RelaxMare' => 'Relax e Mare',
     'Monumenti' => 'Monumenti e Storia',
     'Cultura' => 'Città e Cultura',
+    'contattaci' => 'Contattaci',
+    'NostroStaff'=> 'Il nostro staff',
+    'CompilaForm'=> 'Compila questo form e ti contatteremo al più presto!!',
+    'NomeCognome'=> 'Nome e Cognome',
+    'Messaggio'=> 'Il tuo messaggio',
+    'TuoiDati'=> 'I tuoi dati',
+    'Candidatura'=> 'Invia la tua candidatura',
+    'AnnuncioRevisionare' => 'Annunci da revisionare',
+    'NonRevisionare' => 'Non ci sono annunci da revisionare',
+    'Revisioni'=> 'Revisioni',
+    'Accetta'=> 'Accetta',
+    'Rifiuta'=> 'Rifiuta',
+    'AnnullaOperazione' => 'Annulla ultima operazione',
+    'DettaglioAnnuncio' => 'Dettaglio Annuncio',
+
+     
+
 
     
     

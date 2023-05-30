@@ -42,6 +42,28 @@ return[
     'RelaxMare' => 'Sea and Relax',
     'Monumenti' => 'Monuments and History',
     'Cultura' => 'City and Culture',
+    'contattaci' => 'Contact us',
+    'NostroStaff'=> 'Our staff',
+    'CompilaForm'=> 'Fill out this form and we will contact you as soon as possible!!',
+    'NomeCognome'=> 'Name and Surname',
+    'Messaggio'=> 'Your message',
+    'TuoiDati'=> 'Your details',
+    'Candidatura'=> 'Send your application',
+    'AnnuncioRevisionare' => 'Ads for review',
+    'NonRevisionare' => 'There are no ads to review',
+    'Revisioni'=> 'Reviews',
+    'Accetta'=> 'Accept',
+    'Rifiuta'=> 'Reject',
+    'AnnullaOperazione' => 'Undo last operation',
+    'DettaglioAnnuncio' => 'Announcement Detail',
+
+
+
+
+
+
+
+
 
 
 

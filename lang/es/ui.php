@@ -42,6 +42,27 @@ return[
     'RelaxMare' => 'Relajaciòn y Mar',
     'Monumenti' => 'Monumentos y Historia',
     'Cultura' => 'Ciudad y Cultura',
+    'contattaci' => 'Póngase en contacto con nosotros',
+    'NostroStaff'=> 'Nuestro personal',
+    'CompilaForm'=> 'Rellene este formulario y nos pondremos en contacto con usted lo antes posible.',
+    'NomeCognome'=> 'Nombre y apellidos',
+    'Messaggio'=> 'Su mensaje',
+    'TuoiDati'=> 'Sus datos',
+    'Candidatura'=> 'Envíe su solicitud',
+    'AnnuncioRevisionare' => 'Anuncios por revisars',
+    'NonRevisionare' => 'No hay anuncios que revisar',
+    'Revisioni'=> 'Auditorìas',
+    'Accetta'=> 'Acepta',
+    'Rifiuta'=> 'Se Niega',
+    'AnnullaOperazione' => 'Deshacer la última operación',
+    'DettaglioAnnuncio' => 'Detalle del anuncio',
+
+
+
+
+
+
+
 
 
 

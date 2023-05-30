@@ -8,7 +8,8 @@
         
         <!-- Slider main container -->
         <h5 class="card-title display-4 text-uppercase fw-bold text-center mb-3">{{$article->name}}</h5> 
-        @if ($article->images)
+        
+        @if (!$article->images()->get()->isEmpty())
                     <div class="swiper">
                         <!-- Additional required wrapper -->
                         
@@ -21,17 +22,18 @@
                         </div>
                     </div>    
                     @else
+                    
                     <div class="card p-0">
                         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active ">
-                                    <img src="https://picsum.photos/300"  class=" img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
+                                    <img src="https://picsum.photos/300"  class=" img-carousel-custom d-block " alt="foto di foto di placeholder">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/301" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
+                                <img src="https://picsum.photos/301" class="img-carousel-custom d-block " alt="foto di placeholder">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/302" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
+                                <img src="https://picsum.photos/302" class="img-carousel-custom d-block " alt="foto di placeholder">
                             </div>
                         </div>
                         <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -44,7 +46,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    @endif    
+                    @endif   
         <div class="card-body text-center ">
           <p class="card-text pt-3">Descrizione: {{$article->description}}</p><br>
           <p class="card-text">Prezzo {{$article->price}}€</p><br>

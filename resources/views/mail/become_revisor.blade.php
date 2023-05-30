@@ -81,12 +81,11 @@
 
                     <div class="mb-3">
                       <label for="name" class="form-label">{{__('ui.NomeCognome')}}</label>
-                      <input type="text" name="name" class="form-control" id="name" placeholder="{{Auth::user()->name}}">
+                      <input disabled type="text" name="name" class="form-control" id="name" value="{{Auth::user()->name}}">
                     </div>
-
                     <div class="mb-3">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="{{Auth::user()->email}}">
+                      <input disabled type="text" name="email" class="form-control" id="email" value=" {{Auth::user()->email}}" placeholder=" {{Auth::user()->email}}">
                     </div>
                                         
                     <div class="mb-3">

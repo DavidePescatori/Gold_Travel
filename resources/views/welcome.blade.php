@@ -72,14 +72,14 @@
                             <div class="card mb-3 shadow cardHover">
                                 <div class="row g-0">
                                     <div class="col-12 col-lg-5 p-3 d-flex justify-content-center">
-                                        <img src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
+                                        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="img-fluid rounded" alt="immagine">
                                     </div>
                                     <div class="col-md-7">
                                         <div class="card-body">
                                             <h5 class="card-title">{{$article->name}}</h5>
-                                            <p class="card-text">prezzo: {{$article->price}}€</p>
-                                             <p class="card-text">descrizione: {{$article->description}}</p>
-                                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
+                                            <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p>
+                                            {{-- <p class="card-text">descrizione: {{$article->description}}</p> --}}
+                                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">{{__('ui.PiùInfo')}}</a>
                                             <div class="row g-0">
                                                 <div class="col-md-8">
                                                     <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{$article->category->name}}</a>
@@ -95,8 +95,8 @@
                         
                         <div class="col-12 text-center">
                             
-                            <h2>Non ci sono ancora annunci inseriti</h2>
-                            <a href="{{route('article.create')}}" class="btn btn-warning">Inserisci il tuo annuncio</a>
+                            <h2>{{__('ui.NoAnnunci')}}</h2>
+                            <a href="{{route('article.create')}}" class="btn btn-warning">{{__('ui.Annuncio')}}</a>
                         </div>
                         
                         @endforelse

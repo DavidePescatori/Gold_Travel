@@ -30,9 +30,9 @@
             <h1 class="text-center color-Gold nome-navbar">Gold<span class="color-seagalBlue">Travel</span></h1><br>
 
             <div class="lh-lg">
-            <p>Annunci di Bed and breakfast e alloggi italiani suddivisi per regione, provincia e città, Bed and Breakfast vicino punti di interesse ed eventi.
+            <p>{{__('ui.BB')}}
             </p>
-            <p>Se sei proprietario di un Bed and breakfast o alloggio, segnala gratis il tuo annuncio su Gold Travel, nessun costo d'iscrizione, nessun canone annuale, nessuna commissione!</p>
+            <p>{{__('ui.Proprietario')}}</p>
             </div>
             {{-- <ul class="list-unstyled mb-0">
               <li>
@@ -53,65 +53,43 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0 py-4">
-            <h4 class="text-center">Informazioni</h4>
+            <h4 class="text-center">{{__('ui.Info')}}</h4>
   
             <ul class="list-unstyled mb-0">
               <li class="py-2">
                 <a href="{{route('homepage')}}" class="color-plumViolet">Home</a>
               </li>
               <li class="py-2">
-                <a href="{{route('article.allarticle')}}" class="color-plumViolet">Tutti gli annunci</a>
+                <a href="{{route('article.allarticle')}}" class="color-plumViolet">{{__('ui.TuttiAnnunci')}}</a>
               </li>
               <li class="py-2">
-                <a href="{{route('register')}}" class="color-plumViolet">Registrati</a>
+                <a href="{{route('register')}}" class="color-plumViolet">{{__('ui.Registrati')}}</a>
               </li>
               <li class="py-2">
-                <a href="{{route('mail.become.revisor')}}" class="color-plumViolet">Lavora con noi</a>
+                <a href="{{route('mail.become.revisor')}}" class="color-plumViolet">{{__('ui.Lavora')}}</a>
               </li>
               <li class="py-2">
-                <a href="{{route('revisor.index')}}" class="color-plumViolet">Zona revisore</a>
+                <a href="{{route('revisor.index')}}" class="color-plumViolet">{{__('ui.Revisore')}}</a>
               </li>
             </ul>
           </div>
-          <!--Grid column-->
-  
-          {{-- <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="color-plumViolet">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="color-plumViolet">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="color-plumViolet">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="color-plumViolet">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column--> --}}
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0 py-4">
-            <h4 class="text-center">Collegamenti</h4>
+            <h4 class="text-center">{{__('ui.Collegamenti')}}</h4>
   
             <ul class="list-unstyled mb-0">
               <li class="py-2">
-                <a href="https://www.google.com/travel/flights?hl=it" class="color-plumViolet">Aerei</a>
+                <a href="https://www.google.com/travel/flights?hl=it" class="color-plumViolet">{{__('ui.Aerei')}}</a>
               </li>
               <li class="py-2">
-                <a href="https://www.omio.it/" class="color-plumViolet">Treni e Bus</a>
+                <a href="https://www.omio.it/" class="color-plumViolet">{{__('ui.Treni')}}</a>
               </li>
               <li class="py-2">
-                <a href="https://www.rentalcars.com/it/" class="color-plumViolet">Auto</a>
+                <a href="https://www.rentalcars.com/it/" class="color-plumViolet">{{__('ui.Auto')}}</a>
               </li>
               <li class="py-2">
-                <a href="https://www.traghettitalia.it/" class="color-plumViolet">Traghetti e Navi</a>
+                <a href="https://www.traghettitalia.it/" class="color-plumViolet">{{__('ui.Navi')}}</a>
               </li>
             </ul>
           </div>
@@ -125,9 +103,8 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2023 Copyright:©  Tutti i diritti riservati - Gestione: Gruppo 04 Presto.it - P. IVA 00000000000. Gold Travel è un marchio registrato.
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center p-3">
+      {{__('ui.IVA')}}
     </div>
     <!-- Copyright -->
   

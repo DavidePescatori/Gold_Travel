@@ -1,16 +1,22 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use app;
+use livewire;
 use App\Models\Article;
 use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\In;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Contracts\Service\Attribute\Required;
+
+
 
 class CreateForm extends Component
 {
@@ -30,13 +36,15 @@ class CreateForm extends Component
     public $images =[];
     public $image;
     public $form_id;
+    public $user_id;
     protected $rules = [
 
         'name'=> 'required',
         'price'=> 'required|numeric',
         'description'=> 'required|min:10|max:300',
         'images.*'=>'image|max:1024',
-        'temporary_images.*'=>'image|max:1024'
+        'temporary_images.*'=>'image|max:1024',
+        'user_id'=>'required'
     ];
     protected $messages =[
      'temporary_images.*.image' => 'I file devono essere immagini',
@@ -106,33 +114,25 @@ class CreateForm extends Component
 
 
       public function store(){
-        
+        $this->user_id = Auth::user()->id; 
         $this->validate();
         $this->article = Category::find($this->category)->articles()->create($this->validate());
         if(count($this->images)){
             foreach ($this->images as $image) {
-                $this->article->images()->create(['path'=>$image->store('images', 'public')]);          
+                // $this->article->images()->create(['path'=>$image->store('images', 'public')]); 
+                $newFileName = "articles/{$this->article->id}";    
+                $newImage = $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                dispatch(new ResizeImage($newImage->path, 400, 300));
             } 
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         
-        $category = Category::find($this->category);
-
-        
-        $article = $category->articles()->create([
-            
-            'name' => $this->query,
-            'price' => $this->price,
-            'description' => $this->description,
-            'category'=> $this->category,
-
-            
-        ]);
 
         $selectedServices = Service::whereIn('id', $this->selectedServices)->get();
     
-        $article->services()->sync($selectedServices);
+        $this->article->services()->sync($selectedServices);
         
-        Auth::user()->articles()->save($article);
 
         
         session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio.');
@@ -175,13 +175,3 @@ class CreateForm extends Component
         return view('livewire.create-form');
     }
 }
-
-
-
-
-
-
-
-
-
-

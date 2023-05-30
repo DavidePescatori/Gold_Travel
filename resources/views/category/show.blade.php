@@ -18,7 +18,7 @@
           />
           <image xlink:href="/media/nature.svg" x="6" y="6" width="25" height="25" />
         </svg>
-        <h3 class="display-5 title-circle-custom text-center">Natura e avventura</h3>
+        <h3 class="display-5 title-circle-custom text-center">{{__('ui.NaturaAvventura')}}</h3>
         <p class="color-nature text-center display-5 fw-bold">{{$category->nature}}%</p>
         
       </div>
@@ -37,7 +37,7 @@
           />
           <image xlink:href="/media/relax.svg" x="6" y="6" width="25" height="25" /> 
         </svg>
-        <h3 class="text-center display-5 title-circle-custom">Relax e mare</h3>
+        <h3 class="text-center display-5 title-circle-custom">{{__('ui.RelaxMare')}}</h3>
         <p class="color-relax text-center display-5 fw-bold">{{$category->relax}}%</p>
         
       </div><div class="col-6 col-md-3">
@@ -56,7 +56,7 @@
           <image xlink:href="/media/history.svg" x="7" y="5" width="23" height="25" /> 
           
         </svg>
-        <h3 class="display-5 text-center title-circle-custom">Monumenti e storia</h3>
+        <h3 class="display-5 text-center title-circle-custom">{{__('ui.Monumenti')}}</h3>
         <p class="color-history text-center display-5 fw-bold">{{$category->history}}%</p>
         
       </div><div class="col-6 col-md-3">
@@ -75,7 +75,7 @@
           <image xlink:href="/media/culture.svg" x="6" y="6" width="25" height="25" /> 
           
         </svg>
-        <h3 class="display-5 text-center title-circle-custom">Città e cultura</h3>
+        <h3 class="display-5 text-center title-circle-custom">{{__('ui.Cultura')}}</h3>
         <p class="color-culture text-center display-5 fw-bold">{{$category->culture}}%</p>
         
       </div>
@@ -114,13 +114,13 @@
         <div class="col-12 col-md-4 p-3">
           
           <div class="card bg-transparent cardHover">
-            <img src="https://picsum.photos/300" class="card-img-top p-3 rounded" alt="immagine">
+            <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
             <div class="card-body">
               <h5 class="card-title">{{$article->name}}</h5>
-              <p class="card-text">prezzo: {{$article->price}}</p>
-              <p class="card-text">descrizione: {{$article->description}}</p>
-              <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">Più informazioni</a>
-              <a href="{{route('homepage')}}" class="my-2 border-top card-link  btn btn-secondary">Torna Indietro</a>
+              <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}</p>
+              <p class="card-text">{{__('ui.Descrizione')}}: {{$article->description}}</p>
+              <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">{{__('ui.PiùInfo')}}</a>
+              <a href="{{route('homepage')}}" class="my-2 border-top card-link  btn btn-secondary">{{__('ui.TornaIndietro')}}</a>
             </div>
           </div>
         </div>
@@ -130,8 +130,8 @@
         
         <div class="col-12 text-center">
           
-          <h2>Non ci sono ancora annunci inseriti</h2>
-          <a href="{{route('article.create')}}" class="btn btn-warning">Inserisci il tuo annuncio</a>
+          <h2>{{__('ui.NoAnnunci')}}</h2>
+          <a href="{{route('article.create')}}" class="btn btn-warning">{{__('ui.Annuncio')}}</a>
         </div>
         @endforelse
 

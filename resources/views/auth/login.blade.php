@@ -1,4 +1,4 @@
-<x-layout header="Accedi">
+<x-layout header="{{__('ui.Accedi')}}">
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -19,23 +19,23 @@
                     @endif
 
                     <div class="mb-3">
-                      <label for="email" class="form-label">Indirizzo email <span class="text-danger text-small">*</span></label>
+                      <label for="email" class="form-label">{{__('ui.Email')}} <span class="text-danger text-small">*</span></label>
                       <input type="email" name="email" class="form-control" id="email">
                     </div>
 
                     <div class="mb-3">
-                      <label for="password" class="form-label">Password <span class="text-danger text-small">*</span></label>
+                      <label for="password" class="form-label">{{__('ui.Password')}} <span class="text-danger text-small">*</span></label>
                       <input type="password" name="password" class="form-control" id="password">
                     </div>
 
                     <div class="mb-3 form-check">
                       <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                      <label class="form-check-label" for="remember">Ricordami</label>
+                      <label class="form-check-label" for="remember">{{__('ui.Ricordami')}} </label>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary">Accedi</button><br>
+                    <button type="submit" class="btn btn-secondary">{{__('ui.Accedi')}} </button><br>
                     <div class="d-flex justify-content-end">
-                        <a href="{{route('register')}}">Non sei registrato?</a>
+                        <a href="{{route('register')}}">{{__('ui.NonRegistrato')}}</a>
                     </div>
 
 

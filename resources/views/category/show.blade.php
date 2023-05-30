@@ -114,7 +114,7 @@
         <div class="col-12 col-md-4 p-3">
           
           <div class="card bg-transparent cardHover">
-            <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
+            <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="img-fluid rounded" alt="immagine">
             <div class="card-body">
               <h5 class="card-title">{{$article->name}}</h5>
               <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}</p>

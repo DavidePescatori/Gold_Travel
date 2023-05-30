@@ -7,7 +7,7 @@ window.addEventListener('scroll' , ()=>{
 
     if(window.scrollY > 100){
     Title.classList.add('fixed-top', 'headerMargin');
-    Title.style.transform = 'scale(0.6)';
+    Title.style.transform = 'scale(0.5)';
     Title.classList.remove('bg-h1');
     
     }else{

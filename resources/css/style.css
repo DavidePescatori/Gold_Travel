@@ -145,7 +145,7 @@ li>a:hover{
 .headerMargin{
     margin-top: -0.8rem;
     width: 100px;
-    margin-left: 35rem;
+    margin-left: 30rem;
     }
 
 /* logo navbar */
@@ -616,8 +616,6 @@ transition: 1s;
 .sfondoWelcome{
 
   background-image: url(/public/media/SfondoWelcome.jpg);  
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
   background-size: cover;
   margin-top: 6vh;
   height: 55vh;

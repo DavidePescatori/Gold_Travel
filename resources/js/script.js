@@ -160,4 +160,8 @@ switch (check.classList[1]) {
     header.classList.add('veneto');
     break;
 }
+function handleFlagClick(lang) {
+  // Chiamare la funzione di traduzione con la lingua selezionata
+  translate(lang);
+}
 

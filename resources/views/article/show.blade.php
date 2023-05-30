@@ -16,7 +16,7 @@
           <div class="swiper-wrapper">
             @foreach ($article->images as $image)
             <div class="swiper-slide @if($loop->first)active @endif">
-              <img src="{{Storage::url($image->path)}}" alt="foto di {{$article->name}}">
+              <img class="img-fluid" src="{{Storage::url($image->path)}}" alt="foto di {{$article->name}}">
               {{-- <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine"> --}}
             </div>                                           
             @endforeach
@@ -50,7 +50,7 @@
             </button>
           </div> 
           @endif   
-          <div class="card-body text-center ">
+          <div class="card-body text-center pt-5 ">
             <p class="card-text pt-3">{{__('ui.Descrizione')}}: {{$article->description}}</p><br>
             <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p><br>
             <p class="card-text">{{__('ui.CreatoIl')}}: {{$article->created_at->format('d/m/Y')}}</p><br>

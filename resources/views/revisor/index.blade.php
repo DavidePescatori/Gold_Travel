@@ -1,10 +1,20 @@
-<x-layout header="Revisioni">
+<x-layout header="{{__('ui.Revisioni')}}">
     <div class="container-fluid my-5">
         <div class="row">
             <div class="col-12 p-3 d-flex justify-content-center">
                 
                 <h1 class="display-5 revisor-title-custom">
-                    {{$article_to_check ? 'Annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+
+                    @if ($article_to_check)
+
+                    <p>{{__('ui.AnnuncioRevisionare')}}</p>
+                        
+                    @else
+                        
+                    <p>{{__('ui.NonRevisionare')}}</p>
+
+                    @endif
+                    
                 </h1>
             </div>
         </div>
@@ -66,15 +76,15 @@
 
                     </div>
                     <div class="card-body text-center ">
-                        <p class="card-text pt-3 fs-4">Descrizione: {{$article_to_check->description}}</p><br>
+                        <p class="card-text pt-3 fs-4">{{__('ui.Descrizione')}}: {{$article_to_check->description}}</p><br>
                         <p class="card-text fs-3 text-end">€  {{$article_to_check->price}}</p><br>
-                        <p class="card-text fw-lighter text-end">Creato da: {{$article_to_check->users->name}}</p> 
-                        <p class="card-text fw-lighter fst-italic text-end">il: {{$article_to_check->created_at->format('d/m/Y')}}</p><br>
+                        <p class="card-text fw-lighter text-end">{{__('ui.CreatoDa')}} {{$article_to_check->user->name}}</p>
+                        <p class="card-text fw-lighter fst-italic text-end">{{__('ui.CreatoIl')}} {{$article_to_check->created_at->format('d/m/Y')}}</p><br>
 
                         <div class="card-body text-center">
                             @if (count($article_to_check->services))
 
-                            <h3 class="text-end">Servizi aggiuntivi:</h3>
+                            <h3 class="text-end">{{__('ui.Servizi')}}:</h3>
 
                             @foreach ($article_to_check->services as $service)
                                 <div class="text-end">
@@ -86,7 +96,7 @@
                         @endif
                         </div>
 
-                        <a href="{{route('homepage')}}" class="btn btn-secondary mt-5">Torna indietro</a>
+                        <a href="{{route('homepage')}}" class="btn btn-secondary mt-5">{{__('ui.TornaIndietro')}}</a>
                     </div>
                     
                     
@@ -121,7 +131,7 @@
                         <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">Accetta</button>
+                            <button type="submit" class="btn btn-success shadow">{{__('ui.Accetta')}}</button>
                         </form>
                     </div>
                     
@@ -129,7 +139,7 @@
                         <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                            <button type="submit" class="btn btn-danger shadow">{{__('ui.Rifiuta')}}</button>
                         </form>
                     </div>
                 </div>
@@ -152,7 +162,7 @@
                 <form action="{{ route('revisor.rollbackArticle') }}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="shadow btn btn-warning mt-5 mb-5" type="submit">Annulla ultima operazione</button>
+                    <button class="shadow btn btn-warning mt-5 mb-5" type="submit">{{__('ui.AnnullaOperazione')}}</button>
                 </form>
             </div>
         </div>

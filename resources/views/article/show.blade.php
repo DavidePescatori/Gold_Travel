@@ -1,4 +1,4 @@
-<x-layout header="Dettaglio annuncio">
+<x-layout header="{{__('ui.DettaglioAnnuncio')}}">
   <div class="container-fluid py-5">
     <div class="row">
       <div class="col-12 col-md-6">
@@ -46,14 +46,14 @@
                     </div>
                     @endif    
         <div class="card-body text-center ">
-          <p class="card-text pt-3">Descrizione: {{$article->description}}</p><br>
-          <p class="card-text">Prezzo {{$article->price}}€</p><br>
-          <p class="card-text">Creato il: {{$article->created_at->format('d/m/Y')}}</p><br>
-          <p class="card-text">Creato da: {{$article->user->name}}</p><br> 
+          <p class="card-text pt-3">{{__('ui.Descrizione')}}: {{$article->description}}</p><br>
+          <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p><br>
+          <p class="card-text">{{__('ui.CreatoIl')}}: {{$article->created_at->format('d/m/Y')}}</p><br>
+          <p class="card-text">{{__('ui.CreatoDa')}} {{$article->user->name}}</p><br> 
 
           @if (count($article->services))
 
-          <h3>Servizi aggiuntivi:</h3>
+          <h3>{{__('ui.Servizi')}}:</h3>
 
           @foreach ($article->services as $service)
               <div>                           
@@ -65,7 +65,7 @@
           @endif
 
           <div class="text-center">
-            <a href="{{route('homepage')}}" class="btn btn-secondary mt-4">Torna indietro</a>
+            <a href="{{route('homepage')}}" class="btn btn-secondary mt-4">{{__('ui.TornaIndietro')}}</a>
           </div>
 
 

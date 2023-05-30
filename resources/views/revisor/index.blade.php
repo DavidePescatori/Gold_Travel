@@ -81,19 +81,38 @@
                         <p class="card-text fw-lighter text-end">{{__('ui.CreatoDa')}} {{$article_to_check->user->name}}</p>
                         <p class="card-text fw-lighter fst-italic text-end">{{__('ui.CreatoIl')}} {{$article_to_check->created_at->format('d/m/Y')}}</p><br>
 
-                        <div class="card-body text-center">
+                        <div class="card-body text-end">
                             @if (count($article_to_check->services))
-
-                            <h3 class="text-end">{{__('ui.Servizi')}}:</h3>
-
+            
+                            <h3>{{__('ui.Servizi')}}:</h3>
+                            
+                            @if (App::isLocale('it'))
                             @foreach ($article_to_check->services as $service)
-                                <div class="text-end">
-                                    <i class="fa {{ $service->icon }} p-2 text-end"></i> {{ $service->name }}
-                                </div>
-                            @endforeach
-
-                        
-                        @endif
+                            <div>                           
+                              <i class="fa {{ $service->icon }} p-2 text-start"></i> {{ $service->name }}
+                            </div>
+                            @endforeach 
+                            
+                            @elseif(App::isLocale('en'))
+                            
+                            @foreach ($article_to_check->services as $service)
+                            <div>                           
+                              <i class="fa {{ $service->icon }} p-2 text-start"></i> {{ $service->en }}
+                            </div>
+                            @endforeach 
+                            
+                            @elseif(App::isLocale('es'))
+                            @foreach ($article_to_check->services as $service)
+                            <div>                           
+                              <i class="fa {{ $service->icon }} p-2 text-start"></i> {{ $service->es }}
+                            </div>
+                            @endforeach 
+                            @endif
+                            
+                            
+                            
+                            
+                            @endif
                         </div>
 
                         <a href="{{route('homepage')}}" class="btn btn-secondary mt-5">{{__('ui.TornaIndietro')}}</a>

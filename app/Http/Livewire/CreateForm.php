@@ -7,6 +7,7 @@ use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
+use Illuminate\Http\File;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\In;

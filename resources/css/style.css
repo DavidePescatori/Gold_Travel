@@ -462,14 +462,18 @@ transition: 1s;
 
 @media screen and (max-width: 600px){
 
-  /* .title-circle-custom{
 
-    font-size: 20px !important;
+  .img-custom-swiper{
 
-
-  } */
+    width: 300px;
 
 
+  }
+
+  .swiper {
+    /* height: 80%; */
+    width: 300px;
+  }
 
 }
 
@@ -846,4 +850,11 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
   border:solid 3px #1A385A;
  
   border-radius: 15px;
+}
+
+.img-preview{
+  height: 300px; 
+  background-repeat:no-repeat;
+  background-size:contain;
+
 }

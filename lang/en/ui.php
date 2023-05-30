@@ -27,9 +27,61 @@ return[
     'CreaAnnuncioHeader' => 'Create your announcement',
     'DiconoNoi' => 'They say about us',
     'CreatoDa' => 'Created by:',
+    'CreatoIl' => 'Created',
     'Prezzo' => 'Price',
     'PiùInfo' => 'More Info',
     'NoAnnunci' => 'There are no ads posted yet',
+    'regione'=> 'Select region',
+    'città' => 'Select city',
+    'prezzoNotte' => 'Price per night',
+    'Descrizione' => 'Description',
+    'Servizi' => 'Additional services',
+    'PubblicaAnnuncio' => 'Post ad',
+    'TornaIndietro' => 'Go back',
+    'NaturaAvventura' => 'Adventure and Nature',
+    'RelaxMare' => 'Sea and Relax',
+    'Monumenti' => 'Monuments and History',
+    'Cultura' => 'City and Culture',
+    'contattaci' => 'Contact us',
+    'NostroStaff'=> 'Our staff',
+    'CompilaForm'=> 'Fill out this form and we will contact you as soon as possible!!',
+    'NomeCognome'=> 'Name and Surname',
+    'Messaggio'=> 'Your message',
+    'TuoiDati'=> 'Your details',
+    'Candidatura'=> 'Send your application',
+    'AnnuncioRevisionare' => 'Ads for review',
+    'NonRevisionare' => 'There are no ads to review',
+    'Revisioni'=> 'Reviews',
+    'Accetta'=> 'Accept',
+    'Rifiuta'=> 'Reject',
+    'AnnullaOperazione' => 'Undo last operation',
+    'DettaglioAnnuncio' => 'Announcement Detail',
+    'Email' => 'Email Address',
+    'Password' => 'Insert your Password',
+    'Ricordami' => 'Remember me',
+    'Accedi' => 'Login',
+    'NonRegistrato' => 'Not registered yet?',
+    'ConfPassword' => 'Password Confirmation',
+    'GiàRegistrato' => 'Are you already registered?',
+    'Anteprima' => 'Image preview',
+    'Cancella' => 'Delete',
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

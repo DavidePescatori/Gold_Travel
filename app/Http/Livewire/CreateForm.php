@@ -1,37 +1,72 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use app;
+use livewire;
 use App\Models\Article;
 use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
+use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\In;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Contracts\Service\Attribute\Required;
+
+
 
 class CreateForm extends Component
 {
-    
+    use WithFileUploads;
     // public $name, $price, $description, $bEb, $pranzo, $parcheggio, $wifi, $smoking, $pulizia, $animali, $cancellazione, $pagamento, $servizio;
     public $name, $price, $description, $category, $services;
 
     public $selectedServices =[];
+
 
     // public per menù a tendina dei comuni
     public $query = '';
     public $suggestions = [];
     public $citySelected = false;
     public $selectedCity;
-
+    public $temporary_images;
+    public $images =[];
+    public $image;
+    public $form_id;
+    public $user_id;
     protected $rules = [
 
         'name'=> 'required',
         'price'=> 'required|numeric',
         'description'=> 'required|min:10|max:300',
+        'images.*'=>'image|max:1024',
+        'temporary_images.*'=>'image|max:1024',
+        'user_id'=>'required'
+    ];
+    protected $messages =[
+     'temporary_images.*.image' => 'I file devono essere immagini',
+     'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 1mb'
     ];
     
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
+            'temporary_images.*'=>'image|max:1024',
+        ])){
+            foreach ($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
+    public function removeImage($key)
+    {
+    if(in_array($key, array_keys($this->images))) {
+      unset($this->images[$key]);
+        }
+    }
     
     public function updated($propertyName)
     {
@@ -79,34 +114,42 @@ class CreateForm extends Component
 
 
       public function store(){
-        
+        $this->user_id = Auth::user()->id; 
         $this->validate();
-        
-        $category = Category::find($this->category);
+        $this->article = Category::find($this->category)->articles()->create($this->validate());
+        if(count($this->images)){
+            foreach ($this->images as $image) {
+                // $this->article->images()->create(['path'=>$image->store('images', 'public')]); 
+                $newFileName = "articles/{$this->article->id}";    
+                $newImage = $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                dispatch(new ResizeImage($newImage->path, 400, 300));
+            } 
 
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
         
-        $article = $category->articles()->create([
-            
-            'name' => $this->query,
-            'price' => $this->price,
-            'description' => $this->description,
-            'category'=> $this->category,
-
-            
-        ]);
 
         $selectedServices = Service::whereIn('id', $this->selectedServices)->get();
     
-        $article->services()->sync($selectedServices);
+        $this->article->services()->sync($selectedServices);
         
-        Auth::user()->articles()->save($article);
 
         
         session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio.');
         
-        $this->reset();
+        $this->cleanForm();
         
         
+    }
+
+    public function cleanForm(){
+        $this->title ='';
+        $this->body ='';
+        $this->category='';
+        $this->image='';
+        $this->images=[];
+        $this->temporary_images =[];
+        $this->form_id =rand();    
     }
 
     
@@ -132,13 +175,3 @@ class CreateForm extends Component
         return view('livewire.create-form');
     }
 }
-
-
-
-
-
-
-
-
-
-

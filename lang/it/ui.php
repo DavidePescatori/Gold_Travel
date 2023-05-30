@@ -3,6 +3,7 @@
 return[
 
     'allArticles' => 'Ecco i nostri annunci!',
+   
     'Annuncio' => 'Inserisci il tuo annuncio',
     'Dove' => 'Dove vuoi andare?',
     'TuttiAnnunci' => 'Tutti gli annunci',
@@ -27,9 +28,54 @@ return[
     'CreaAnnuncioHeader' => 'Crea il tuo annuncio',
     'DiconoNoi' => 'Dicono di noi',
     'CreatoDa' => 'Creato da:',
+    'CreatoIl' => 'Creato il',
     'Prezzo' => 'Prezzo',
     'PiùInfo' => 'Più informazioni',
     'NoAnnunci' => 'Non ci sono ancora annunci inseriti',
+    'regione'=> 'Seleziona la regione',
+    'città' => 'Seleziona città',
+    'prezzoNotte' => 'Prezzo per notte',
+    'Descrizione' => 'Descrizione',
+    'Servizi' => 'Servizi aggiuntivi',
+    'PubblicaAnnuncio' => 'Pubblica annuncio',
+    'TornaIndietro' => 'Torna Indietro',
+    'NaturaAvventura' => 'Natura e Avventura',
+    'RelaxMare' => 'Relax e Mare',
+    'Monumenti' => 'Monumenti e Storia',
+    'Cultura' => 'Città e Cultura',
+    'contattaci' => 'Contattaci',
+    'NostroStaff'=> 'Il nostro staff',
+    'CompilaForm'=> 'Compila questo form e ti contatteremo al più presto!!',
+    'NomeCognome'=> 'Nome e Cognome',
+    'Messaggio'=> 'Il tuo messaggio',
+    'TuoiDati'=> 'I tuoi dati',
+    'Candidatura'=> 'Invia la tua candidatura',
+    'AnnuncioRevisionare' => 'Annunci da revisionare',
+    'NonRevisionare' => 'Non ci sono annunci da revisionare',
+    'Revisioni'=> 'Revisioni',
+    'Accetta'=> 'Accetta',
+    'Rifiuta'=> 'Rifiuta',
+    'AnnullaOperazione' => 'Annulla ultima operazione',
+    'DettaglioAnnuncio' => 'Dettaglio Annuncio',
+    'Email' => 'Indirizzo Email',
+    'Password' => 'Inserisci la tua Password',
+    'Ricordami' => 'Ricordami',
+    'Accedi' => 'Accedi',
+    'NonRegistrato' => 'Non sei registrato?',
+    'ConfPassword' => 'Conferma password',
+    'GiàRegistrato' => 'Sei già registrato?',
+    'Anteprima' => 'Anteprima immagine',
+    'Cancella' => 'Cancella',
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,11 @@ use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
-use Illuminate\Http\File;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\In;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class CreateForm extends Component

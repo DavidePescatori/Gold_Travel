@@ -78,7 +78,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{$article->name}}</h5>
                                             <p class="card-text">prezzo: {{$article->price}}€</p>
-                                            {{-- <p class="card-text">descrizione: {{$article->description}}</p> --}}
+                                             <p class="card-text">descrizione: {{$article->description}}</p>
                                             <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Più informazioni</a>
                                             <div class="row g-0">
                                                 <div class="col-md-8">

@@ -59,12 +59,12 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    @endif    
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev px-3 py-1"></div> 
-                        <div class="swiper-button-next px-3 py-1"></div> 
-
-                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev px-3 py-1"></div> 
+                    <div class="swiper-button-next px-3 py-1"></div> 
+                    
+                </div>
+                @endif    
                     <div class="card-body text-center ">
                         <p class="card-text pt-3 fs-4">Descrizione: {{$article_to_check->description}}</p><br>
                         <p class="card-text fs-3 text-end">€  {{$article_to_check->price}}</p><br>

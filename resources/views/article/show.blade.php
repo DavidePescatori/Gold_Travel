@@ -44,7 +44,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    @endif    
+        @endif    
         <div class="card-body text-center ">
           <p class="card-text pt-3">Descrizione: {{$article->description}}</p><br>
           <p class="card-text">Prezzo {{$article->price}}€</p><br>

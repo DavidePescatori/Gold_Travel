@@ -72,7 +72,7 @@
                             <div class="card mb-3 shadow cardHover">
                                 <div class="row g-0">
                                     <div class="col-12 col-lg-5 p-3 d-flex justify-content-center">
-                                        <img src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
+                                        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
                                     </div>
                                     <div class="col-md-7">
                                         <div class="card-body">

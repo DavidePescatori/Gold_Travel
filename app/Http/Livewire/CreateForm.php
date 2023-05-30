@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use app;
+use livewire;
 use App\Models\Article;
 use App\Models\Service;
 use Livewire\Component;
@@ -11,7 +12,11 @@ use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\In;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Contracts\Service\Attribute\Required;
+
+
 
 class CreateForm extends Component
 {
@@ -120,7 +125,7 @@ class CreateForm extends Component
                 dispatch(new ResizeImage($newImage->path, 400, 300));
             } 
 
-            File::deleteDirectory(storage_path("app/livewire-tmp"));
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         
 

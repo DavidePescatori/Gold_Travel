@@ -462,14 +462,18 @@ transition: 1s;
 
 @media screen and (max-width: 600px){
 
-  /* .title-circle-custom{
 
-    font-size: 20px !important;
+  .img-custom-swiper{
 
-
-  } */
+    width: 300px;
 
 
+  }
+
+  .swiper {
+    /* height: 80%; */
+    width: 300px;
+  }
 
 }
 

@@ -57,12 +57,25 @@ return[
     'Rifiuta'=> 'Rifiuta',
     'AnnullaOperazione' => 'Annulla ultima operazione',
     'DettaglioAnnuncio' => 'Dettaglio Annuncio',
+    'Email' => 'Indirizzo Email',
+    'Password' => 'Inserisci la tua Password',
+    'Ricordami' => 'Ricordami',
+    'Accedi' => 'Accedi',
+    'NonRegistrato' => 'Non sei registrato?',
+    'ConfPassword' => 'Conferma password',
+    'GiàRegistrato' => 'Sei già registrato?',
+    'Anteprima' => 'Anteprima immagine',
+    'Cancella' => 'Cancella',
 
-     
 
 
-    
-    
+
+
+
+
+
+
+
 
 
 

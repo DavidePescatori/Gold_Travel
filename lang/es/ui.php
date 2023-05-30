@@ -56,6 +56,17 @@ return[
     'Rifiuta'=> 'Se Niega',
     'AnnullaOperazione' => 'Deshacer la última operación',
     'DettaglioAnnuncio' => 'Detalle del anuncio',
+    'Email' => 'Direcciòn de correo electrònico',
+    'Password' => 'Introduzca la contraseña',
+    'Ricordami' => 'Recuèrdame',
+    'Accedi' => 'Iniciar sesiòn',
+    'NonRegistrato' => '¿No está registrado?',
+    'ConfPassword' => 'Confirmación de Contraseña',
+    'GiàRegistrato' => '¿Ya se ha registrado?',
+    'Anteprima' => 'Vista previa de la imagen',
+    'Cancella' => 'Borrar',
+    
+
 
 
 

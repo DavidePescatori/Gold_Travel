@@ -56,6 +56,17 @@ return[
     'Rifiuta'=> 'Reject',
     'AnnullaOperazione' => 'Undo last operation',
     'DettaglioAnnuncio' => 'Announcement Detail',
+    'Email' => 'Email Address',
+    'Password' => 'Insert your Password',
+    'Ricordami' => 'Remember me',
+    'Accedi' => 'Login',
+    'NonRegistrato' => 'Not registered yet?',
+    'ConfPassword' => 'Password Confirmation',
+    'GiàRegistrato' => 'Are you already registered?',
+    'Anteprima' => 'Image preview',
+    'Cancella' => 'Delete',
+   
+
 
 
 

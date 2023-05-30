@@ -17,9 +17,12 @@
             @foreach ($article->images as $image)
             <div class="swiper-slide @if($loop->first)active @endif">
               <img src="{{Storage::url($image->path)}}" alt="foto di {{$article->name}}">
+              {{-- <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine"> --}}
             </div>                                           
             @endforeach
           </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>    
         @else
         
@@ -27,7 +30,7 @@
           <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active ">
-                <img src="https://picsum.photos/300"  class=" img-carousel-custom d-block " alt="foto di foto di placeholder">
+                <img src="https://picsum.photos/300" class="img-carousel-custom d-block " alt="foto di placeholder">
               </div>
               <div class="carousel-item">
                 <img src="https://picsum.photos/301" class="img-carousel-custom d-block " alt="foto di placeholder">
@@ -45,7 +48,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+          </div> 
           @endif   
           <div class="card-body text-center ">
             <p class="card-text pt-3">{{__('ui.Descrizione')}}: {{$article->description}}</p><br>

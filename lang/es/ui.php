@@ -6,7 +6,7 @@ return[
     'Annuncio' => 'Publique su anuncio',
     'Dove' => '¿Adónde quiere ir?',
     'TuttiAnnunci' => 'Todos los anuncios',
-    'Revisore' => 'Area de auditoria',
+    'Revisore' => 'Area auditoria',
     'Lavora' => 'Trabaja con nosotros',
     'Ciao' => 'Hola',
     'Profilo' => 'Perfil',
@@ -75,16 +75,6 @@ return[
 
 
 
-
-
-
-
-
-
-    
-
-
-    
 
 
 

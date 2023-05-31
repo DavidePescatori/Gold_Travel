@@ -176,11 +176,11 @@
             <div class="col-12 d-flex justify-content-center mb-5">
                 <a href="{{route('homepage')}}" class="btn btn-secondary mx-3">{{__('ui.TornaIndietro')}}</a>
                 @if (App\Models\Article::toBeRevisionedCount() != App\Models\Article::all()->count() )
-                    <form action="{{ route('revisor.rollbackArticle') }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button class="shadow btn btn-warning" type="submit">{{__('ui.AnnullaOperazione')}}</button>
-                    </form>
+                <form action="{{ route('revisor.rollbackArticle') }}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button class="shadow btn btn-warning" type="submit">{{__('ui.AnnullaOperazione')}}</button>
+                </form>
                 @endif
             </div>
         </div>

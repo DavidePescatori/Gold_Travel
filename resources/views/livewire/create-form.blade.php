@@ -7,13 +7,13 @@
         <div class="insert-article-custom">
             
             @if (app()->getLocale() === 'it')
-            <img src="{{ asset('media/AnnuncioDefinitivo.png') }}" alt="Immagine creazione form">
+            <img class="img-article-create-form-custom" src="{{ asset('media/AnnuncioDefinitivo.png') }}" alt="Immagine creazione form">
             
             @elseif (app()->getLocale() === 'en')
-            <img src="{{ asset('media/InserYourAd.png') }}" alt="Image form creation">
+            <img class="img-article-create-form-custom" src="{{ asset('media/InserYourAd.png') }}" alt="Image form creation">
             
             @elseif (app()->getLocale() === 'es')
-            <img src="{{ asset('media/Annunciacion.png') }}" alt="Creación de formularios de imagen">
+            <img class="img-article-create-form-custom" src="{{ asset('media/Annunciacion.png') }}" alt="Creación de formularios de imagen">
             
             @endif
         </div>
@@ -52,7 +52,7 @@
             <input type="float" wire:model.lazy="price" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
             @error('price') <span class="error">{{ $message }}</span> @enderror
         </div>
-        
+
         <div class="mb-3">
             <label for="description" class="form-label">{{__('ui.Descrizione')}}</label>
             <textarea id="description" wire:model.lazy="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror" wire:model.lazy="description"></textarea>

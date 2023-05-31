@@ -1,9 +1,8 @@
 <x-layout header="{{__('ui.Accedi')}}">
-
     <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <form method="POST" action="{{route('login')}}" class="shadow p-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <form method="POST" action="{{route('login')}}" class="main-card-login p-5">
 
                     @csrf
 
@@ -33,7 +32,7 @@
                       <label class="form-check-label" for="remember">{{__('ui.Ricordami')}} </label>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary">{{__('ui.Accedi')}} </button><br>
+                    <button type="submit" class="btn btn-secondary button-login">{{__('ui.Accedi')}} </button><br>
                     <div class="d-flex justify-content-end">
                         <a href="{{route('register')}}">{{__('ui.NonRegistrato')}}</a>
                     </div>
@@ -43,6 +42,5 @@
             </div>
         </div>
     </div>
-
-
+    
 </x-layout>

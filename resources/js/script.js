@@ -3,20 +3,20 @@ let Div = document.querySelector('#divTitle');
 
 
 
-window.addEventListener('scroll' , ()=>{
+// window.addEventListener('scroll' , ()=>{
 
-    if(window.scrollY > 100){
-    Title.classList.add('fixed-top', 'headerMargin');
-    Title.style.transform = 'scale(0.5)';
-    Title.classList.remove('bg-h1');
+//     if(window.scrollY > 100){
+//     Title.classList.add('fixed-top', 'headerMargin');
+//     Title.style.transform = 'scale(0.5)';
+//     Title.classList.remove('bg-h1');
     
-    }else{
-    Title.classList.remove('fixed-top', 'headerMargin');
-    Title.style.transform = 'scale(1)';
-    Title.classList.add('bg-h1');
-    }
+//     }else{
+//     Title.classList.remove('fixed-top', 'headerMargin');
+//     Title.style.transform = 'scale(1)';
+//     Title.classList.add('bg-h1');
+//     }
 
-});
+// });
 
 
 const swiper = new Swiper('.swiper', {
@@ -159,5 +159,9 @@ switch (check.classList[1]) {
     header.classList.remove('header-image');
     header.classList.add('veneto');
     break;
+}
+function handleFlagClick(lang) {
+  // Chiamare la funzione di traduzione con la lingua selezionata
+  translate(lang);
 }
 

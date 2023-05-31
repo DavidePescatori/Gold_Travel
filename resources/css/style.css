@@ -266,11 +266,18 @@ li>a:hover{
 
   .insert-article-custom{
 
-    height: 65vh;
+    /* height: 65vh; */
     margin-bottom: 60px !important;
     display: flex;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
+  }
+
+  .img-article-create-form-custom{
+
+    width: 650px;
+
+
   }
 
   .img-form-custom{
@@ -416,7 +423,7 @@ transition: 1s;
 /* fine menù a tendina comuni  */
 
 .swiper {
-  /* height: 80%; */
+  /* height: 800px; */
   width: 800px;
 }
 
@@ -475,10 +482,54 @@ transition: 1s;
     width: 300px;
   }
 
+ 
 }
 
 
+.lingue-custom-dropdown .dropdown-menu {
+  width: 100px;
+  left: auto;
+  right: 0;
+  margin-top: 9px;
+  transform-origin: top right;
+}
+
+.lingue-custom-dropdown .dropdown-menu::before {
+  right: 12px;
+  left: auto;
+}
+
+
+
+
 @media screen and (max-width: 1000px){
+  
+  .img-article-create-form-custom{
+
+    width: 325px;
+    height: 300px;
+
+
+  }
+
+  .lingue-custom-dropdown{
+
+    margin-top: 15px;
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+    left: 0;
+    transform-origin: top left;
+  }
+
+  .lingue-custom-dropdown .dropdown-menu {
+    right: auto;
+  }
+
+  .lingue-custom-dropdown .dropdown-menu::before {
+    right: auto;
+    left: 12px;
+  }
+
   .nomeSito-navbar{
 
    display: none;
@@ -493,8 +544,8 @@ transition: 1s;
   
   .nav-numeretto-custom{
 
-    width: 120px;
-
+    width: 130px;
+    
 
 
   }
@@ -502,7 +553,7 @@ transition: 1s;
   .nav-numeretto-custom span{
 
     /* float:left !important; */
-    left: 100% !important;
+    left: 80% !important;
 
   }
 
@@ -542,7 +593,7 @@ transition: 1s;
 
 /* media query header */
 
-@media screen and (max-width: 739px){
+@media screen and (max-width: 820px){
 
   .fontBord{
   
@@ -585,7 +636,7 @@ transition: 1s;
     line-height: 150%;
     color: hsl(300, 9%, 85%) ;
     text-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
-    font-size: 35px;
+    font-size:30px;
     font-family: 'Amaranth', sans-serif;
     background-color: hsl(212, 55%, 23%, 0.7);
     border-radius: 15px 15px 0px 0px;

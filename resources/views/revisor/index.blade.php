@@ -28,13 +28,12 @@
     
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
                 
                 
                 <!-- Slider main container -->
                 <h5 class="card-title display-4 text-uppercase fw-bold text-center mb-3">{{$article_to_check->name}}</h5> 
                 @if ($article_to_check->images)
-                <div class="swiper">
+                <div class="swiper col-12 col-md-6">
                     <!-- Additional required wrapper -->
                     
                     <div class="swiper-wrapper">
@@ -42,12 +41,52 @@
                         <div class="swiper-slide @if($loop->first)active @endif">
                             <img class="img-fluid img-custom-swiper" src="{{Storage::url($image->path)}}" alt="foto di {{$article_to_check->name}}">
                             {{-- <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine"> --}}
-                        </div>                                           
-                        @endforeach
+                        </div>   
+
                     </div>
-                    <div class="swiper-button-prev px-3 py-1"></div> 
-                    <div class="swiper-button-next px-3 py-1"></div> 
-                </div>    
+
+                     
+
+                        <div class="swiper-button-prev px-3 py-1"></div> 
+                        <div class="swiper-button-next px-3 py-1"></div> 
+
+                </div> 
+
+            
+
+                        <div class="col-md-4 border-end">
+                            <h5 class="tc-accent mt-3">Tags</h5>
+                            <div class="p-2">
+                                @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                        <p class="d-inline">{{ $label }},</p>
+                                    @endforeach
+                                @endif
+                            </div>
+
+                        
+
+                        
+                        
+                            <div class="card-body">
+                                <h5 class="tc-accent">Revisione immagini</h5>
+                                <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                                <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
+                            </div>
+                        </div>
+
+                  
+                        
+                        
+
+
+                        @endforeach
+                    
+                    
+                   
                 @else
                 <div class="card p-0">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -116,33 +155,11 @@
                     
                     
                 </div>
+
+        </div>
                 
                 
-                {{-- <div class="card p-0">
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active ">
-                                <img src="https://picsum.photos/300"  class=" img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://picsum.photos/301" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://picsum.photos/302" class="img-carousel-custom d-block " alt="foto di {{$article_to_check->name}}">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    
-                </div> --}}
+           
                 
                 <div class="row py-5">
                     <div class="col-12 d-flex justify-content-center">
@@ -161,9 +178,10 @@
                     
                     
                 </div>
+            
                 
-            </div>
-        </div>
+            
+        
         
         
     </div>
@@ -188,10 +206,5 @@
 </x-layout>
 
 
-{{-- @if (Auth::user() && Auth::user()->id == $article->user_id)
-    <a href="{{route('article.edit', compact('article'))}}" class="btn btn-dark">Modifica</a>
-    @endif --}}   
-    
-    
-    {{-- 
+
         

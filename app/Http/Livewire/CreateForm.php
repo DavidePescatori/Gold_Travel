@@ -11,6 +11,7 @@ use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\In;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -123,6 +124,8 @@ class CreateForm extends Component
                 $newFileName = "articles/{$this->article->id}";    
                 $newImage = $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
                 dispatch(new ResizeImage($newImage->path, 400, 300));
+
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
             } 
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

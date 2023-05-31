@@ -424,7 +424,7 @@ transition: 1s;
 
 .swiper {
   /* height: 800px; */
-  width: 800px;
+  width: 600px;
 }
 
 .revisor-title-custom{
@@ -479,8 +479,8 @@ transition: 1s;
 
   .img-custom-swiper{
 
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 250px;
 
   }
 
@@ -926,4 +926,70 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
   background-size:cover;
   background-position: center;
 
+}
+
+/* stile bottoni area revisore */
+
+.seville-red {
+  background:#FF0000;
+  padding:1em 2em;
+  border:0.3em solid rgb(201, 32, 6);
+  border-radius:2em 0 2em 0;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-red:hover {
+  background:rgb(168, 4, 4);
+  color:white;
+  transition:0.1s;
+}
+
+.seville-green {
+  background:green;
+  padding:1em 2em;
+  border:0.3em solid rgb(5, 151, 34);
+  border-radius:0 2em 0 2em;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-green:hover {
+  background:rgb(3, 96, 23);
+  color:white;
+  transition:0.1s;
+}
+
+.seville-grey {
+  background:gray;
+  padding:1em 2em;
+  border:0.3em solid #999999;
+  border-radius:0 2em 0 2em;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-grey:hover {
+  background:#5a5651;
+  color:white;
+  transition:0.1s;
+}
+
+.seville-yellow {
+  background:rgb(255, 193, 7);
+  padding:1em 2em;
+  border:0.3em solid rgb(211, 218, 8);
+  border-radius:2em 0 2em 0;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-yellow:hover {
+  background:rgb(225, 170, 5);
+  color:white;
+  transition:0.1s;
 }

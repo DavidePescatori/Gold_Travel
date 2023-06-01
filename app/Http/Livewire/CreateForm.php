@@ -7,6 +7,7 @@ use App\Models\Article;
 use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\Removefaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
@@ -124,9 +125,13 @@ class CreateForm extends Component
                 // $this->article->images()->create(['path'=>$image->store('images', 'public')]); 
                 $newFileName = "articles/{$this->article->id}";    
                 $newImage = $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
-                dispatch(new ResizeImage($newImage->path, 400, 300));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                
+                Removefaces::withChain([
+                    new ResizeImage($newImage->path, 400, 300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
+          
             } 
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

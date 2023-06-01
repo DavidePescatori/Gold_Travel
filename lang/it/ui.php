@@ -3,7 +3,6 @@
 return[
 
     'allArticles' => 'Ecco i nostri annunci!',
-   
     'Annuncio' => 'Inserisci il tuo annuncio',
     'Dove' => 'Dove vuoi andare?',
     'TuttiAnnunci' => 'Tutti gli annunci',
@@ -66,17 +65,5 @@ return[
     'GiàRegistrato' => 'Sei già registrato?',
     'Anteprima' => 'Anteprima immagine',
     'Cancella' => 'Cancella',
-
-
-
-
-
-
-
-
-
-
-
-
 
 ];

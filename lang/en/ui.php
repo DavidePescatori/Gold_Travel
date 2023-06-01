@@ -65,7 +65,7 @@ return[
     'GiàRegistrato' => 'Are you already registered?',
     'Anteprima' => 'Image preview',
     'Cancella' => 'Delete',
-   
+    
 
 
 

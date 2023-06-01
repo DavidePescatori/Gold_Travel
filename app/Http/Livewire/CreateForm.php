@@ -13,6 +13,7 @@ use App\Jobs\waterMarkJob;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
 use Spatie\Image\Manipulations;
+use Illuminate\Support\Facades\App as FacadesApp;
 use Illuminate\Validation\Rules\In;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
@@ -145,9 +146,15 @@ class CreateForm extends Component
     
         $this->article->services()->sync($selectedServices);
         
+        if (FacadesApp::isLocale('it')) {
+            session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio.');
+        } elseif (FacadesApp::isLocale('en')){
 
-        
-        session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio.');
+            session()->flash('articleCreated', 'You have correctly placed your ad.');
+        } elseif (FacadesApp::isLocale('es')){
+
+            session()->flash('articleCreated', 'Ha publicado correctamente su anuncio.');
+        }
         
         $this->cleanForm();
         

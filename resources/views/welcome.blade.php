@@ -17,25 +17,25 @@
     <x-navbar />
     
     @if(session('emailSent'))
-    <div class="alert alert-success text-center my-5">
+    <div class="alert alert-success text-center  mt-5  mb-0">
         {{ session('emailSent') }}
     </div>
     @endif
     
     @if(session('emailError'))
-    <div class="alert alert-danger text-center my-5">
+    <div class="alert alert-danger text-center mt-5  mb-0">
         {{ session('emailError') }}
     </div>
     @endif
     
     @if(session('access.denied'))
-    <div class="alert alert-danger text-center my-5">
+    <div class="alert alert-danger text-center mt-5  mb-0">
         {{ session('access.denied') }}
     </div>
     @endif
     
     @if(session('message'))
-    <div class="alert alert-success text-center my-5">
+    <div class="alert alert-success text- mt-5 mb-0">
         {{ session('message') }}
     </div>
     @endif

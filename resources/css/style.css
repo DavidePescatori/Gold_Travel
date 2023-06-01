@@ -69,6 +69,13 @@ color: #1A385A;
 
 }
 
+body{
+
+  background-image: url(/public/media/sfondo-custom.jpg);
+  background-size: cover;
+
+}
+
 .fontBord{
   
     /* font-family: arial, verdana, tahona, sans-serif; */
@@ -228,15 +235,15 @@ li>a:hover{
 
   .color-history{
 
-    stroke: gold ;
-    color: gold;
+    stroke: orange ;
+    color: orange;
 
   }
 
   .color-culture{
 
-    stroke: orange;
-    color: orange;
+    stroke: red;
+    color: red;
 
   }
 
@@ -408,6 +415,12 @@ li>a:hover{
   color: gray;
 }
 
+.cardHover {
+
+  border: 0.5px solid #1A385A;
+
+}
+
 .cardHover:hover{
   transform: scale(1.07);
   transition: 1s;
@@ -415,6 +428,12 @@ li>a:hover{
 .cardHover:not(hover){
 transform: scale(1);
 transition: 1s;
+
+}
+
+.padding-custom-show-detail{
+
+  padding-top: 100px !important;
 
 }
 
@@ -518,6 +537,8 @@ transition: 1s;
 
   }
 
+  
+
 }
 
 @media screen and (max-width: 1000px){
@@ -528,6 +549,12 @@ transition: 1s;
     height: 300px;
 
 
+  }
+
+  .padding-custom-show-detail{
+
+    padding-top: 0px !important;
+  
   }
 
   .lingue-custom-dropdown{
@@ -686,7 +713,7 @@ transition: 1s;
 
   background-image: url(/public/media/SfondoWelcome.jpg);  
   background-size: cover;
-  margin-top: 6vh;
+  /* margin-top: 6vh; */
   height: 55vh;
 }
 
@@ -998,7 +1025,7 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 .main-card-login{
   
 	width: 350px;
-	height: 400px;
+	height: 450px;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;

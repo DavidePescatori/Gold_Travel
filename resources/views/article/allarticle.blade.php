@@ -24,8 +24,8 @@
         <div class="row">
 
             @forelse ($articles as $article)
-            <div class="col-12 col-md-6 col-lg-3  p-3 d-flex justify-content-center cardHover">
-                <div class="card card-custom-rem text-center shadow">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                <div class="card card-custom-rem p-2 text-center shadow  cardHover m-2">
                     <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="img-fluid rounded" alt="immagine">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->name}}</h5>

@@ -65,5 +65,5 @@ return[
     'GiàRegistrato' => 'Sei già registrato?',
     'Anteprima' => 'Anteprima immagine',
     'Cancella' => 'Cancella',
-
+    
 ];

@@ -68,9 +68,6 @@
               <li class="py-2">
                 <a href="{{route('mail.become.revisor')}}" class="color-plumViolet">{{__('ui.Lavora')}}</a>
               </li>
-              <li class="py-2">
-                <a href="{{route('revisor.index')}}" class="color-plumViolet">{{__('ui.Revisore')}}</a>
-              </li>
             </ul>
           </div>
   
@@ -80,16 +77,16 @@
   
             <ul class="list-unstyled mb-0">
               <li class="py-2">
-                <a href="https://www.google.com/travel/flights?hl=it" class="color-plumViolet">{{__('ui.Aerei')}}</a>
+                <a target="_blank" href="https://www.google.com/travel/flights?hl=it" class="color-plumViolet">{{__('ui.Aerei')}}</a>
               </li>
               <li class="py-2">
-                <a href="https://www.omio.it/" class="color-plumViolet">{{__('ui.Treni')}}</a>
+                <a target="_blank" href="https://www.omio.it/" class="color-plumViolet">{{__('ui.Treni')}}</a>
               </li>
               <li class="py-2">
-                <a href="https://www.rentalcars.com/it/" class="color-plumViolet">{{__('ui.Auto')}}</a>
+                <a target="_blank" href="https://www.rentalcars.com/it/" class="color-plumViolet">{{__('ui.Auto')}}</a>
               </li>
               <li class="py-2">
-                <a href="https://www.traghettitalia.it/" class="color-plumViolet">{{__('ui.Navi')}}</a>
+                <a target="_blank" href="https://www.traghettitalia.it/" class="color-plumViolet">{{__('ui.Navi')}}</a>
               </li>
             </ul>
           </div>

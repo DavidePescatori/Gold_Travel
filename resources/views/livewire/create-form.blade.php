@@ -1,5 +1,5 @@
 <div>
-    <form class="shadow p-5 bg-custom color-steelBlue formLavora" wire:submit.prevent="store">
+    <form class="shadow p-5 bg-custom color-steelBlue formLavora" wire:submit.prevent="store" >
         @csrf
         <div class="div-custom rounded">
         </div>
@@ -92,7 +92,9 @@
             @if (App::isLocale('it'))
             @foreach ($services as $service)
             <div class="d-flex">
-                <input id="services" type="checkbox" wire:model="selectedServices" value="{{$service->id}}">
+                <input id="services" type="checkbox" wire:model.debounce.500ms="selectedServices" 
+
+                 value="{{$service->id}}">
                 
                 <i class="fa {{ $service->icon }} p-2 text-start"></i>
                 

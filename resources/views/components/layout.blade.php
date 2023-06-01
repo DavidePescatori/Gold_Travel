@@ -24,7 +24,7 @@
     
     
     
-    <div>
+    <div class="custom-bg-body">
         {{$slot}}
     </div>
     

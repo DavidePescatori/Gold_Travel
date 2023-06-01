@@ -41,7 +41,7 @@ class ResizeImage implements ShouldQueue
                             ->crop(Manipulations::CROP_CENTER, $w, $h)
                             ->watermark('resources/img/logonuovo.png')
                             ->watermarkOpacity(50)
-                            ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT)
+                            ->watermarkPadding(50)
                             ->watermarkPosition(Manipulations::POSITION_TOP)      
                             ->watermarkHeight(50, Manipulations::UNIT_PERCENT)    
                             ->watermarkWidth(100, Manipulations::UNIT_PERCENT)

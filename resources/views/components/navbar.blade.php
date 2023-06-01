@@ -99,10 +99,10 @@
         <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="ddMenu" role="button" data-bs-toggle="dropdown">
           <i class="fa-solid fa-2x fa-earth-americas color-Gold"></i>
         </a>
-        <div id="lingue" class="navbar-dropdown dropdown-menu bg-seagalBlue color-plumViolet" aria-labelledby="ddMenu">
-          <a class="dropdown-item" href="#" onclick="translate('it')"><x-_locale lang="it" /></a>
-          <a class="dropdown-item" href="#" onclick="translate('en')"><x-_locale lang="en" /></a>
-          <a class="dropdown-item" href="#" onclick="translate('es')"><x-_locale lang="es" /></a>
+        <div id="lingue" class="navbar-dropdown dropdown-menu color-plumViolet" aria-labelledby="ddMenu">
+          <a class="dropdown-item" href="#" onclick="translate('it')"><x-_locale lang="it" name="Italiano" /></a>
+          <a class="dropdown-item" href="#" onclick="translate('en')"><x-_locale lang="en" name="English"/></a>
+          <a class="dropdown-item" href="#" onclick="translate('es')"><x-_locale lang="es" name="Espanòl"/></a>
         </div>
       </div>
       

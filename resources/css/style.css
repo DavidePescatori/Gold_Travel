@@ -424,7 +424,7 @@ transition: 1s;
 
 .swiper {
   /* height: 800px; */
-  width: 800px;
+  width: 600px;
 }
 
 .revisor-title-custom{
@@ -469,8 +469,8 @@ transition: 1s;
 
 .img-custom-swiper{
 
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
 
 }
 
@@ -479,8 +479,8 @@ transition: 1s;
 
   .img-custom-swiper{
 
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 250px;
 
   }
 
@@ -928,5 +928,122 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 
 }
 
+/* stile bottoni area revisore */
 
+.seville-red {
+  background:#FF0000;
+  padding:1em 2em;
+  border:0.3em solid rgb(201, 32, 6);
+  border-radius:2em 0 2em 0;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-red:hover {
+  background:rgb(168, 4, 4);
+  color:white;
+  transition:0.1s;
+}
 
+.seville-green {
+  background:green;
+  padding:1em 2em;
+  border:0.3em solid rgb(5, 151, 34);
+  border-radius:0 2em 0 2em;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-green:hover {
+  background:rgb(3, 96, 23);
+  color:white;
+  transition:0.1s;
+}
+
+.seville-grey {
+  background:gray;
+  padding:1em 2em;
+  border:0.3em solid #999999;
+  border-radius:0 2em 0 2em;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-grey:hover {
+  background:#5a5651;
+  color:white;
+  transition:0.1s;
+}
+
+.seville-yellow {
+  background:rgb(255, 193, 7);
+  padding:1em 2em;
+  border:0.3em solid rgb(211, 218, 8);
+  border-radius:2em 0 2em 0;
+  color:white;
+  font-weight:bold;
+  transition:0.1s;
+  opacity:1;
+}
+.seville-yellow:hover {
+  background:rgb(225, 170, 5);
+  color:white;
+  transition:0.1s;
+}
+
+.main-card-login{
+  
+	width: 350px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+  color: whitesmoke;
+	font-size: 1.2em;
+	justify-content: center;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+  background-color: #1A385A;
+  text-decoration: none;
+}
+
+.main-card-register{
+  
+	width: 350px;
+	min-height: 600px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+  color: whitesmoke;
+	font-size: 1.2em;
+	justify-content: center;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+  background-color: #1A385A;
+  text-decoration: none;
+}
+
+.button-login{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+.button-login:hover{
+	background: goldenrod;
+}

@@ -1,9 +1,9 @@
 <x-layout header="{{__('ui.Registrati')}}">
 
     <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <form method="POST" action="{{route('register')}}" class="shadow p-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <form method="POST" action="{{route('register')}}" class="main-card-register p-5">
 
                     @csrf
 
@@ -44,7 +44,7 @@
                       <label class="form-check-label" for="remember">{{__('ui.Ricordami')}}</label>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary">{{__('ui.Registrati')}}</button><br>
+                    <button type="submit" class="btn button-login btn-secondary">{{__('ui.Registrati')}}</button><br>
                     <div class="d-flex justify-content-end">
                         <a href="{{route('login')}}">{{__('ui.GiàRegistrato')}}</a>
                     </div>

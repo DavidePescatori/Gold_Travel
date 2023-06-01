@@ -9,8 +9,10 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\Removefaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\waterMarkJob;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
+use Spatie\Image\Manipulations;
 use Illuminate\Validation\Rules\In;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
@@ -128,6 +130,7 @@ class CreateForm extends Component
                 
                 Removefaces::withChain([
                     new ResizeImage($newImage->path, 400, 300),
+                    new ResizeImage($newImage->path, 800, 400),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);

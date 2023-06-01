@@ -40,8 +40,7 @@
                         <div class="swiper-wrapper">
                             @foreach ($article_to_check->images as $image)
                             <div class="swiper-slide @if($loop->first)active @endif">
-                                <img class="img-fluid img-custom-swiper" src="{{Storage::url($image->path)}}" alt="foto di {{$article_to_check->name}}">
-                                {{-- <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine"> --}}
+                                <img src="{{!$article_to_check->images()->get()->isEmpty() ? $image->getUrl(800,400) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
                             </div>   
                             @endforeach
 

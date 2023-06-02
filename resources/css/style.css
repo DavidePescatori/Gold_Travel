@@ -602,7 +602,7 @@ transition: 1s;
 
    }
  
-
+ 
 
 
 }
@@ -705,6 +705,14 @@ transition: 1s;
 
     height: 3.5rem;
   
+  }
+
+  .distanza-card-navbar-custom{
+
+    margin-top: 150px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
   }
 }
 /* fine media query header */

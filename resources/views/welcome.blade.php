@@ -54,7 +54,7 @@
     </div>
     
     
-    <div class="container-fluid my-5 distanza-card-navbar-custom">
+    <div class="container-fluid my-5 distanza-card-navbar-custom px-5">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-4">
                 <p class="display-4 my-2 fw-bold text-center">{{__('ui.allArticles')}}</p>

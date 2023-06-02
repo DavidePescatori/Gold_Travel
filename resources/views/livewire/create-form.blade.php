@@ -120,8 +120,6 @@
                 <input id="services" type="checkbox" wire:model="selectedServices" value="{{$service->id}}">
                 
                 <i class="fa {{ $service->icon }} p-2 text-start"></i>
-                
-                
                 <span  class="">{{$service->es}}</span>
             </div>
             @endforeach

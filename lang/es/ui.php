@@ -54,7 +54,7 @@ return[
     'Revisioni'=> 'Auditorìas',
     'Accetta'=> 'Acepta',
     'Rifiuta'=> 'Se Niega',
-    'AnnullaOperazione' => 'Deshacer la última operación',
+    'AnnullaOperazione' => 'Deshacer operación',
     'DettaglioAnnuncio' => 'Detalle del anuncio',
     'Email' => 'Direcciòn de correo electrònico',
     'Password' => 'Introduzca la contraseña',

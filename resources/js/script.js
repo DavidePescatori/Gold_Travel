@@ -24,7 +24,7 @@ const swiper = new Swiper('.swiper', {
     // direction: 'vertical',
     loop: true,
     autoplay: {
-        delay: 2000, // Tempo di transizione in millisecondi (3 secondi in questo caso)
+        delay: 5000 // Tempo di transizione in millisecondi (3 secondi in questo caso)
       },
   
     // If we need pagination

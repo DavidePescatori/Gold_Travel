@@ -32,7 +32,8 @@
                 
                 <!-- Slider main container -->
                 <h5 class="card-title display-4 text-uppercase fw-bold text-center mb-3">{{$article_to_check->name}}</h5> 
-                @if ($article_to_check->images)
+                
+                 @if (!$article_to_check->images()->get()->isEmpty())
                 <div class="col-12 col-md-6 border-end">
                     <div class="swiper">
                     <!-- Additional required wrapper -->
@@ -40,7 +41,7 @@
                         <div class="swiper-wrapper">
                             @foreach ($article_to_check->images as $image)
                             <div class="swiper-slide @if($loop->first)active @endif">
-                                <img src="{{!$article_to_check->images()->get()->isEmpty() ? $image->getUrl(800,400) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
+                                <img src="{{!$article_to_check->images()->get()->isEmpty() ? $image->getUrl(800,400) : 'https://picsum.photos/800/400'}}" class="img-fluid rounded" alt="immagine">
                             </div>   
                             @endforeach
 
@@ -51,7 +52,32 @@
                             <div class="swiper-button-next px-3 py-1"></div> 
 
                     </div> 
+                </div> 
+
+                @else
+                <div class="col-12 col-md-6 border-end">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/800/400" class="img-fluid rounded" alt="foto di placeholder">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/800/401" class="img-fluid rounded" alt="foto di placeholder">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/800/402" class="img-fluid rounded" alt="foto di placeholder">
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev px-3 py-1"></div> 
+                      <div class="swiper-button-next px-3 py-1"></div> 
+
+                    </div>
+                  </div>
                 </div>
+
+
+                @endif
             
 
                         <div class="col-md-3 border-end">
@@ -78,40 +104,6 @@
                             </div>
                         </div>
 
-                  
-                        
-                        
-
-
-                        
-                    
-                    
-                   
-                @else
-                <div class="card p-0">
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active ">
-                                <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/300'}}" class="img-fluid rounded" alt="immagine">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    @endif    
                 </div>
                 <div class="container-fluid">
                     <div class="row">

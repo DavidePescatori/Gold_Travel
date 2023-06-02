@@ -581,6 +581,8 @@ transition: 1s;
     display: none;
 
    }
+ 
+
 
 
 }
@@ -600,6 +602,7 @@ transition: 1s;
 
 @media screen and (max-width: 820px){
 
+  
   .fontBord{
   
     /* font-family: arial, verdana, tahona, sans-serif; */
@@ -611,6 +614,7 @@ transition: 1s;
     border-radius: 15px 15px 0px 0px;
   
     /* text-shadow: black 50px !important; */
+
   
   }
   .shadow-custom{
@@ -1091,3 +1095,4 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
   font-size: 25px;
 
 }
+

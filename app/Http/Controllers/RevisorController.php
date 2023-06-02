@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Article;
 use App\Models\Service;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use GPBMetadata\Google\Api\Label;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Artisan;
@@ -18,6 +20,7 @@ class RevisorController extends Controller
         $article = Article::all();
 
         $services = Service::all();
+
 
         $article_to_check = Article::where('is_accepted', null)->first();
         return view('revisor.index', compact('article_to_check', 'article', 'services'));

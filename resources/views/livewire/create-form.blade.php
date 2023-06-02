@@ -139,7 +139,7 @@
         
         
         @if (session()->has('articleCreated'))
-        <div class="alert snippet alert-success my-4 p-2">
+        <div class="alert snippet alert-success my-4 p-2 articleCreatedCustom w-100 text-center">
             {{ session('articleCreated') }}
         </div>
         @endif

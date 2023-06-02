@@ -1,5 +1,5 @@
 <div>
-    <form class="shadow p-5 bg-custom color-steelBlue formLavora" wire:submit.prevent="store">
+    <form class="shadow p-5 bg-custom color-steelBlue formLavora" wire:submit.prevent="store" >
         @csrf
         <div class="div-custom rounded">
         </div>
@@ -92,7 +92,9 @@
             @if (App::isLocale('it'))
             @foreach ($services as $service)
             <div class="d-flex">
-                <input id="services" type="checkbox" wire:model="selectedServices" value="{{$service->id}}">
+                <input id="services" type="checkbox" wire:model.debounce.500ms="selectedServices" 
+
+                 value="{{$service->id}}">
                 
                 <i class="fa {{ $service->icon }} p-2 text-start"></i>
                 
@@ -118,8 +120,6 @@
                 <input id="services" type="checkbox" wire:model="selectedServices" value="{{$service->id}}">
                 
                 <i class="fa {{ $service->icon }} p-2 text-start"></i>
-                
-                
                 <span  class="">{{$service->es}}</span>
             </div>
             @endforeach
@@ -132,12 +132,12 @@
         
         
         
-        <button class="btn btn-dark">{{__('ui.PubblicaAnnuncio')}}</button>
+        <button class="btn btn-dark lingue-custom">{{__('ui.PubblicaAnnuncio')}}</button>
         
         
         
         @if (session()->has('articleCreated'))
-        <div class="alert snippet alert-success my-4 p-2">
+        <div class="alert snippet alert-success my-4 p-2 articleCreatedCustom w-100 text-center">
             {{ session('articleCreated') }}
         </div>
         @endif

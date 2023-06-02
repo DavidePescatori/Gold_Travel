@@ -7,10 +7,15 @@ use App\Models\Article;
 use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\Removefaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\waterMarkJob;
 use Livewire\WithFileUploads;
 use Illuminate\Validation\Rule;
+use Spatie\Image\Manipulations;
+use Illuminate\Support\Facades\App as FacadesApp;
 use Illuminate\Validation\Rules\In;
+use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -123,9 +128,14 @@ class CreateForm extends Component
                 // $this->article->images()->create(['path'=>$image->store('images', 'public')]); 
                 $newFileName = "articles/{$this->article->id}";    
                 $newImage = $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
-                dispatch(new ResizeImage($newImage->path, 400, 300));
-
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
+                
+                Removefaces::withChain([
+                    new ResizeImage($newImage->path, 400, 300),
+                    new ResizeImage($newImage->path, 800, 400),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
+          
             } 
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
@@ -136,9 +146,15 @@ class CreateForm extends Component
     
         $this->article->services()->sync($selectedServices);
         
+        if (FacadesApp::isLocale('it')) {
+            session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio.');
+        } elseif (FacadesApp::isLocale('en')){
 
-        
-        session()->flash('articleCreated', 'Hai correttamente inserito il tuo annuncio.');
+            session()->flash('articleCreated', 'You have correctly placed your ad.');
+        } elseif (FacadesApp::isLocale('es')){
+
+            session()->flash('articleCreated', 'Ha publicado correctamente su anuncio.');
+        }
         
         $this->cleanForm();
         

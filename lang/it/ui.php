@@ -3,7 +3,6 @@
 return[
 
     'allArticles' => 'Ecco i nostri annunci!',
-   
     'Annuncio' => 'Inserisci il tuo annuncio',
     'Dove' => 'Dove vuoi andare?',
     'TuttiAnnunci' => 'Tutti gli annunci',
@@ -45,7 +44,7 @@ return[
     'Cultura' => 'Città e Cultura',
     'contattaci' => 'Contattaci',
     'NostroStaff'=> 'Il nostro staff',
-    'CompilaForm'=> 'Compila questo form e ti contatteremo al più presto!!',
+    'CompilaForm'=> 'Compila il form e ti contatteremo presto!',
     'NomeCognome'=> 'Nome e Cognome',
     'Messaggio'=> 'Il tuo messaggio',
     'TuoiDati'=> 'I tuoi dati',
@@ -55,7 +54,7 @@ return[
     'Revisioni'=> 'Revisioni',
     'Accetta'=> 'Accetta',
     'Rifiuta'=> 'Rifiuta',
-    'AnnullaOperazione' => 'Annulla ultima operazione',
+    'AnnullaOperazione' => 'Annulla operazione',
     'DettaglioAnnuncio' => 'Dettaglio Annuncio',
     'Email' => 'Indirizzo Email',
     'Password' => 'Inserisci la tua Password',
@@ -66,17 +65,5 @@ return[
     'GiàRegistrato' => 'Sei già registrato?',
     'Anteprima' => 'Anteprima immagine',
     'Cancella' => 'Cancella',
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 ];

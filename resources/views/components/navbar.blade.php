@@ -47,7 +47,7 @@
         <li class="nav-item nav-numeretto-custom">
           <a class=" @if(Route::currentRouteName() == 'revisor.index') active @endif nav-link color-plumViolet position-relative" aria-current="page" href="{{route('revisor.index')}}">
             {{__('ui.Revisore')}}
-            <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+            <span class="position-absolute top-3 start-0 translate-middle badge rounded-pill bg-success numeretto-custom">
               {{App\Models\Article::toBeRevisionedCount()}}
               <span class="visually-hidden">Messaggi non letti</span>
             </span>
@@ -97,12 +97,12 @@
       
       <div class="nav-item dropdown mx-3 lingue-custom-dropdown">
         <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="ddMenu" role="button" data-bs-toggle="dropdown">
-          <i class="fa-solid fa-2x fa-earth-americas color-Gold"></i>
+          <i class="fa-solid fa-earth-americas color-Gold fa-custom-globe"></i>
         </a>
-        <div id="lingue" class="navbar-dropdown dropdown-menu bg-seagalBlue color-plumViolet" aria-labelledby="ddMenu">
-          <a class="dropdown-item" href="#" onclick="translate('it')"><x-_locale lang="it" /> <span>Italiano</span></a>
-          <a class="dropdown-item" href="#" onclick="translate('en')"><x-_locale lang="en" /> <span>English</span></a>
-          <a class="dropdown-item" href="#" onclick="translate('es')"><x-_locale lang="es" /> <span>Español</span></a>
+        <div id="lingue" class="navbar-dropdown dropdown-menu color-plumViolet" aria-labelledby="ddMenu">
+          <a class="dropdown-item" href="#" onclick="translate('it')"><x-_locale lang="it" name="Italiano" /></a>
+          <a class="dropdown-item" href="#" onclick="translate('en')"><x-_locale lang="en" name="English"/></a>
+          <a class="dropdown-item" href="#" onclick="translate('es')"><x-_locale lang="es" name="Español"/></a>
         </div>
       </div>
       

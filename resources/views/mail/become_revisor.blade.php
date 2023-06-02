@@ -94,7 +94,7 @@
                     </div>
                     
                       
-                    <button type="submit" class="btn btn-secondary">{{__('ui.Candidatura')}}</button>
+                    <button type="submit" class="btn button-revisore btn-secondary">{{__('ui.Candidatura')}}</button>
                   
                 </form>
             

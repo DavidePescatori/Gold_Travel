@@ -27,11 +27,11 @@ class ContactController extends Controller
 
         } catch(Exception $error){
 
-            return redirect()->back()->with('emailError', 'Si è verificato un problema con i nostri server, riprova tra qualche minuto');
+            return redirect()->back()->with('emailError', 'Si è verificato un problema con i nostri server, riprova tra qualche minuto.');
         
         }
 
-         return redirect('/')->with('emailSent', 'Abbiamo ricevuto la tua candidatura, ti risponderemo il prima possibile');
+         return redirect('/')->with('emailSent', 'Abbiamo ricevuto la tua candidatura, ti risponderemo il prima possibile.');
 
     }
 }

@@ -44,7 +44,7 @@ return[
     'Cultura' => 'Ciudad y Cultura',
     'contattaci' => 'Póngase en contacto con nosotros',
     'NostroStaff'=> 'Nuestro personal',
-    'CompilaForm'=> 'Rellene este formulario y nos pondremos en contacto con usted lo antes posible.',
+    'CompilaForm'=> '¡Completa el formulario y nos pondremos en contacto contigo pronto!',
     'NomeCognome'=> 'Nombre y apellidos',
     'Messaggio'=> 'Su mensaje',
     'TuoiDati'=> 'Sus datos',

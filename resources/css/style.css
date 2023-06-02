@@ -1,4 +1,12 @@
 
+body{
+
+  font-family: 'Amaranth', sans-serif;
+  font-family: 'Rancho', cursive;
+  font-size: 25px !important;
+
+}
+
 
 :root {
   --bs-dropdown-link-active-color: #FF0000; 
@@ -83,7 +91,7 @@ body{
     color: hsl(300, 9%, 85%) ;
     text-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
     font-size: 85px;
-    font-family: 'Amaranth', sans-serif;
+    /* font-family: 'Amaranth', sans-serif; */
     background-color: hsl(212, 55%, 23%, 0.7);
     border-radius: 15px 15px 0px 0px;
 
@@ -251,18 +259,7 @@ li>a:hover{
   .bg-custom{
 
     background-color: rgb(255, 193, 7);
-    /* background-image: url(/public/media/Oceano.jpg); */
   }
-
-  /* .div-custom{
-
-    background-image: url(/public/media/Oceano.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-
-
-  } */
 
   .bg-article-create-custom{
 
@@ -270,21 +267,14 @@ li>a:hover{
 
   }
 
-
   .insert-article-custom{
-
-    /* height: 65vh; */
     margin-bottom: 60px !important;
     display: flex;
     justify-content: center;
-    /* width: 100%; */
   }
 
   .img-article-create-form-custom{
-
     width: 650px;
-
-
   }
 
   .img-form-custom{
@@ -320,30 +310,6 @@ li>a:hover{
   .navbar-dropdown::-webkit-scrollbar {
     width: 0.0em;  /* Imposta la larghezza della scrollbar */
   }
-  
-   /* fine navbar dropdown delle categorie */
-
-   /* logo aereo inserisci-annuncio */
-/* .img-aereo{
-  transform: rotate(-20deg);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  margin-top: -12rem;
-  } */
-
-/* .card-areo{
-  background-color: #ffc107;
-} */
-   /* fine logo aereo inserisci annuncio */
-
-   /* prova card  */
-/* .card-home{
-  width: 15rem;
-} */
-   /* fine prova card */
-
   /* codice casa inserisci annuncio */
 .casa-custom{
   display: block;
@@ -446,12 +412,6 @@ transition: 1s;
   width: 600px;
 }
 
-.revisor-title-custom{
-
-  font-family: monospace;
-
-
-}
 
 :root {
   --swiper-navigation-size: 22px;
@@ -647,7 +607,6 @@ transition: 1s;
     color: hsl(300, 9%, 85%) ;
     text-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
     font-size: 55px;
-    font-family: 'Amaranth', sans-serif;
     background-color: hsl(212, 55%, 23%, 0.7);
     border-radius: 15px 15px 0px 0px;
   
@@ -682,7 +641,6 @@ transition: 1s;
     color: hsl(300, 9%, 85%) ;
     text-shadow: -3px 0 #5a5651, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
     font-size:30px;
-    font-family: 'Amaranth', sans-serif;
     background-color: hsl(212, 55%, 23%, 0.7);
     border-radius: 15px 15px 0px 0px;
   
@@ -1107,4 +1065,10 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
   margin-left: 0;
   padding-right: 52px;
   
+}
+
+.fa-custom-globe{
+
+  font-size: 40px !important;
+
 }

@@ -44,7 +44,7 @@ return[
     'Cultura' => 'Città e Cultura',
     'contattaci' => 'Contattaci',
     'NostroStaff'=> 'Il nostro staff',
-    'CompilaForm'=> 'Compila questo form e ti contatteremo al più presto!!',
+    'CompilaForm'=> 'Compila il form e ti contatteremo presto!',
     'NomeCognome'=> 'Nome e Cognome',
     'Messaggio'=> 'Il tuo messaggio',
     'TuoiDati'=> 'I tuoi dati',

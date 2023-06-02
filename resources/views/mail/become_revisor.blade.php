@@ -15,7 +15,7 @@
                           <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold display-5">Luisa</h5>
-                                <p class="card-text display-6">Sito ottimo, ho iniziato a lavorare con loro ed è stato la cosa migliore della mia vita!</p>
+                                <p class="card-text display-6">Sito ottimo, ho iniziato a lavorare con loro e mi trovo benissimo!</p>
                                 
                             </div>
                           </div>
@@ -30,7 +30,7 @@
                               <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title fw-bold display-5">Michael</h5>
-                                    <p class="card-text display-6">In line with my needs and always understanding</p>
+                                    <p class="card-text display-6">In line with my needs and always understanding!</p>
                                     
                                 </div>
                               </div>
@@ -45,7 +45,7 @@
                               <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title fw-bold display-5">Alejandro</h5>
-                                    <p class="card-text display-6">Una garantía cuando decidas poner en práctica lo que has aprendido</p>
+                                    <p class="card-text display-6">Una garantía cuando decidas poner en práctica lo que has aprendido.</p>
                                     
                                 </div>
                               </div>
@@ -56,8 +56,8 @@
             
             </div>
             <div class="col-12 col-md-6">
-                <h2 class="display-5 text-center">{{__('ui.CompilaForm')}}</h2>
-                <form method="POST" action="{{route('mail.contact.us.submit')}}" class="shadow formLavora mt-5 p-5 bg-steelBlue color-plumViolet">
+              <form method="POST" action="{{route('mail.contact.us.submit')}}" class="shadow formLavora mt-5 p-5 bg-steelBlue color-plumViolet">
+                <h2 class="display-5 text-center py-4">{{__('ui.CompilaForm')}}</h2>
     
                     @if(session('emailError'))
                         <div class="alert alert-danger text-center">

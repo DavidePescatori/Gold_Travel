@@ -44,7 +44,7 @@ return[
     'Cultura' => 'City and Culture',
     'contattaci' => 'Contact us',
     'NostroStaff'=> 'Our staff',
-    'CompilaForm'=> 'Fill out this form and we will contact you as soon as possible!!',
+    'CompilaForm'=> 'Complete the form and we will contact you soon!',
     'NomeCognome'=> 'Name and Surname',
     'Messaggio'=> 'Your message',
     'TuoiDati'=> 'Your details',

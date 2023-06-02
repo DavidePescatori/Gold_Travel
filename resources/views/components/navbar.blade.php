@@ -97,12 +97,12 @@
       
       <div class="nav-item dropdown mx-3 lingue-custom-dropdown">
         <a class="nav-link dropdown-toggle color-plumViolet" href="#" id="ddMenu" role="button" data-bs-toggle="dropdown">
-          <i class="fa-solid fa-2x fa-earth-americas color-Gold"></i>
+          <i class="fa-solid fa-earth-americas color-Gold fa-custom-globe"></i>
         </a>
         <div id="lingue" class="navbar-dropdown dropdown-menu color-plumViolet" aria-labelledby="ddMenu">
           <a class="dropdown-item" href="#" onclick="translate('it')"><x-_locale lang="it" name="Italiano" /></a>
           <a class="dropdown-item" href="#" onclick="translate('en')"><x-_locale lang="en" name="English"/></a>
-          <a class="dropdown-item" href="#" onclick="translate('es')"><x-_locale lang="es" name="Espanòl"/></a>
+          <a class="dropdown-item" href="#" onclick="translate('es')"><x-_locale lang="es" name="Español"/></a>
         </div>
       </div>
       

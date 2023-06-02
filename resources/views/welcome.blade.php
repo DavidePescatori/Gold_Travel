@@ -71,10 +71,10 @@
                                         <h5 class="card-title">{{$article->name}}</h5>
                                         <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p>
                                         {{-- <p class="card-text">descrizione: {{$article->description}}</p> --}}
-                                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">{{__('ui.PiùInfo')}}</a>
+                                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary lingue-custom">{{__('ui.PiùInfo')}}</a>
                                         <div class="row g-0">
                                             <div class="col-md-8">
-                                                <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{$article->category->name}}</a>
+                                                <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success lingue-custom">{{$article->category->name}}</a>
                                             </div>
                                         </div>
                                     </div>

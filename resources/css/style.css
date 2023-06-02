@@ -574,7 +574,7 @@ transition: 1s;
 
 
 }
-@media screen and (max-width: 1210px){
+@media screen and (max-width: 991px){
 
   .titoloWelcome{
 
@@ -983,7 +983,7 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 .main-card-login{
   
 	width: 350px;
-	height: 450px;
+	min-height: 450px;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
@@ -1014,7 +1014,7 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 
 .button-login{
 	width: 60%;
-	height: 40px;
+	height: 50px;
 	margin: 10px auto;
 	justify-content: center;
 	display: block;
@@ -1070,5 +1070,24 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 .fa-custom-globe{
 
   font-size: 40px !important;
+
+}
+
+.dropdown-item {
+
+  font-size: 25px !important;
+
+
+}
+
+.numeretto-custom{
+
+  font-size: 15px !important;
+
+}
+
+.btn-indietro-custom{
+
+  font-size: 25px;
 
 }

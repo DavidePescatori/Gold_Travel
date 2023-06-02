@@ -134,7 +134,7 @@
         
         
         
-        <button class="btn btn-dark">{{__('ui.PubblicaAnnuncio')}}</button>
+        <button class="btn btn-dark lingue-custom">{{__('ui.PubblicaAnnuncio')}}</button>
         
         
         

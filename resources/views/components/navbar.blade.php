@@ -47,7 +47,7 @@
         <li class="nav-item nav-numeretto-custom">
           <a class=" @if(Route::currentRouteName() == 'revisor.index') active @endif nav-link color-plumViolet position-relative" aria-current="page" href="{{route('revisor.index')}}">
             {{__('ui.Revisore')}}
-            <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+            <span class="position-absolute top-3 start-0 translate-middle badge rounded-pill bg-success numeretto-custom">
               {{App\Models\Article::toBeRevisionedCount()}}
               <span class="visually-hidden">Messaggi non letti</span>
             </span>

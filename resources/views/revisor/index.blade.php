@@ -194,7 +194,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center mb-5">
-                <a href="{{route('homepage')}}" class="btn seville-grey mx-3 mt-1">{{__('ui.TornaIndietro')}}</a>
+                <a href="{{route('homepage')}}" class="btn-indietro-custom text-center btn seville-grey mx-3 mt-1">{{__('ui.TornaIndietro')}}</a>
                 @if (App\Models\Article::toBeRevisionedCount() != App\Models\Article::all()->count() )
                 <form action="{{ route('revisor.rollbackArticle') }}" method="POST">
                     @csrf

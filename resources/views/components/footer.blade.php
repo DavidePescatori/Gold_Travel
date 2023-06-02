@@ -27,7 +27,7 @@
           <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
             {{-- <h5 class="text-uppercase">Links</h5> --}}
             {{-- <img class="logo-custom py-1" src="/media/colosseo.png" alt=""> --}}
-            <h1 class="text-center color-Gold nome-navbar">Gold<span class="color-seagalBlue">Travel</span></h1><br>
+            <h1 class="text-center color-Gold nome-navbar">Gold<span class=" color-seagalBlue">Travel</span></h1><br>
 
             <div class="lh-lg">
             <p>{{__('ui.BB')}}

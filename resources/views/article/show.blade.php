@@ -80,7 +80,7 @@
           @endif
           @endif
           <div class="text-center">
-            <a href="{{route('homepage')}}" class="btn btn-secondary mt-4">{{__('ui.TornaIndietro')}}</a>
+            <a href="{{route('homepage')}}" class="btn btn-secondary mt-4 lingue-custom">{{__('ui.TornaIndietro')}}</a>
           </div>
         </div>
    

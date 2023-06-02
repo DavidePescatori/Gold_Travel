@@ -25,13 +25,13 @@
 
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
-                <div class="card card-custom-rem p-2 text-center shadow  cardHover m-2">
+                <div class="card card-custom-rem p-2 text-center shadow cardHover m-2">
                     <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="img-fluid rounded" alt="immagine">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->name}}</h5>
                         <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}</p>
-                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">{{__('ui.PiùInfo')}}</a> <br>
-                        <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{$article->category->name}}</a>
+                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary lingue-custom">{{__('ui.PiùInfo')}}</a> <br>
+                        <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success lingue-custom">{{$article->category->name}}</a>
                     </div>
                 </div>
             </div>

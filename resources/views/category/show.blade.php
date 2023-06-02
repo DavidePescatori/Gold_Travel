@@ -108,7 +108,7 @@
         <div class="col-12 text-center">
           
           <h2 class="mb-3">{{__('ui.NoAnnunci')}}</h2>
-          <a href="{{route('article.create')}}" class="btn btn-warning">{{__('ui.Annuncio')}}</a>
+          <a href="{{route('article.create')}}" class="btn btn-warning lingue-custom">{{__('ui.Annuncio')}}</a>
         </div>
         @endforelse
 

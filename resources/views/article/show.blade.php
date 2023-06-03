@@ -19,34 +19,28 @@
           <div class="swiper-button-next"></div>
         </div>    
         @else
-        <div class="card p-0">
-          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://picsum.photos/300" class="img-carousel-custom d-block" alt="foto di placeholder">
+          <div class="swiper">
+              <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <img src="https://picsum.photos/800/400" class="img-fluid rounded" alt="foto di placeholder">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://picsum.photos/800/401" class="img-fluid rounded" alt="foto di placeholder">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://picsum.photos/800/402" class="img-fluid rounded" alt="foto di placeholder">
+                  </div>
+                </div>
+                <div class="swiper-button-prev px-3 py-1"></div> 
+                <div class="swiper-button-next px-3 py-1"></div> 
+
               </div>
-              <div class="carousel-item">
-                <img src="https://picsum.photos/301" class="img-carousel-custom d-block" alt="foto di placeholder">
-              </div>
-              <div class="carousel-item">
-                <img src="https://picsum.photos/302" class="img-carousel-custom d-block" alt="foto di placeholder">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
         @endif
         <p class="card-text text-center pt-3">{{__('ui.Descrizione')}}: {{$article->description}}</p><br>
+    </div>
 
-      </div>
-      <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-6">
         <div class="card-body text-center padding-custom-show-detail">
           <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p><br>
           <p class="card-text">{{__('ui.CreatoIl')}}: {{$article->created_at->format('d/m/Y')}}</p><br>
@@ -86,7 +80,6 @@
    
         
       </div>
-    </div>
   </div>
 </x-layout>
 

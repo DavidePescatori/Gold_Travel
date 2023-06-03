@@ -54,7 +54,7 @@ return[
     'Revisioni'=> 'Reviews',
     'Accetta'=> 'Accept',
     'Rifiuta'=> 'Reject',
-    'AnnullaOperazione' => 'Undo last operation',
+    'AnnullaOperazione' => 'Undo operation',
     'DettaglioAnnuncio' => 'Announcement Detail',
     'Email' => 'Email Address',
     'Password' => 'Insert your Password',

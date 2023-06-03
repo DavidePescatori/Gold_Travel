@@ -4,6 +4,13 @@ body{
   font-family: 'Amaranth', sans-serif;
   font-family: 'Rancho', cursive;
   font-size: 25px !important;
+  overflow-x: hidden;
+
+}
+
+.titoloWelcome{
+
+  font-size: 85px !important;
 
 }
 
@@ -180,7 +187,7 @@ li>a:hover{
 
 .nome-navbar{
   
-  font-size: 40px;
+  font-size: 53px;
   
 }
 /* fine logo navbar */
@@ -441,6 +448,19 @@ transition: 1s;
 
 
 
+.swiper-button-welcome-prev,
+.swiper-button-welcome-next {
+
+  transform: scale(0.8) !important;
+  font-weight: 900;
+  color: white !important;
+  background-color: #1A385A;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.7s;
+
+}
+
 .divTitleNav{
 
   border: 0px!important;
@@ -581,6 +601,8 @@ transition: 1s;
     display: none;
 
    }
+ 
+ 
 
 
 }
@@ -589,7 +611,7 @@ transition: 1s;
 
   .nome-navbar{
 
-    font-size: 30px;
+    font-size: 42px;
 
   }
 
@@ -600,6 +622,27 @@ transition: 1s;
 
 @media screen and (max-width: 820px){
 
+  .btn-revisor-custom{
+
+    width: 120px;
+    height: 85px;
+    font-size: 18px !important;
+    /* padding-bottom: 100px  !important; */
+  }
+
+  .seville-yellow{
+
+    padding: 0 !important;
+  }
+  .seville-green{
+
+    padding: 0 !important;
+  }
+  .seville-red{
+
+    padding: 0 !important;
+  }
+  
   .fontBord{
   
     /* font-family: arial, verdana, tahona, sans-serif; */
@@ -611,6 +654,7 @@ transition: 1s;
     border-radius: 15px 15px 0px 0px;
   
     /* text-shadow: black 50px !important; */
+
   
   }
   .shadow-custom{
@@ -661,6 +705,14 @@ transition: 1s;
 
     height: 3.5rem;
   
+  }
+
+  .distanza-card-navbar-custom{
+
+    margin-top: 150px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
   }
 }
 /* fine media query header */
@@ -918,7 +970,7 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 
 .seville-red {
   background:#FF0000;
-  padding:1em 2em;
+  padding: 1em 2em;
   border:0.3em solid rgb(201, 32, 6);
   border-radius:2em 0 2em 0;
   color:white;
@@ -934,7 +986,7 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 
 .seville-green {
   background:green;
-  padding:1em 2em;
+  padding: 1em 2em;
   border:0.3em solid rgb(5, 151, 34);
   border-radius:0 2em 0 2em;
   color:white;
@@ -949,8 +1001,10 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 }
 
 .seville-grey {
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
   background:gray;
-  padding:1em 2em;
   border:0.3em solid #999999;
   border-radius:0 2em 0 2em;
   color:white;
@@ -966,7 +1020,7 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 
 .seville-yellow {
   background:rgb(255, 193, 7);
-  padding:1em 2em;
+  padding: 1em 2em;
   border:0.3em solid rgb(211, 218, 8);
   border-radius:2em 0 2em 0;
   color:white;
@@ -1081,9 +1135,7 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
 }
 
 .numeretto-custom{
-
-  font-size: 15px !important;
-
+  font-size: 12px !important;
 }
 
 .btn-indietro-custom{
@@ -1091,3 +1143,6 @@ background: radial-gradient(circle, rgba(26,56,90,0.60) 55%, rgba(26,56,90,0) 10
   font-size: 25px;
 
 }
+
+
+

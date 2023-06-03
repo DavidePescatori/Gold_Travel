@@ -120,8 +120,6 @@
                 <input id="services" type="checkbox" wire:model="selectedServices" value="{{$service->id}}">
                 
                 <i class="fa {{ $service->icon }} p-2 text-start"></i>
-                
-                
                 <span  class="">{{$service->es}}</span>
             </div>
             @endforeach
@@ -139,7 +137,7 @@
         
         
         @if (session()->has('articleCreated'))
-        <div class="alert snippet alert-success my-4 p-2">
+        <div class="alert snippet alert-success my-4 p-2 articleCreatedCustom w-100 text-center">
             {{ session('articleCreated') }}
         </div>
         @endif

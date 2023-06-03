@@ -1,4 +1,4 @@
-<x-layout header="{{__('ui.Registrati')}}">
+<x-layout title="Registrati" header="{{__('ui.Registrati')}}">
 
     <div class="container my-5">
         <div class="row">

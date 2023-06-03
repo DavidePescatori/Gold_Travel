@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital@0;1&family=Rancho&display=swap" rel="stylesheet">
     @vite(['resources/js/app.js', 'resources/css/app.css'])
     @livewireStyles
-    <title>Gold Travel</title>
+    <title>{{$title}}</title>
     
     
     

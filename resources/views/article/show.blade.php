@@ -1,4 +1,4 @@
-<x-layout  header="{{__('ui.DettaglioAnnuncio')}}">
+<x-layout title="Dettaglio Annuncio"  header="{{__('ui.DettaglioAnnuncio')}}">
   
   <div class="container-fluid py-5">
     <div class="row">

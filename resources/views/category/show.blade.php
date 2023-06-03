@@ -1,5 +1,5 @@
 
-<x-layout  header="{{$category->name}}">
+<x-layout title="Regione -> {{$category->name}}"  header="{{$category->name}}">
   <span id="check" class="d-none id{{$category->id}}"></span>
   <div class="container py-5 circle-card-custom">
     <div class="row font-custom">

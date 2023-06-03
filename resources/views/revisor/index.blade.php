@@ -1,4 +1,4 @@
-<x-layout header="{{__('ui.Revisioni')}}">
+<x-layout title="Zona Revisore" header="{{__('ui.Revisioni')}}">
     <div class="container-fluid my-5">
         <div class="row">
             <div class="col-12 p-3 d-flex justify-content-center">

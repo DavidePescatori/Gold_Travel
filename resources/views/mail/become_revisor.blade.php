@@ -1,4 +1,4 @@
-<x-layout header="{{__('ui.contattaci')}}">
+<x-layout title="Contattaci" header="{{__('ui.contattaci')}}">
 
     <div class="container my-5">
         <div class="row justify-content-center">

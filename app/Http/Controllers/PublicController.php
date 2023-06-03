@@ -16,9 +16,8 @@ class PublicController extends Controller
 
     public function categoryShow(Category $category){
         // $category = Category::all();
-        $articles = Article::where('is_accepted', true)->get();
         $services= Service::all();
-        return view('category.show', compact('category', 'services', 'articles'));
+        return view('category.show', compact('category', 'services'));
     }
 
     public function searchArticles(Request $request)

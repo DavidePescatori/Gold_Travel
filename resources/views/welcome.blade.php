@@ -46,9 +46,11 @@
     
     
     <div class="container-fluid sfondoWelcome">
-        <div class="row">
-            <div id="divTitle" class="d-flex justify-content-center align-items-center divTitle">
-                <h1 id="title" class="text-center titoloWelcome color-Gold bg-h1">Gold<span class="color-seagalBlue">Travel</span></h1>
+        <div class="row d-flex">
+            <div class="bg-title col-12">
+                
+                    <div id="Logo" class="divTitle"></div>
+                
             </div>
         </div>
     </div>

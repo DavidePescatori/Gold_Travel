@@ -1,6 +1,14 @@
 let Title = document.querySelector('#title');
-let Div = document.querySelector('#divTitle');
+let Div = document.querySelector('#Logo');
 
+window.addEventListener('load',()=>{     
+    
+  
+    Div.classList.remove('divTitle');
+    Div.classList.add('divTitle2');
+ 
+
+});
 
 
 // window.addEventListener('scroll' , ()=>{
@@ -24,7 +32,7 @@ const swiper = new Swiper('.swiper', {
     // direction: 'vertical',
     loop: true,
     autoplay: {
-        delay: 5000 // Tempo di transizione in millisecondi (3 secondi in questo caso)
+        delay: 2000, // Tempo di transizione in millisecondi (3 secondi in questo caso)
       },
   
     // If we need pagination

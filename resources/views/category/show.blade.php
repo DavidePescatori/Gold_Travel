@@ -87,7 +87,7 @@
     
     <div class="container py-5">
       <div class="row">
-        @forelse ($category->articles as $article)
+        @forelse ($category->articles->where('is_accepted', true) as $article)
         <div class="col-12 col-md-4 p-3">
           
           <div class="card p-2 cardHover">

@@ -55,7 +55,6 @@
         </div>
     </div>
     
-    
     <div class="container-fluid my-5 distanza-card-navbar-custom">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-4">

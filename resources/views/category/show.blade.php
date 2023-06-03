@@ -1,5 +1,5 @@
 
-<x-layout header="{{$category->name}}">
+<x-layout  header="{{$category->name}}">
   <span id="check" class="d-none id{{$category->id}}"></span>
   <div class="container py-5 circle-card-custom">
     <div class="row font-custom">
@@ -95,7 +95,7 @@
             <div class="card-body">
               <h5 class="card-title">{{$article->name}}</h5>
               <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p>
-              <p class="card-text">{{__('ui.Descrizione')}}: {{$article->description}}</p>
+              {{-- <p class="card-text">{{__('ui.Descrizione')}}: {{$article->description}}</p> --}}
               <a href="{{route('article.show', compact('article'))}}" class="btn btn-success lingue-custom">{{__('ui.PiùInfo')}}</a>
               <a href="{{route('homepage')}}" class="my-2 border-top card-link lingue-custom  btn btn-secondary">{{__('ui.TornaIndietro')}}</a>
             </div>

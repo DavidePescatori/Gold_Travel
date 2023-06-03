@@ -47,7 +47,7 @@ class CreateForm extends Component
 
         'name'=> 'required',
         'price'=> 'required|numeric',
-        'description'=> 'required|min:10|max:300',
+        'description'=> 'required|min:10|max:3000',
         'images.*'=>'image|max:1024',
         'temporary_images.*'=>'image|max:1024',
         'user_id'=>'required'
@@ -181,7 +181,8 @@ class CreateForm extends Component
             'price.numeric' => 'Il prezzo deve essere un numero, separato da un punto',
             // 'price.max' => 'Devi inserire un prezzo di massimo 8 cifre',
             'description.required' => 'Devi inserire una descrizione',
-            'description.min' => 'La descrizione deve contenere tra i :min e i 300 caratteri',
+            'description.min' => 'La descrizione deve contenere tra i :min e i 2000 caratteri',
+            'description.max' => 'La descrizione deve contenere tra i :min e i 2000 caratteri',
             'category.required' => 'Devi selezionare una regione',
 
         ];

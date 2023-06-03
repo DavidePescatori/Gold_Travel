@@ -2,12 +2,8 @@ let Title = document.querySelector('#title');
 let Div = document.querySelector('#Logo');
 
 window.addEventListener('load',()=>{     
-    
-  
     Div.classList.remove('divTitle');
     Div.classList.add('divTitle2');
- 
-
 });
 
 

@@ -111,7 +111,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-6 card-body text-center">
-                <p class="card-text pt-3 fs-4">{{__('ui.Descrizione')}}: {{$article_to_check->description}}</p><br>
+                <p class="card-text pt-3 ps-5 fs-4">{{__('ui.Descrizione')}}: {{$article_to_check->description}}</p><br>
                 <p class="card-text fs-3">€  {{$article_to_check->price}}</p><br>
                 <p class="card-text fw-lighter">{{__('ui.CreatoDa')}} {{$article_to_check->user->name}}</p>
                 <p class="card-text fw-lighter fst-italic">{{__('ui.CreatoIl')}} {{$article_to_check->created_at->format('d/m/Y')}}</p><br>

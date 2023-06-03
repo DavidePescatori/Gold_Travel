@@ -411,7 +411,7 @@ li>a:hover{
 }
 
 .cardHover:hover{
-  transform: scale(1.07);
+  transform: scale(1.06);
   transition: 1s;
 }
 .cardHover:not(hover){
@@ -543,6 +543,13 @@ transition: 1s;
 
     width: 325px;
     height: 300px;
+
+
+  }
+
+  .text-custom-card-start{
+
+    text-align: start !important;
 
 
   }
@@ -1154,5 +1161,9 @@ transition: 1s;
 
 }
 
+.mb-custom{
+  
+  margin-bottom: 105px;
 
+}
 

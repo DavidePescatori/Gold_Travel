@@ -28,6 +28,7 @@
     }
     
     h1 {
+      text-align: center;
       color: #333333;
       font-size: 50px;
       margin-bottom: 20px !important;
@@ -43,6 +44,7 @@
       color: #555555;
       font-weight: 100;
       font-size: 20px;
+      margin-top: 7px !important;
     }
     
     .button {
@@ -61,13 +63,27 @@
     }
     
     .immagine-logo{
-      width: 250px;
-      text-align: center;
+      width: 300px;
+
+    }
+    
+    .margine-h2-custom{
+      
+      margin-bottom: 0px !important;
+      
+    }
+    
+    .bottone-custom-posizione{
+      
+      display: flex;
+      justify-content: center;
+      
     }
 
-    .margine-h2-custom{
+    .img-posizione-custom{
 
-      margin-bottom: 0px !important;
+      display: flex;
+      justify-content: center;
 
     }
     
@@ -75,10 +91,13 @@
 </head>
 <body>
   <div class="container">
-    <img class="immagine-logo" src="{{ $message->embed(public_path('media/nuovoLogoCopia.png')) }}" alt="Logo">
+    <div class="img-posizione-custom">
+      <img class="immagine-logo" src="{{ $message->embed(public_path('media/nuovoLogoCopia.png')) }}" alt="Logo">
+
+    </div>
     <h1>Richiesta di candidatura</h1>
     <hr>
-    <p class="ptesto">L'utente <strong>{{$name}}</strong> ha richiesto di diventare revisore,</p>
+    <p class="ptesto">L'utente <strong>{{$name}}</strong> ha richiesto di diventare revisore.</p>
     <h2 class="margine-h2-custom">Dati Dell'Utente</h2>
     <ul>
       <li>
@@ -90,7 +109,9 @@
     </ul>
     <h2 class="margine-h2-custom">Messaggio:<h2>
       <p class="pmessaggio">{{$messaggio}}</p>
-      <a class="button" href="{{route('make.revisor', compact('user'))}}">Approva Richiesta</a>
+      <div class="bottone-custom-posizione">
+        <a class="button" href="{{route('make.revisor', compact('user'))}}">Approva Richiesta</a>
+      </div>
     </div>
   </body>
   </html>

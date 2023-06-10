@@ -1,4 +1,4 @@
-<x-layout header="{{__('ui.Accedi')}}">
+<x-layout title="Accedi" header="{{__('ui.Accedi')}}">
     <div class="container my-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">

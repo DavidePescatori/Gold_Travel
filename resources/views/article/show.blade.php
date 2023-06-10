@@ -1,4 +1,4 @@
-<x-layout header="{{__('ui.DettaglioAnnuncio')}}">
+<x-layout title="Dettaglio Annuncio"  header="{{__('ui.DettaglioAnnuncio')}}">
   
   <div class="container-fluid py-5">
     <div class="row">
@@ -37,7 +37,7 @@
 
               </div>
         @endif
-        <p class="card-text text-center pt-3">{{__('ui.Descrizione')}}: {{$article->description}}</p><br>
+        <p class="card-text pt-5 ps-5">{{__('ui.Descrizione')}}: {{$article->description}}</p>
     </div>
 
     <div class="col-12 col-lg-6">
@@ -74,7 +74,7 @@
           @endif
           @endif
           <div class="text-center">
-            <a href="{{route('homepage')}}" class="btn btn-secondary mt-4 lingue-custom">{{__('ui.TornaIndietro')}}</a>
+            <a href="{{route('homepage')}}" class="btn btn-secondary lingue-custom mt-5">{{__('ui.TornaIndietro')}}</a>
           </div>
         </div>
    

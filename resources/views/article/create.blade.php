@@ -1,4 +1,4 @@
-<x-layout  header="{{__('ui.CreaAnnuncioHeader')}}">
+<x-layout title="Inserisci Annuncio"  header="{{__('ui.CreaAnnuncioHeader')}}">
 
     <div class="container-fluid py-5 bg-article-create-custom">
         <div class="row">

@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/media/colosseo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital@0;1&family=Rancho&display=swap" rel="stylesheet">
     @vite(['resources/js/app.js', 'resources/css/app.css'])
     @livewireStyles
-    <title>GoldTravel</title>
+    <title>Homepage</title>
 </head>
 
 <body>
@@ -39,20 +40,21 @@
     @endif
     
     @if(session('message'))
-    <div class="alert alert-success text- mt-5 mb-0">
+    <div class="alert alert-success text-center mt-5 mb-0">
         {{ session('message') }}
     </div>
     @endif
     
     
     <div class="container-fluid sfondoWelcome">
-        <div class="row">
-            <div id="divTitle" class="d-flex justify-content-center align-items-center divTitle">
-                <h1 id="title" class="text-center titoloWelcome color-Gold bg-h1">Gold<span class="color-seagalBlue">Travel</span></h1>
+        <div class="row d-flex">
+            <div class="bg-title col-12">
+                
+                    <div id="Logo" class="divTitle"></div>
+                
             </div>
         </div>
     </div>
-    
     
     <div class="container-fluid my-5 distanza-card-navbar-custom px-5">
         <div class="row justify-content-center">
@@ -65,7 +67,7 @@
             <div class="col-9 col-md-4 my-3">
                 <div class="card mb-3 shadow cardHover">
                     <div class="row g-0">
-                        <div class="col-12 col-lg-7 p-3 d-flex justify-content-center">
+                        <div class="col-12 col-lg-8 p-3 d-flex justify-content-center">
                             @if (!$article->images()->get()->isEmpty())
                             <div class="swiper">
                                 <!-- Additional required wrapper -->
@@ -103,17 +105,17 @@
                         </div>
                         
                         
-                        <div class="col-lg-5">
+                        <div class="col-lg-4 text-custom-card-start text-end">
                             <div class="card-body">
                                 <h5 class="card-title">{{$article->name}}</h5>
-                                <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p>
+                                <p class="card-text mb-custom">{{__('ui.Prezzo')}}: {{$article->price}}€</p>
                                 {{-- <p class="card-text">descrizione: {{$article->description}}</p> --}}
-                                <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary lingue-custom">{{__('ui.PiùInfo')}}</a>
                                 <div class="row g-0">
-                                    <div class="col-md-8">
+                                    <div class="col-12 text-custom-card-start text-end">
                                         <a href="{{ route('category.show', ['category'=>$article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success lingue-custom">{{$article->category->name}}</a>
                                     </div>
                                 </div>
+                                <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary lingue-custom">{{__('ui.PiùInfo')}}</a>
                             </div>
                         </div>
                     </div>

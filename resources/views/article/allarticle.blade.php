@@ -1,4 +1,4 @@
-<x-layout header="{{__('ui.TuttiAnnunci')}}">
+<x-layout title="Tutti gli annunci" header="{{__('ui.TuttiAnnunci')}}">
     {{-- <div class="container my-5 ">
         <div class="row bg-gold divSmussati">
             

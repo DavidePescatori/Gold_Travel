@@ -1,5 +1,5 @@
 
-<x-layout header="{{$category->name}}">
+<x-layout title="Regione -> {{$category->name}}"  header="{{$category->name}}">
   <span id="check" class="d-none id{{$category->id}}"></span>
   <div class="container py-5 circle-card-custom">
     <div class="row font-custom">
@@ -87,17 +87,17 @@
     
     <div class="container py-5">
       <div class="row">
-        @forelse ($category->articles as $article)
+        @forelse ($category->articles->where('is_accepted', true) as $article)
         <div class="col-12 col-md-4 p-3">
           
           <div class="card p-2 cardHover">
             <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="img-fluid rounded" alt="immagine">
             <div class="card-body">
               <h5 class="card-title">{{$article->name}}</h5>
-              <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}</p>
-              <p class="card-text">{{__('ui.Descrizione')}}: {{$article->description}}</p>
-              <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">{{__('ui.PiùInfo')}}</a>
-              <a href="{{route('homepage')}}" class="my-2 border-top card-link  btn btn-secondary">{{__('ui.TornaIndietro')}}</a>
+              <p class="card-text">{{__('ui.Prezzo')}}: {{$article->price}}€</p>
+              {{-- <p class="card-text">{{__('ui.Descrizione')}}: {{$article->description}}</p> --}}
+              <a href="{{route('article.show', compact('article'))}}" class="btn btn-success lingue-custom">{{__('ui.PiùInfo')}}</a>
+              <a href="{{route('homepage')}}" class="my-2 border-top card-link lingue-custom  btn btn-secondary">{{__('ui.TornaIndietro')}}</a>
             </div>
           </div>
         </div>
